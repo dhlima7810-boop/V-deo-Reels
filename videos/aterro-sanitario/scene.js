@@ -64,7 +64,7 @@ function groundBox(x0, x1, z0, z1) { const m = new THREE.Mesh(BOX(x1 - x0, 8, z1
 const PIT = 8, PIT_D = 5;
 groundBox(-400, 400, -400, -PIT); groundBox(-400, 400, PIT, 400); groundBox(-400, -PIT, -PIT, PIT); groundBox(PIT, 400, -PIT, PIT);
 mk(BOX(16, .4, 16), DIRT, 0, -PIT_D - .2, 0);                              // pit floor
-const cover = mk(BOX(16.3, .3, 16.3), GRASS, 0, -.145, 0);                    // hides the pit until it is dug
+const cover = mk(BOX(17, .3, 17), GRASS, 0, -.14, 0); cover.receiveShadow = true; cover.castShadow = false;                    // hides the pit until it is dug
 
 // river
 const RIVER_BLUE = new THREE.Color('#47a6ee'), RIVER_DIRTY = new THREE.Color('#7b7a3c');
@@ -521,7 +521,13 @@ function uiAt(t) {
   }
 }
 
-window.renderAt = t => { setState(t); uiAt(t); renderer.render(scene, camera); };
+// anything collapsed to ~0 scale (pipes, liners, poles before they grow) is hidden so it can't draw hairlines
+let autoHidden = [];
+function hideCollapsed() {
+  for (const o of autoHidden) o.visible = true; autoHidden = [];
+  scene.traverse(o => { if (o.visible && o !== scene && Math.min(Math.abs(o.scale.x), Math.abs(o.scale.y), Math.abs(o.scale.z)) < .003) { o.visible = false; autoHidden.push(o); } });
+}
+window.renderAt = t => { setState(t); hideCollapsed(); uiAt(t); renderer.render(scene, camera); };
 window.DURATION = DUR;
 await document.fonts.load('900 100px Inter');
 window.renderAt(0);
