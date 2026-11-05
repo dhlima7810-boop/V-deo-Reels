@@ -199,8 +199,8 @@ MS.boot(C => {
     s.every(k, (lt, st) => { st.s *= 1 + lt * .03; });
     const bubble = (txt, at, y, size) => { const b = s.el(`<div class="ui" style="max-width:860px;padding:30px 44px;background:#fff;border:8px solid ${INK};border-radius:50px;font-size:${size}px;line-height:1.1;text-align:center;box-shadow:0 12px 0 rgba(0,0,0,.35)">${txt}</div>`, { space: 'frame', x: .5, y, layer: s.hud });
       s.anim(b, 'pop', at - s.start); s.every(b, (lt, st) => { st.o *= s.start + lt >= at ? 1 : 0; }); C.cue(at, 'pop', { gain: .5 }); return b; };
-    bubble('"Fala pra ela que eu vou."', 23.15, .2, 64);
-    bubble('"No sábado... ela vai <b style="color:#e63946">dançar comigo</b>."', 24.9, .39, 70);
+    bubble('"Fala pra ela que eu vou."', 23.15, .228, 64);
+    bubble('"No sábado... ela vai <b style="color:#e63946">dançar comigo</b>."', 24.9, .41, 70);
     C.cue(25.6, 'drop', { gain: .6 });
     hud(s);
   }, { energy: .7, purpose: 'the rival claims her' });
