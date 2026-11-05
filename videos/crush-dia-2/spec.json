@@ -1,0 +1,21 @@
+{
+ "name": "crush-dia-2",
+ "title": "4 dias pra conquistar a crush — Dia 2",
+ "brief": "narrated teen story episode, cartoon style, energetic motion, 58s, vertical 9:16",
+ "template": "social-short",
+ "style": "childrens",
+ "motion": "energetic",
+ "format": "9:16",
+ "fps": 30,
+ "duration": 58.5,
+ "seed": 1606,
+ "audio": {
+  "music": "auto",
+  "sfx": true,
+  "file": null,
+  "voiceover": "assets/narracao.wav",
+  "lufs": -14
+ },
+ "vars": {},
+ "variants": []
+}
