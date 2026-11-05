@@ -1,0 +1,400 @@
+{
+ "engine": "1.0.0",
+ "width": 1080,
+ "height": 1920,
+ "fps": 30,
+ "duration": 45,
+ "bpm": 118,
+ "seed": 1234,
+ "scenes": [
+  {
+   "id": "gancho",
+   "start": 0,
+   "end": 3.4,
+   "energy": 0.9,
+   "purpose": "hook: the promise of the series (Dia 1 vs Dia 4)",
+   "hold": null
+  },
+  {
+   "id": "leo",
+   "start": 3.4,
+   "end": 9.6,
+   "energy": 0.7,
+   "purpose": "who he is and what he wants",
+   "hold": null
+  },
+  {
+   "id": "problema",
+   "start": 9.6,
+   "end": 16.2,
+   "energy": 0.5,
+   "purpose": "what he lacks",
+   "hold": null
+  },
+  {
+   "id": "chance",
+   "start": 16.2,
+   "end": 23.4,
+   "energy": 0.8,
+   "purpose": "the challenge: a trial in 3 days",
+   "hold": null
+  },
+  {
+   "id": "treino",
+   "start": 23.4,
+   "end": 31.2,
+   "energy": 0.9,
+   "purpose": "effort \u2014 the meter climbs",
+   "hold": null
+  },
+  {
+   "id": "baque",
+   "start": 31.2,
+   "end": 36.6,
+   "energy": 0.15,
+   "purpose": "the setback (emotional low)",
+   "hold": null
+  },
+  {
+   "id": "escolha",
+   "start": 36.6,
+   "end": 45,
+   "energy": 0.7,
+   "purpose": "audience choice + cliffhanger to Dia 2",
+   "hold": null
+  }
+ ],
+ "transitions": [
+  {
+   "from": "gancho",
+   "to": "leo",
+   "at": 3.4,
+   "dur": 0.45,
+   "type": "whip"
+  },
+  {
+   "from": "leo",
+   "to": "problema",
+   "at": 9.6,
+   "dur": 0,
+   "type": "cut"
+  },
+  {
+   "from": "problema",
+   "to": "chance",
+   "at": 16.2,
+   "dur": 0.6,
+   "type": "zoom"
+  },
+  {
+   "from": "chance",
+   "to": "treino",
+   "at": 23.4,
+   "dur": 0.45,
+   "type": "whip"
+  },
+  {
+   "from": "treino",
+   "to": "baque",
+   "at": 31.2,
+   "dur": 0,
+   "type": "cut"
+  },
+  {
+   "from": "baque",
+   "to": "escolha",
+   "at": 36.6,
+   "dur": 0.3,
+   "type": "flash"
+  }
+ ],
+ "cues": [
+  {
+   "t": 0,
+   "type": "impact",
+   "gain": 0.8
+  },
+  {
+   "t": 0.606,
+   "type": "impact",
+   "auto": true,
+   "gain": 0.8
+  },
+  {
+   "t": 0.856,
+   "type": "impact",
+   "auto": true,
+   "gain": 0.8
+  },
+  {
+   "t": 3.175,
+   "type": "whoosh",
+   "auto": true,
+   "dur": 0.45
+  },
+  {
+   "t": 7.65,
+   "type": "ding",
+   "gain": 0.6
+  },
+  {
+   "t": 12.8,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 15.9,
+   "type": "whoosh",
+   "auto": true,
+   "dur": 0.6
+  },
+  {
+   "t": 16.9,
+   "type": "notify",
+   "gain": 0.8
+  },
+  {
+   "t": 18.6,
+   "type": "ding",
+   "gain": 0.5
+  },
+  {
+   "t": 23.175,
+   "type": "whoosh",
+   "auto": true,
+   "dur": 0.45
+  },
+  {
+   "t": 23.45,
+   "type": "hit",
+   "gain": 0.35
+  },
+  {
+   "t": 24.45,
+   "type": "hit",
+   "gain": 0.35
+  },
+  {
+   "t": 25.45,
+   "type": "hit",
+   "gain": 0.35
+  },
+  {
+   "t": 26.45,
+   "type": "hit",
+   "gain": 0.35
+  },
+  {
+   "t": 27.45,
+   "type": "hit",
+   "gain": 0.35
+  },
+  {
+   "t": 28.45,
+   "type": "hit",
+   "gain": 0.35
+  },
+  {
+   "t": 29.45,
+   "type": "hit",
+   "gain": 0.35
+  },
+  {
+   "t": 30.4,
+   "type": "ding",
+   "gain": 0.7
+  },
+  {
+   "t": 30.45,
+   "type": "hit",
+   "gain": 0.35
+  },
+  {
+   "t": 31.55,
+   "type": "impact",
+   "auto": true,
+   "gain": 0.5
+  },
+  {
+   "t": 31.55,
+   "type": "impact",
+   "auto": true,
+   "gain": 0.8
+  },
+  {
+   "t": 31.55,
+   "type": "boom",
+   "gain": 0.9
+  },
+  {
+   "t": 36.6,
+   "type": "impact",
+   "auto": true,
+   "dur": 0.3
+  },
+  {
+   "t": 37.4,
+   "type": "pop",
+   "gain": 0.6
+  },
+  {
+   "t": 38.2,
+   "type": "pop",
+   "gain": 0.6
+  },
+  {
+   "t": 42.4,
+   "type": "impact",
+   "gain": 0.6
+  }
+ ],
+ "texts": 23,
+ "textList": [
+  {
+   "scene": "gancho",
+   "words": 2,
+   "text": "DIA 1"
+  },
+  {
+   "scene": "gancho",
+   "words": 2,
+   "text": "DIA 4"
+  },
+  {
+   "scene": "gancho",
+   "words": 2,
+   "text": "DO TERR\u00c3O"
+  },
+  {
+   "scene": "gancho",
+   "words": 2,
+   "text": "AO EST\u00c1DIO?"
+  },
+  {
+   "scene": "leo",
+   "words": 4,
+   "text": "ESSE \u00c9 O L\u00c9O"
+  },
+  {
+   "scene": "leo",
+   "words": 2,
+   "text": "12 ANOS"
+  },
+  {
+   "scene": "leo",
+   "words": 2,
+   "text": "UM SONHO:"
+  },
+  {
+   "scene": "leo",
+   "words": 2,
+   "text": "VIRAR JOGADOR"
+  },
+  {
+   "scene": "problema",
+   "words": 2,
+   "text": "ELE JOGA"
+  },
+  {
+   "scene": "problema",
+   "words": 2,
+   "text": "DE CHINELO"
+  },
+  {
+   "scene": "problema",
+   "words": 3,
+   "text": "COM UMA BOLA"
+  },
+  {
+   "scene": "problema",
+   "words": 1,
+   "text": "REMENDADA"
+  },
+  {
+   "scene": "chance",
+   "words": 2,
+   "text": "UMA PENEIRA"
+  },
+  {
+   "scene": "chance",
+   "words": 3,
+   "text": "EM 3 DIAS"
+  },
+  {
+   "scene": "chance",
+   "words": 3,
+   "text": "S\u00d3 2 VAGAS"
+  },
+  {
+   "scene": "treino",
+   "words": 2,
+   "text": "TREINOU SOZINHO"
+  },
+  {
+   "scene": "treino",
+   "words": 2,
+   "text": "AT\u00c9 ESCURECER"
+  },
+  {
+   "scene": "treino",
+   "words": 2,
+   "text": "100 CHUTES"
+  },
+  {
+   "scene": "baque",
+   "words": 2,
+   "text": "A BOLA"
+  },
+  {
+   "scene": "baque",
+   "words": 1,
+   "text": "ESTOUROU."
+  },
+  {
+   "scene": "baque",
+   "words": 2,
+   "text": "E AGORA?"
+  },
+  {
+   "scene": "escolha",
+   "words": 4,
+   "text": "COMENTA A OU B"
+  },
+  {
+   "scene": "escolha",
+   "words": 3,
+   "text": "DIA 2 AMANH\u00c3"
+  }
+ ],
+ "safe": {
+  "x": 75.60000000000001,
+  "y": 249.60000000000002,
+  "w": 928.8,
+  "h": 1286.4
+ },
+ "minTextPx": 24,
+ "style": "childrens",
+ "motion": "energetic",
+ "missingFonts": [],
+ "style_ids": [
+  "childrens"
+ ],
+ "motion_ids": [
+  "energetic"
+ ],
+ "sound": {
+  "music": "whimsical",
+  "bpm": 118,
+  "key": "C",
+  "sfx": "cartoon",
+  "mood": "joyful"
+ },
+ "audio": {
+  "music": "auto",
+  "sfx": true,
+  "file": null,
+  "voiceover": null,
+  "lufs": -14
+ },
+ "pageErrors": []
+}

@@ -1,0 +1,26 @@
+[
+ {
+  "t": 3.5,
+  "kind": "offframe",
+  "severity": "info",
+  "text": "DIA 1",
+  "box": [
+   -997,
+   437,
+   -635,
+   713
+  ]
+ },
+ {
+  "t": 3.5,
+  "kind": "offframe",
+  "severity": "info",
+  "text": "DIA 4",
+  "box": [
+   -412,
+   437,
+   -16,
+   713
+  ]
+ }
+]

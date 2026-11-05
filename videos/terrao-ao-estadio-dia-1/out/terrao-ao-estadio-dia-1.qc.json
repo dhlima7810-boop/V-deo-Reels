@@ -1,0 +1,71 @@
+{
+ "video": "/home/claude/V-deo-Reels/videos/terrao-ao-estadio-dia-1/out/terrao-ao-estadio-dia-1.mp4",
+ "duration": 45.0,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30.0,
+ "audio": true,
+ "loudness": {
+  "lufs": -14.1,
+  "true_peak": -0.8
+ },
+ "sync": {
+  "cues": 18,
+  "matched": 16,
+  "stacked": 4,
+  "median_offset_ms": -0.9,
+  "mux_offset_ms": 1.0
+ },
+ "black": [],
+ "frozen": [
+  [
+   39.8,
+   42.2
+  ],
+  [
+   42.7667,
+   null
+  ]
+ ],
+ "scene_changes": 1,
+ "transitions": [
+  "whip",
+  "cut",
+  "zoom",
+  "whip",
+  "cut",
+  "flash"
+ ],
+ "findings": [
+  {
+   "severity": "info",
+   "check": "stillness",
+   "msg": "still 39.80-42.20s (2.4s)",
+   "t": 39.8
+  },
+  {
+   "severity": "info",
+   "check": "stillness",
+   "msg": "still 42.77-45.00s (2.2s)",
+   "t": 42.7667
+  },
+  {
+   "severity": "warn",
+   "check": "sync",
+   "msg": "2/18 percussive cues produced no distinct attack within 30 ms: impact@0.00s, pop@37.40s"
+  },
+  {
+   "severity": "info",
+   "check": "sync",
+   "msg": "4 hits are stacked within 0.25-0.45 s of an earlier hit (they blur into one sound; drop duplicates or space them)"
+  }
+ ],
+ "sheet": "/home/claude/V-deo-Reels/videos/terrao-ao-estadio-dia-1/out/terrao-ao-estadio-dia-1.qc-sheet.png",
+ "counts": {
+  "error": 0,
+  "warn": 1,
+  "info": 3
+ }
+}

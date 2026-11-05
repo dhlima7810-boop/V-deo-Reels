@@ -1,0 +1,21 @@
+{
+ "name": "terrao-ao-estadio-dia-1",
+ "title": "Do Terrão ao Estádio — Dia 1",
+ "brief": "social short story episode, childrens cartoon style, energetic motion, 45s, vertical 9:16",
+ "template": "social-short",
+ "style": "childrens",
+ "motion": "energetic",
+ "format": "9:16",
+ "fps": 30,
+ "duration": 45.0,
+ "seed": 1234,
+ "audio": {
+  "music": "auto",
+  "sfx": true,
+  "file": null,
+  "voiceover": null,
+  "lufs": -14
+ },
+ "vars": {},
+ "variants": []
+}

@@ -1,0 +1,269 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Do Terrão ao Estádio — Dia 1</title><link rel="stylesheet" href="/engine/ms.css">
+<style>
+  .cap { font-family: Anton, sans-serif !important; -webkit-text-stroke: 16px #141414; paint-order: stroke fill; letter-spacing: .01em; line-height: 1; filter: drop-shadow(0 8px 0 rgba(0,0,0,.35)); }
+  .hudbox { position: absolute; background: #1e2130; border: 6px solid #0d0f17; border-radius: 26px; box-shadow: 0 8px 0 rgba(0,0,0,.35); }
+  .hudlbl { font: 400 34px/1 Anton, sans-serif; color: #c9cfe6; letter-spacing: .08em; }
+  .hudval { font: 400 104px/1 Anton, sans-serif; -webkit-text-stroke: 10px #0d0f17; paint-order: stroke fill; }
+  .card { font-family: Fredoka, sans-serif; font-weight: 700; color: #1b1b1b; }
+</style></head>
+<body>
+<script src="/__spec.js"></script>
+<script src="/engine/ms.js"></script>
+<script>
+/* DO TERRÃO AO ESTÁDIO — Dia 1 de 4 (45 s, 9:16).
+   Episode grammar of the series: split-screen hook (Dia 1 vs Dia 4) → who he is → what he lacks → the challenge
+   (a trial in 3 days) → the effort → the setback → A/B choice in the comments that decides Dia 2.
+   Persistent HUD: DIA x/4 + SONHO meter. Story is told by huge captions (videos autoplay muted; no VO). */
+MS.boot(C => {
+  const W = C.W, H = C.H, u = C.u, hash = MS.hash;
+  const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x)), sm = (a, b, x) => { const k = clamp((x - a) / (b - a)); return k * k * (3 - 2 * k); };
+  const mix = (c1, c2, k) => { const p = c => [1, 3, 5].map(i => parseInt(c.slice(i, i + 2), 16)); const a = p(c1), b = p(c2); return `rgb(${a.map((v, i) => Math.round(v + (b[i] - v) * k)).join(',')})`; };
+  const INK = '#1b1b1b', SKIN = '#8d5a3b';
+
+  // ───────── character: Léo (original design). Parts carry classes so scenes can animate them.
+  function leo(o = {}) {
+    const ex = o.expr || 'neutral', shirt = o.shirt || '#3bb273', lk = o.look || [0, 0];
+    const brows = { neutral: ['M100 104 q20 -8 40 0', 'M160 104 q20 -8 40 0'], happy: ['M100 98 q20 -14 40 -2', 'M160 96 q20 -12 40 2'],
+      sad: ['M100 110 L140 98', 'M160 98 L200 110'], determined: ['M102 98 L140 112', 'M160 112 L198 98'], wow: ['M100 92 q20 -14 40 -2', 'M160 90 q20 -12 40 2'] }[ex];
+    const mouth = { neutral: '<path d="M130 192 q20 10 40 0" fill="none"/>', happy: '<path d="M120 184 q30 40 60 0 z" fill="#7a1f1f"/><path d="M128 186 h44" stroke="#fff" stroke-width="6"/>',
+      sad: '<path d="M130 202 q20 -16 40 0" fill="none"/>', determined: '<path d="M132 194 h36" fill="none"/>', wow: '<ellipse cx="150" cy="198" rx="14" ry="18" fill="#7a1f1f"/>' }[ex];
+    const leg = (x, cls) => `<g class="${cls}"><rect x="${x}" y="392" width="34" height="150" rx="15" fill="${SKIN}"/>${o.boots
+      ? `<path d="M${x - 14} 532 h56 q10 0 10 14 v6 h-66 z" fill="#111"/><path d="M${x - 10} 554 h56" stroke="#ffc93c" stroke-width="5"/>`
+      : `<rect x="${x - 12}" y="548" width="58" height="16" rx="8" fill="#e63946"/><path d="M${x + 6} 550 l11 -16 l11 16" fill="none" stroke-width="6"/>`}</g>`;
+    return `<svg viewBox="0 0 300 600" width="300" height="600" xmlns="http://www.w3.org/2000/svg"><g stroke="${INK}" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+      ${leg(104, 'lleg')}${leg(162, 'rleg')}
+      <path d="M86 330 h128 l8 92 h-64 l-8 -28 l-8 28 h-64 z" fill="${o.shorts || '#2b3a67'}"/>
+      <g class="armL"><rect x="50" y="250" width="32" height="128" rx="16" fill="${SKIN}" transform="rotate(10 66 256)"/></g>
+      <g class="armR"><rect x="218" y="250" width="32" height="128" rx="16" fill="${SKIN}" transform="rotate(-10 234 256)"/></g>
+      <rect x="132" y="200" width="36" height="40" fill="${SKIN}"/>
+      <path d="M80 238 Q150 222 220 238 L252 290 L224 306 L216 292 L214 354 Q150 366 86 354 L84 292 L76 306 L48 290 Z" fill="${shirt}"/>
+      <path d="M126 232 Q150 254 174 232" fill="none"/>
+      ${o.number ? `<text x="150" y="330" text-anchor="middle" font-family="Anton" font-size="70" fill="#1b1b1b" stroke="none">${o.number}</text>` : `<path d="M104 300 l12 8 M190 320 l10 -6" stroke-width="5" opacity=".5"/>`}
+      <ellipse cx="72" cy="142" rx="16" ry="21" fill="${SKIN}"/><ellipse cx="228" cy="142" rx="16" ry="21" fill="${SKIN}"/>
+      <ellipse cx="150" cy="136" rx="80" ry="86" fill="${SKIN}"/>
+      <g fill="#1b1b1b">${[[86, 92, 24], [104, 68, 26], [132, 56, 27], [164, 54, 27], [194, 64, 26], [214, 88, 24], [118, 80, 22], [178, 78, 22], [150, 74, 22]].map(([x, y, r]) => `<circle cx="${x}" cy="${y}" r="${r}"/>`).join('')}</g>
+      <g class="eyes" style="transform-box:fill-box;transform-origin:center"><ellipse cx="120" cy="140" rx="18" ry="21" fill="#fff"/><ellipse cx="180" cy="140" rx="18" ry="21" fill="#fff"/>
+        <circle class="pup" cx="${122 + lk[0]}" cy="${144 + lk[1]}" r="8.5" fill="${INK}" stroke="none"/><circle class="pup" cx="${182 + lk[0]}" cy="${144 + lk[1]}" r="8.5" fill="${INK}" stroke="none"/></g>
+      <path d="${brows[0]}" fill="none" stroke-width="8"/><path d="${brows[1]}" fill="none" stroke-width="8"/>
+      <path d="M150 152 q-9 20 4 24" fill="none" stroke-width="5"/>
+      ${mouth}
+    </g></svg>`;
+  }
+  const ball = (taped = true, flat = false) => `<svg viewBox="0 0 120 120" width="120" height="120" xmlns="http://www.w3.org/2000/svg"><g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
+    ${flat ? '<path d="M8 96 Q60 70 112 96 Q60 112 8 96 Z" fill="#f2f2f2"/><path d="M40 92 l10 -6 l12 6 M70 90 l10 -4" fill="none"/>'
+    : `<circle cx="60" cy="60" r="52" fill="#f7f7f7"/><path d="M60 38 l20 14 l-8 24 h-24 l-8 -24 z" fill="${INK}"/><path d="M60 8 v30 M80 52 l28 -8 M72 76 l16 26 M48 76 l-16 26 M40 52 l-28 -8" fill="none"/>
+      ${taped ? '<rect x="14" y="74" width="62" height="18" rx="3" fill="#b8b8b8" transform="rotate(-28 45 83)"/><rect x="64" y="20" width="44" height="16" rx="3" fill="#c9c9c9" transform="rotate(32 86 28)"/>' : ''}`}</g></svg>`;
+
+  // ───────── scenery (full-frame SVG, flat cartoon with ink outlines)
+  const frameSvg = inner => `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg"><g stroke="${INK}" stroke-width="7" stroke-linejoin="round">${inner}</g></svg>`;
+  const houses = (base, seed, cols) => { const r = MS.rng(seed); let x = -30, out = '';
+    while (x < W + 30) { const w = 170 + r() * 120, h = 260 + r() * 260, c = cols[Math.floor(r() * cols.length)];
+      out += `<rect x="${x}" y="${base - h}" width="${w}" height="${h + 400}" fill="${c}"/>`;
+      for (let wy = base - h + 50; wy < base - 90; wy += 120) for (let wx = x + 30; wx < x + w - 60; wx += 90) out += `<rect x="${wx}" y="${wy}" width="48" height="58" fill="#2d3a5a"/>`;
+      out += `<rect x="${x + w / 2 - 30}" y="${base - 120}" width="60" height="120" fill="#5a3b26"/>`; x += w; }
+    return out; };
+  const bgStreet = () => frameSvg(`<rect x="-10" y="-10" width="${W + 20}" height="${H}" fill="#7fd0ff" stroke="none"/>
+    <circle cx="860" cy="330" r="90" fill="#ffd166"/>
+    <path d="M-20 520 Q300 470 600 540 T1100 500" fill="none" stroke-width="5"/><path d="M-20 600 Q400 560 1100 620" fill="none" stroke-width="5"/>
+    ${houses(1470, 3, ['#ff7a59', '#ffc93c', '#43c6ac', '#9b5de5', '#f15bb5', '#4cc9f0'])}
+    <rect x="-10" y="1470" width="${W + 20}" height="110" fill="#d8c9a8"/><rect x="-10" y="1580" width="${W + 20}" height="400" fill="#6c6a7a"/>
+    <path d="M0 1760 h180 M300 1760 h180 M600 1760 h180 M900 1760 h180" stroke="#f2f2f2" stroke-width="14"/>`);
+  const bgTerrao = (sky1 = '#ff9f68', sky2 = '#ffd6a5') => frameSvg(`<defs><linearGradient id="tsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${sky1}"/><stop offset="1" stop-color="${sky2}"/></linearGradient></defs>
+    <rect x="-10" y="-10" width="${W + 20}" height="${H}" fill="url(#tsky)" stroke="none"/>
+    ${houses(1250, 9, ['#c46a4a', '#d98b5f', '#b5563d', '#e0a070'])}
+    <rect x="-10" y="1250" width="${W + 20}" height="700" fill="#c98b4f"/>
+    <ellipse cx="300" cy="1560" rx="160" ry="30" fill="#b57a42" stroke="none"/><ellipse cx="820" cy="1700" rx="200" ry="34" fill="#b57a42" stroke="none"/>
+    <path d="M640 1270 v-300 h330 v300" fill="none" stroke="#8a5a32" stroke-width="22"/><path d="M640 1270 v-300 h330 v300" fill="none" stroke-width="6"/>`);
+  const bgStadium = () => frameSvg(`<rect x="-10" y="-10" width="${W + 20}" height="${H}" fill="#0f1a4a" stroke="none"/>
+    ${[[160, 280], [920, 300]].map(([x, y]) => `<polygon points="${x - 40},${y + 40} ${x + 40},${y + 40} ${x + 420 * (x < 500 ? 1 : -1)},1500 ${x - 160 * (x < 500 ? 1 : -1)},1500" fill="#fff7c2" opacity=".18" stroke="none"/>
+      <rect x="${x - 70}" y="${y - 50}" width="140" height="90" fill="#ffe66d"/><path d="M${x - 70} ${y - 20} h140 M${x - 70} ${y + 10} h140 M${x - 25} ${y - 50} v90 M${x + 25} ${y - 50} v90" stroke-width="4"/><rect x="${x - 10}" y="${y + 40}" width="20" height="900" fill="#2a2f45"/>`).join('')}
+    <rect x="-10" y="900" width="${W + 20}" height="420" fill="#1f2b6b"/>
+    <g stroke="none">${Array.from({ length: 160 }, (_, i) => `<circle cx="${(hash(i) * W).toFixed(0)}" cy="${(930 + hash(i * 3.3) * 360).toFixed(0)}" r="13" fill="${['#ffc93c', '#ff7a59', '#43c6ac', '#f2f2f2', '#f15bb5'][i % 5]}"/>`).join('')}</g>
+    <rect x="-10" y="1320" width="${W + 20}" height="700" fill="#2fa84f"/>
+    ${[0, 1, 2, 3].map(i => `<rect x="-10" y="${1380 + i * 150}" width="${W + 20}" height="75" fill="#38bb5b" stroke="none"/>`).join('')}
+    <path d="M-20 1500 h${W + 40}" stroke="#f2f2f2" stroke-width="10"/>`);
+
+  // ───────── HUD (top): DIA x/4 + SONHO meter, value is a function of absolute time
+  const METER = t => t < 7.6 ? 3 : t < 18.6 ? 8 : t < 23.5 ? 15 : t < 31.2 ? 15 + Math.round(12 * sm(23.5, 30.5, t)) : 19;
+  function hud(s) {
+    const root = s.el(`<div style="width:${W}px;height:300px"></div>`, { space: 'frame', x: 0, y: 0, anchor: 'top-left', layer: s.hud });
+    root.innerHTML = `<div class="hudbox" style="left:40px;top:120px;width:280px;height:170px;text-align:center"><div class="hudlbl" style="margin-top:16px">DIA</div><div class="hudval" style="color:#ffc93c">1<span style="font-size:58px;color:#c9cfe6">/4</span></div></div>
+      <div class="hudbox" style="left:350px;top:120px;width:690px;height:170px"><div class="hudlbl" style="position:absolute;left:34px;top:22px">SONHO DE SER JOGADOR</div>
+        <div class="hudval pct" style="position:absolute;left:34px;top:56px;color:#6ee36e">3%</div>
+        <div style="position:absolute;left:300px;top:92px;width:350px;height:40px;background:#0d0f17;border-radius:20px;overflow:hidden"><div class="bar" style="height:100%;width:3%;background:#6ee36e;border-radius:20px"></div></div></div>`;
+    const pct = root.querySelector('.pct'), bar = root.querySelector('.bar');
+    s.every(root, lt => { const t = s.start + lt, v = METER(t), drop = t > 31.2 && t < 33.6;
+      pct.textContent = v + '%'; bar.style.width = v + '%'; const col = drop && Math.floor(t * 8) % 2 ? '#ff4d4d' : '#6ee36e'; pct.style.color = col; bar.style.background = col; });
+    return root;
+  }
+  // ───────── captions: huge condensed words with thick ink outline, popped on the beat
+  function cap(s, at, dur, str, o = {}) {
+    const t = s.text(str, { size: o.size || 15, space: 'frame', x: .5, y: o.y || .7, color: o.color || '#ffffff', css: 'font-family:Anton,sans-serif', layer: s.hud, minSize: 8 });
+    t.classList.add('cap'); t.style.zIndex = 8;
+    s.anim(t, 'pop', at, { cue: o.cue });
+    s.every(t, (lt, st) => { st.o *= lt >= at && lt < at + dur ? 1 : 0; st.r += o.rot || 0; });
+    return t;
+  }
+  const blink = (svgNode, seed) => { const e = svgNode.querySelector('.eyes'); return lt => { const k = (lt + seed) % 3.1; e.style.transform = k < .12 ? 'scaleY(.1)' : ''; }; };
+
+  // ═════════ 01 GANCHO · 0–3.4 s · split screen DIA 1 vs DIA 4
+  C.scene('gancho', 0, 3.4, s => {
+    s.root.style.setProperty('--scene-bg', '#1b1b1b');
+    const half = (x, bg, char, label, labelCol) => {
+      const box = s.el(`<div style="width:${W / 2}px;height:${H}px;overflow:hidden"></div>`, { space: 'frame', x, y: 0, anchor: 'top-left' });
+      box.innerHTML = `<div style="position:absolute;left:${-W / 4}px;top:0">${bg}</div><div class="who" style="position:absolute;left:${W / 4 - 210}px;top:${H * .44}px;width:420px">${char}</div>`;
+      box.querySelector('.who svg').setAttribute('width', 420); box.querySelector('.who svg').setAttribute('height', 840);
+      return box;
+    };
+    const L = half(0, bgTerrao(), leo({ expr: 'sad', look: [0, 4] }), 'DIA 1', '#fff');
+    const R = half(.5, bgStadium(), leo({ expr: 'happy', shirt: '#ffc93c', shorts: '#1d4ed8', number: '10', boots: true }), 'DIA 4', '#ffc93c');
+    const bl = s.el(`<div style="position:absolute;width:150px">${ball(true)}</div>`, { space: 'frame', x: .27, y: .9 }); bl.querySelector('svg').setAttribute('width', 150); bl.querySelector('svg').setAttribute('height', 150);
+    const divider = s.el(`<div style="width:16px;height:${H}px;background:#ffc93c;border-left:5px solid ${INK};border-right:5px solid ${INK}"></div>`, { space: 'frame', x: .5, y: 0, anchor: 'top' });
+    s.every(L, (lt, st) => { st.x -= (1 - sm(0, .22, lt)) * W * .5; }); s.every(R, (lt, st) => { st.x += (1 - sm(0, .22, lt)) * W * .5; });
+    s.every(divider, (lt, st) => { st.sy *= sm(.2, .5, lt); });
+    const l1 = s.text('DIA 1', { size: 17, space: 'frame', x: .25, y: .3, color: '#ffffff', css: 'font-family:Anton,sans-serif', layer: s.hud }); l1.classList.add('cap'); s.anim(l1, 'slam', .35);
+    const l2 = s.text('DIA 4', { size: 17, space: 'frame', x: .75, y: .3, color: '#ffc93c', css: 'font-family:Anton,sans-serif', layer: s.hud }); l2.classList.add('cap'); s.anim(l2, 'slam', .6);
+    cap(s, 1.3, 2.1, 'DO TERRÃO', { y: .6 });
+    cap(s, 2.15, 1.25, 'AO ESTÁDIO?', { y: .69, color: '#ffc93c' });
+    hud(s);
+    C.cue(0, 'impact', { gain: .8 });
+  }, { energy: .9, purpose: 'hook: the promise of the series (Dia 1 vs Dia 4)' });
+
+  // ═════════ 02 QUEM É · 3.4–9.6 s · his street, keepy-ups
+  C.scene('leo', 3.4, 6.2, s => {
+    s.el(`<div>${bgStreet()}</div>`, { space: 'frame', x: 0, y: 0, anchor: 'top-left', layer: s.layer(.6, 'bg') });
+    const p = s.el(`<div style="width:460px">${leo({ expr: 'happy' })}</div>`, { space: 'frame', x: .5, y: .955, anchor: 'bottom' });
+    const sv = p.querySelector('svg'); sv.setAttribute('width', 460); sv.setAttribute('height', 920);
+    const rl = sv.querySelector('.rleg'), bk = blink(sv, .4);
+    const b = s.el(`<div style="width:120px">${ball(true)}</div>`, { space: 'frame', x: .56, y: .78 });
+    s.every(b, (lt, st) => { const ph = (lt * 1.6) % 1; st.y -= Math.sin(ph * Math.PI) * 170; st.r += lt * 260; });
+    s.every(p, (lt, st) => { const ph = (lt * 1.6) % 1, kick = ph < .18 || ph > .92 ? 1 : 0; rl.setAttribute('transform', kick ? 'rotate(-28 179 400)' : ''); st.y -= Math.abs(Math.sin(lt * 3.2)) * 6; bk(lt); });
+    cap(s, .3, 1.35, 'ESSE É O LÉO', { y: .37 });
+    cap(s, 1.7, 1.2, '12 ANOS', { y: .37 });
+    cap(s, 3.0, 1.3, 'UM SONHO:', { y: .37 });
+    cap(s, 4.25, 1.95, 'VIRAR JOGADOR', { y: .37, color: '#ffc93c', size: 14 });
+    C.cue(3.4 + 4.25, 'ding', { gain: .6 });
+    s.camera([{ t: 0, zoom: 1 }, { t: 4.2, zoom: 1.04 }, { t: 4.4, zoom: 1.12, ease: 'outExpo' }, { t: 6.2, zoom: 1.14 }]);
+    hud(s);
+  }, { energy: .7, purpose: 'who he is and what he wants' });
+
+  // ═════════ 03 O PROBLEMA · 9.6–16.2 s · flip-flops, taped ball (two close-ups)
+  C.scene('problema', 9.6, 6.6, s => {
+    const shot = (a, b) => (lt, st) => { st.o *= lt >= a && lt < b ? 1 : 0; };
+    const A = s.el(`<div>${bgTerrao('#ffb07c', '#ffe1b5')}</div>`, { space: 'frame', x: 0, y: 0, anchor: 'top-left', layer: s.layer(.6, 'bgA') });
+    const feet = s.el(`<div style="width:1500px">${leo({ expr: 'neutral' })}</div>`, { space: 'frame', x: .5, y: 1.0, anchor: 'bottom' });
+    feet.querySelector('svg').setAttribute('width', 1500); feet.querySelector('svg').setAttribute('height', 3000);
+    s.every(feet, (lt, st) => { st.y += 0; st.s *= 1 + lt * .01; }); s.every(A, shot(0, 3.2)); s.every(feet, shot(0, 3.2));
+    const B = s.el(`<div style="width:${W}px;height:${H}px;background:#c98b4f"></div>`, { space: 'frame', x: 0, y: 0, anchor: 'top-left' });
+    const bb = s.el(`<div style="width:640px">${ball(true)}</div>`, { space: 'frame', x: .5, y: .46 }); bb.querySelector('svg').setAttribute('width', 640); bb.querySelector('svg').setAttribute('height', 640);
+    s.every(B, shot(3.2, 9)); s.every(bb, (lt, st) => { st.o *= lt >= 3.2 ? 1 : 0; st.r += (lt - 3.2) * 14; st.s *= 1 + sm(3.2, 3.5, lt) * .06 - .06; });
+    cap(s, .25, 1.35, 'ELE JOGA', { y: .36 });
+    cap(s, 1.5, 1.7, 'DE CHINELO', { y: .36, color: '#ffc93c' });
+    cap(s, 3.3, 1.4, 'COM UMA BOLA', { y: .69 });
+    cap(s, 4.75, 1.85, 'REMENDADA', { y: .69, color: '#ffc93c' });
+    C.cue(9.6 + 3.2, 'whoosh', { gain: .5 });
+    s.camera([{ t: 0, zoom: 1.08 }, { t: 3.19, zoom: 1.0 }, { t: 3.2, zoom: 1.1 }, { t: 6.6, zoom: 1.0 }]);
+    hud(s);
+  }, { energy: .5, purpose: 'what he lacks' });
+
+  // ═════════ 04 A CHANCE · 16.2–23.4 s · the notification: trial in 3 days
+  C.scene('chance', 16.2, 7.2, s => {
+    s.el(`<div style="width:${W}px;height:${H}px;background:radial-gradient(circle at 50% 40%, #6d3bd1, #2b1055 60%, #150630)"></div>`, { space: 'frame', x: 0, y: 0, anchor: 'top-left', layer: s.layer(.5, 'bg') });
+    const phone = s.el(`<div style="width:660px;height:1180px;border-radius:90px;background:#121218;border:14px solid #2c2c36;box-shadow:0 0 0 8px #0b0b10, 0 40px 80px rgba(0,0,0,.5)">
+      <div style="position:absolute;top:40px;left:50%;transform:translateX(-50%);width:180px;height:44px;border-radius:22px;background:#000"></div></div>`, { space: 'frame', x: .5, y: .5 });
+    const note = s.el(`<div class="card" style="width:600px;padding:34px 34px 30px;background:#fff;border:6px solid ${INK};border-radius:40px;box-shadow:0 12px 0 rgba(0,0,0,.35)">
+      <div style="display:flex;align-items:center;gap:22px"><div style="width:96px;height:96px">${ball(false).replace('width="120" height="120"', 'width="96" height="96"')}</div>
+      <div><div style="font-size:44px;line-height:1.05">Estrela FC</div><div style="font-size:30px;font-weight:500;color:#5a5a6e">agora</div></div></div>
+      <div style="font-size:56px;line-height:1.05;margin-top:22px">PENEIRA SUB-13</div>
+      <div style="font-size:38px;font-weight:500;line-height:1.25;margin-top:10px;color:#333">Sábado, 8h · campo da prefeitura<br><b style="color:#e63946">Só 2 vagas.</b></div></div>`, { space: 'frame', x: .5, y: .34 });
+    s.every(note, (lt, st) => { const e = sm(.5, .9, lt); st.y -= (1 - e) * 500; st.o *= e; st.s *= 1 + .04 * Math.sin(clamp((lt - .9) / .3) * Math.PI); });
+    s.every(phone, (lt, st) => { st.y += (1 - sm(0, .45, lt)) * 900; st.r += Math.sin(lt * 1.5) * .6; });
+    const kid = s.el(`<div style="width:380px">${leo({ expr: 'wow', look: [6, -6] })}</div>`, { space: 'frame', x: .2, y: 1.08, anchor: 'bottom' });
+    kid.querySelector('svg').setAttribute('width', 380); kid.querySelector('svg').setAttribute('height', 760);
+    s.every(kid, (lt, st) => { st.y += (1 - sm(1.2, 1.6, lt)) * 500; st.r += -6; });
+    C.cue(16.2 + .7, 'notify', { gain: .8 });
+    cap(s, 2.0, 1.4, 'UMA PENEIRA', { y: .69 });
+    cap(s, 3.5, 1.6, 'EM 3 DIAS', { y: .69, color: '#ffc93c' });
+    cap(s, 5.2, 2.0, 'SÓ 2 VAGAS', { y: .69, color: '#ff6b6b' });
+    C.cue(16.2 + 2.4, 'ding', { gain: .5 });
+    s.push(.04);
+    hud(s);
+  }, { energy: .8, purpose: 'the challenge: a trial in 3 days' });
+
+  // ═════════ 05 O TREINO · 23.4–31.2 s · 100 kicks against the wall, day → night
+  C.scene('treino', 23.4, 7.8, s => {
+    const sky = s.el(`<div style="width:${W}px;height:${H}px"></div>`, { space: 'frame', x: 0, y: 0, anchor: 'top-left', layer: s.layer(.4, 'sky') });
+    s.every(sky, lt => { const k = lt / 7.8; sky.style.background = k < .5 ? mix('#7fd0ff', '#ff9f68', k * 2) : mix('#ff9f68', '#1b1f4b', (k - .5) * 2); });
+    let bricks = ''; for (let r = 0; r < 12; r++) for (let c = -1; c < 9; c++) bricks += `<rect x="${c * 140 + (r % 2) * 70}" y="${560 + r * 66}" width="140" height="66" fill="${['#c4553a', '#b84c33', '#cf6244'][(r * 3 + c) % 3 < 0 ? 0 : (r * 3 + c) % 3]}"/>`;
+    s.el(`<div>${frameSvg(`${bricks}<rect x="-10" y="1350" width="${W + 20}" height="700" fill="#9a9a9a"/><path d="M560 760 h400 v380 h-400 z" fill="none" stroke="#fdfdfd" stroke-width="12" stroke-dasharray="40 18"/>
+      <rect x="980" y="300" width="22" height="1100" fill="#2a2f45"/><path d="M990 310 q-80 -30 -140 10" fill="none" stroke-width="16"/><rect class="lamp" x="800" y="310" width="90" height="34" rx="12" fill="#ffe66d"/>`)}</div>`, { space: 'frame', x: 0, y: 0, anchor: 'top-left', layer: s.layer(.7, 'wall') });
+    const glow = s.el(`<div style="width:700px;height:900px;background:radial-gradient(ellipse at 50% 0%, rgba(255,230,109,.55), transparent 65%)"></div>`, { space: 'frame', x: .78, y: .18, anchor: 'top', layer: s.layer(.7, 'glow') });
+    s.every(glow, (lt, st) => { st.o *= sm(5.6, 6.0, lt) * (lt > 5.6 && lt < 5.9 && Math.floor(lt * 20) % 2 ? .3 : 1); });
+    const p = s.el(`<div style="width:430px">${leo({ expr: 'determined', look: [8, -2] })}</div>`, { space: 'frame', x: .27, y: .965, anchor: 'bottom' });
+    const sv = p.querySelector('svg'); sv.setAttribute('width', 430); sv.setAttribute('height', 860); const rl = sv.querySelector('.rleg'), bk = blink(sv, 1.1);
+    const P = 1.0;                                             // one kick per second-ish (sped up montage)
+    const b = s.el(`<div style="width:110px">${ball(true)}</div>`, { space: 'frame', x: .4, y: .9 });
+    s.every(b, (lt, st) => { const ph = (lt % P) / P, go = ph < .45 ? ph / .45 : 1 - (ph - .45) / .55;
+      st.x += go * W * .36; st.y -= Math.sin(go * Math.PI * .9) * 220 + go * 560; st.r += lt * 500; });
+    s.every(p, (lt) => { const ph = (lt % P) / P; rl.setAttribute('transform', ph < .12 ? 'rotate(-48 179 400)' : ph > .9 ? 'rotate(14 179 400)' : ''); bk(lt); });
+    for (let k = 0; k < 7.8; k += P) C.cue(23.4 + k + .05, 'hit', { gain: .35 });
+    const cnt = s.el(`<div style="text-align:center"><div class="hudlbl" style="font-size:44px;color:#fff;-webkit-text-stroke:8px ${INK};paint-order:stroke fill">CHUTES</div><div class="hudval n" style="font-size:190px;color:#fff;-webkit-text-stroke:16px ${INK}">0</div></div>`, { space: 'frame', x: .5, y: .245, layer: s.hud });
+    const n = cnt.querySelector('.n'); s.every(cnt, lt => { const v = Math.min(100, Math.floor(Math.pow(clamp(lt / 7.0), 1.3) * 100)); n.textContent = v; n.style.color = v >= 100 ? '#ffc93c' : '#fff'; });
+    cap(s, .4, 2.0, 'TREINOU SOZINHO', { y: .4, size: 12 });
+    cap(s, 2.6, 2.6, 'ATÉ ESCURECER', { y: .4, size: 12, color: '#ffc93c' });
+    cap(s, 5.4, 2.4, '100 CHUTES', { y: .4, size: 13, color: '#6ee36e' });
+    C.cue(23.4 + 7.0, 'ding', { gain: .7 });
+    s.handheld(.3);
+    hud(s);
+  }, { energy: .9, purpose: 'effort — the meter climbs' });
+
+  // ═════════ 06 O BAQUE · 31.2–36.6 s · the ball bursts
+  C.scene('baque', 31.2, 5.4, s => {
+    s.el(`<div style="width:${W}px;height:${H}px;background:#1b1f4b"></div>`, { space: 'frame', x: 0, y: 0, anchor: 'top-left', layer: s.layer(.4, 'sky') });
+    s.el(`<div>${frameSvg(`<rect x="-10" y="1350" width="${W + 20}" height="700" fill="#5d5d6e"/>`)}</div>`, { space: 'frame', x: 0, y: 0, anchor: 'top-left', layer: s.layer(.7, 'ground') });
+    const pow = s.el(`<div style="width:760px">${`<svg viewBox="0 0 200 200" width="760" height="760" xmlns="http://www.w3.org/2000/svg"><polygon points="${Array.from({ length: 24 }, (_, i) => { const a = i / 24 * Math.PI * 2, r = i % 2 ? 58 : 98; return `${100 + Math.cos(a) * r},${100 + Math.sin(a) * r}`; }).join(' ')}" fill="#ffc93c" stroke="${INK}" stroke-width="4"/><text x="100" y="118" text-anchor="middle" font-family="Anton" font-size="52" fill="#e63946" stroke="${INK}" stroke-width="3">POW!</text></svg>`}</div>`, { space: 'frame', x: .5, y: .44 });
+    s.every(pow, (lt, st) => { const k = lt - .35; st.o *= k > 0 && k < 1.0 ? 1 : 0; st.s *= k > 0 ? .7 + .3 * sm(0, .12, k) : 0; st.r += -8; });
+    const whole = s.el(`<div style="width:260px">${ball(true)}</div>`, { space: 'frame', x: .5, y: .44 }); whole.querySelector('svg').setAttribute('width', 260); whole.querySelector('svg').setAttribute('height', 260);
+    s.every(whole, (lt, st) => { st.o *= lt < .35 ? 1 : 0; st.s *= 1 + lt * .9; st.r += lt * 300; });
+    const flat = s.el(`<div style="width:300px">${ball(true, true)}</div>`, { space: 'frame', x: .55, y: .84 }); flat.querySelector('svg').setAttribute('width', 300); flat.querySelector('svg').setAttribute('height', 300);
+    s.every(flat, (lt, st) => { st.o *= lt > 1.0 ? 1 : 0; st.y -= (1 - sm(1.0, 1.4, lt)) * 500; });
+    const p = s.el(`<div style="width:420px">${leo({ expr: 'sad', look: [4, 8] })}</div>`, { space: 'frame', x: .24, y: .99, anchor: 'bottom' });
+    const sv = p.querySelector('svg'); sv.setAttribute('width', 420); sv.setAttribute('height', 840); const bk = blink(sv, 0);
+    s.every(p, (lt, st) => { st.o *= lt > 1.3 ? 1 : 0; st.y += (1 - sm(1.3, 1.7, lt)) * 80; bk(lt); });
+    s.particles({ type: 'burst', at: .35, x: .5, y: .44, count: 40, colors: ['#ffc93c', '#f2f2f2', '#e63946'], speed: 1.2 });
+    s.shake(.35, .4, 1.6);
+    C.cue(31.2 + .35, 'boom', { gain: .9 });
+    cap(s, 1.4, 1.3, 'A BOLA', { y: .3 });
+    cap(s, 2.6, 1.5, 'ESTOUROU.', { y: .3, color: '#ff6b6b' });
+    cap(s, 4.1, 1.3, 'E AGORA?', { y: .3, color: '#ffc93c' });
+    hud(s);
+  }, { energy: .15, purpose: 'the setback (emotional low)' });
+
+  // ═════════ 07 A ESCOLHA · 36.6–45 s · A/B in the comments decides Dia 2
+  C.scene('escolha', 36.6, 8.4, s => {
+    s.el(`<div style="width:${W}px;height:${H}px;background:radial-gradient(circle at 50% 45%, #5b2bb5, #2b1055 55%, #12052a)"></div>`, { space: 'frame', x: 0, y: 0, anchor: 'top-left', layer: s.layer(.5, 'bg') });
+    const band = s.el(`<div style="width:${W * 1.2}px;padding:26px 0;background:#2a1a0e;border-top:8px solid ${INK};border-bottom:8px solid ${INK};text-align:center;font:400 96px/1 Anton,sans-serif;color:#fff">
+      VOCÊS DECIDEM <span style="color:#ffc93c">O DIA 2</span></div>`, { space: 'frame', x: .5, y: .2 });
+    s.every(band, (lt, st) => { st.r += -4; st.x -= (1 - sm(0, .35, lt)) * W * 1.3; });
+    const card = (letter, col, title, sub, y, at) => { const c = s.el(`<div class="card" style="width:900px;min-height:250px;display:flex;align-items:center;gap:34px;padding:30px 40px;background:${col};border:8px solid ${INK};border-radius:44px;box-shadow:0 14px 0 rgba(0,0,0,.4)">
+        <div style="flex:none;width:140px;height:140px;border-radius:50%;background:#fff;border:7px solid ${INK};font:400 96px/140px Anton,sans-serif;text-align:center">${letter}</div>
+        <div><div style="font-size:66px;line-height:1.02">${title}</div><div style="font-size:42px;font-weight:500;line-height:1.2;margin-top:8px">${sub}</div></div></div>`, { space: 'frame', x: .5, y });
+      s.anim(c, 'pop', at); C.cue(36.6 + at, 'pop', { gain: .6 }); return c; };
+    card('A', '#ffc93c', 'Costurar a bola', 'e treinar a noite inteira sozinho', .38, .8);
+    card('B', '#4cc9f0', 'Pedir ajuda pro Seu Zé', 'o ex-jogador ranzinza do bairro', .55, 1.6);
+    cap(s, 2.8, 2.8, 'COMENTA A OU B', { y: .69, size: 13 });
+    cap(s, 5.8, 2.6, 'DIA 2 AMANHÃ', { y: .69, size: 14, color: '#ffc93c' });
+    C.cue(36.6 + 5.8, 'impact', { gain: .6 });
+    hud(s);
+  }, { energy: .7, purpose: 'audience choice + cliffhanger to Dia 2' });
+
+  C.transition('gancho', 'leo', { type: 'whip', dir: 'left' });
+  C.transition('leo', 'problema', { type: 'cut' });
+  C.transition('problema', 'chance', { type: 'zoom', intent: 'impact' });
+  C.transition('chance', 'treino', { type: 'whip', dir: 'up' });
+  C.transition('treino', 'baque', { type: 'cut' });
+  C.transition('baque', 'escolha', { type: 'flash', color: '#ffffff' });
+});
+</script>
+</body></html>
