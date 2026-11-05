@@ -140,7 +140,7 @@ MS.boot(C => {
     s.every(b, (lt, st) => { const ph = (lt * 1.6) % 1; st.y -= Math.sin(ph * Math.PI) * 170; st.r += lt * 260; });
     s.every(p, (lt, st) => { const ph = (lt * 1.6) % 1, kick = ph < .18 || ph > .92 ? 1 : 0; rl.setAttribute('transform', kick ? 'rotate(-28 179 400)' : ''); st.y -= Math.abs(Math.sin(lt * 3.2)) * 6; bk(lt); });
     cap(s, .3, 1.35, 'ESSE É O LÉO', { y: .37 });
-    cap(s, 1.7, 1.2, '12 ANOS', { y: .37 });
+    cap(s, 1.7, 1.2, '16 ANOS', { y: .37 });
     cap(s, 3.0, 1.3, 'UM SONHO:', { y: .37 });
     cap(s, 4.25, 1.95, 'VIRAR JOGADOR', { y: .37, color: '#ffc93c', size: 14 });
     C.cue(3.4 + 4.25, 'ding', { gain: .6 });
@@ -175,7 +175,7 @@ MS.boot(C => {
     const note = s.el(`<div class="card" style="width:600px;padding:34px 34px 30px;background:#fff;border:6px solid ${INK};border-radius:40px;box-shadow:0 12px 0 rgba(0,0,0,.35)">
       <div style="display:flex;align-items:center;gap:22px"><div style="width:96px;height:96px">${ball(false).replace('width="120" height="120"', 'width="96" height="96"')}</div>
       <div><div style="font-size:44px;line-height:1.05">Estrela FC</div><div style="font-size:30px;font-weight:500;color:#5a5a6e">agora</div></div></div>
-      <div style="font-size:56px;line-height:1.05;margin-top:22px">PENEIRA SUB-13</div>
+      <div style="font-size:56px;line-height:1.05;margin-top:22px">PENEIRA SUB-17</div>
       <div style="font-size:38px;font-weight:500;line-height:1.25;margin-top:10px;color:#333">Sábado, 8h · campo da prefeitura<br><b style="color:#e63946">Só 2 vagas.</b></div></div>`, { space: 'frame', x: .5, y: .34 });
     s.every(note, (lt, st) => { const e = sm(.5, .9, lt); st.y -= (1 - e) * 500; st.o *= e; st.s *= 1 + .04 * Math.sin(clamp((lt - .9) / .3) * Math.PI); });
     s.every(phone, (lt, st) => { st.y += (1 - sm(0, .45, lt)) * 900; st.r += Math.sin(lt * 1.5) * .6; });

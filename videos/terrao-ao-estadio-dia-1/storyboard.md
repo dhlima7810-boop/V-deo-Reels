@@ -1,6 +1,6 @@
 # Do Terrão ao Estádio — Dia 1 de 4 (45 s · 9:16 · 30 fps)
 
-Série: Léo, 12 anos, quer virar jogador. Dia 1 → Dia 4 (Dia 4 = vira profissional e joga). HUD fixo: DIA 1/4 + "SONHO DE SER JOGADOR" (3% → 27% → cai pra 19%).
+Série: Léo, 16 anos, quer virar jogador. Dia 1 → Dia 4 (Dia 4 = vira profissional e joga). HUD fixo: DIA 1/4 + "SONHO DE SER JOGADOR" (3% → 27% → cai pra 19%).
 
 | # | Tempo | Cena | Legendas | Som |
 |---|---|---|---|---|
