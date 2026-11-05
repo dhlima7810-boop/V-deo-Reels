@@ -1,0 +1,107 @@
+{
+ "K": 1.1666666666666667,
+ "cues": [
+  {
+   "id": "pedido",
+   "t": 0.35,
+   "d": 4.204,
+   "text": "O favor que a Bia me pediu? Descobrir se o Kaique vai na festa dela."
+  },
+  {
+   "id": "gosta",
+   "t": 5.222,
+   "d": 1.914,
+   "text": "Ou seja... ela gosta dele."
+  },
+  {
+   "id": "chao",
+   "t": 7.385,
+   "d": 1.842,
+   "text": "Minha chance foi pro chão."
+  },
+  {
+   "id": "amarelo",
+   "t": 9.765,
+   "d": 5.62,
+   "text": "Ela ainda mandou um coração amarelo. E coração amarelo é amizade. Todo mundo sabe."
+  },
+  {
+   "id": "intervalo",
+   "t": 16.127,
+   "d": 3.482,
+   "text": "No intervalo, fui até ele. Cercado pelo time inteiro."
+  },
+  {
+   "id": "riu",
+   "t": 20.031,
+   "d": 2.182,
+   "text": "Perguntei. E ele riu na minha cara."
+  },
+  {
+   "id": "time",
+   "t": 22.884,
+   "d": 3.565,
+   "text": "O time inteiro riu junto. Aí ele chegou pertinho e falou:"
+  },
+  {
+   "id": "fala",
+   "t": 26.931,
+   "d": 1.601,
+   "text": "Fala pra ela que eu vou."
+  },
+  {
+   "id": "danca",
+   "t": 28.961,
+   "d": 2.778,
+   "text": "E que no sábado... ela vai dançar comigo."
+  },
+  {
+   "id": "contar",
+   "t": 32.329,
+   "d": 5.852,
+   "text": "Eu ia contar tudo pra Bia. Mas no corredor, a Júlia, melhor amiga dela, me puxou pelo braço."
+  },
+  {
+   "id": "segredo",
+   "t": 38.814,
+   "d": 3.416,
+   "text": "Ela olhou pros lados, como se fosse segredo de estado."
+  },
+  {
+   "id": "errado",
+   "t": 42.724,
+   "d": 2.845,
+   "text": "Ela disse: Davi, você entendeu tudo errado."
+  },
+  {
+   "id": "medo",
+   "t": 46.13,
+   "d": 3.866,
+   "text": "A Bia não quer o Kaique na festa. Tem medo dele estragar tudo."
+  },
+  {
+   "id": "oque",
+   "t": 50.78,
+   "d": 1.271,
+   "text": "Estragar o quê?"
+  },
+  {
+   "id": "plano",
+   "t": 52.632,
+   "d": 3.531,
+   "text": "E ela respondeu: o plano dela... de te chamar pra dançar."
+  },
+  {
+   "id": "travei",
+   "t": 57.085,
+   "d": 2.645,
+   "text": "Eu travei. Meu coração batia no ouvido."
+  },
+  {
+   "id": "ouviu",
+   "t": 60.636,
+   "d": 3.219,
+   "text": "Só que atrás da gente... o Kaique tinha ouvido tudo."
+  }
+ ]
+}
