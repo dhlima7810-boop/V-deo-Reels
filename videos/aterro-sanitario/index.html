@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Aterro sanitário</title>
+<style>
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#000}
+#c{position:absolute;inset:0;width:1080px;height:1920px}
+#ui{position:absolute;inset:0;pointer-events:none;font-family:'Inter','DejaVu Sans',sans-serif;overflow:hidden}
+#cap{position:absolute;left:0;right:0;top:1150px;text-align:center;font-weight:900;font-size:124px;line-height:1;color:#fff;
+  -webkit-text-stroke:16px #141414;paint-order:stroke fill;letter-spacing:-1px;text-shadow:0 10px 0 rgba(0,0,0,.35)}
+#cap span{display:inline-block}
+.lab{position:absolute;left:0;top:0;font-weight:900;font-size:60px;color:#FFD21F;-webkit-text-stroke:11px #1a1a1a;
+  paint-order:stroke fill;white-space:nowrap;letter-spacing:.5px}
+.lab.big{font-size:96px;-webkit-text-stroke:15px #1a1a1a}
+#flash{position:absolute;inset:0;background:#fff;opacity:0}
+</style></head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<div id="ui"><div id="labs"></div><div id="cap"><span id="capw"></span></div><div id="flash"></div></div>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+<script type="module" src="./scene.js"></script>
+</body></html>

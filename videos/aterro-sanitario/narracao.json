@@ -1,0 +1,1051 @@
+{
+ "duration": 49.303,
+ "lines": [
+  {
+   "id": "s1",
+   "text": "Você precisa sumir com o lixo de uma cidade inteira.",
+   "start": 0.15,
+   "end": 3.052,
+   "words": [
+    {
+     "w": "Você",
+     "start": 0.15,
+     "end": 0.424,
+     "hl": false
+    },
+    {
+     "w": "precisa",
+     "start": 0.424,
+     "end": 0.834,
+     "hl": false
+    },
+    {
+     "w": "sumir",
+     "start": 0.834,
+     "end": 1.108,
+     "hl": false
+    },
+    {
+     "w": "com",
+     "start": 1.108,
+     "end": 1.245,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 1.245,
+     "end": 1.382,
+     "hl": false
+    },
+    {
+     "w": "lixo",
+     "start": 1.382,
+     "end": 1.656,
+     "hl": true
+    },
+    {
+     "w": "de",
+     "start": 1.656,
+     "end": 1.793,
+     "hl": false
+    },
+    {
+     "w": "uma",
+     "start": 1.793,
+     "end": 2.067,
+     "hl": false
+    },
+    {
+     "w": "cidade",
+     "start": 2.067,
+     "end": 2.477,
+     "hl": false
+    },
+    {
+     "w": "inteira",
+     "start": 2.477,
+     "end": 3.052,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "text": "Então joga tudo num terreno vazio.",
+   "start": 3.272,
+   "end": 5.387,
+   "words": [
+    {
+     "w": "Então",
+     "start": 3.272,
+     "end": 3.593,
+     "hl": false
+    },
+    {
+     "w": "joga",
+     "start": 3.593,
+     "end": 3.913,
+     "hl": false
+    },
+    {
+     "w": "tudo",
+     "start": 3.913,
+     "end": 4.234,
+     "hl": false
+    },
+    {
+     "w": "num",
+     "start": 4.234,
+     "end": 4.394,
+     "hl": false
+    },
+    {
+     "w": "terreno",
+     "start": 4.394,
+     "end": 4.875,
+     "hl": false
+    },
+    {
+     "w": "vazio",
+     "start": 4.875,
+     "end": 5.387,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "text": "Mas a chuva atravessa o lixo e vira chorume, um líquido tóxico que escorre até o rio.",
+   "start": 5.607,
+   "end": 9.976,
+   "words": [
+    {
+     "w": "Mas",
+     "start": 5.607,
+     "end": 5.734,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 5.734,
+     "end": 5.861,
+     "hl": false
+    },
+    {
+     "w": "chuva",
+     "start": 5.861,
+     "end": 6.115,
+     "hl": false
+    },
+    {
+     "w": "atravessa",
+     "start": 6.115,
+     "end": 6.623,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 6.623,
+     "end": 6.75,
+     "hl": false
+    },
+    {
+     "w": "lixo",
+     "start": 6.75,
+     "end": 7.004,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 7.004,
+     "end": 7.131,
+     "hl": false
+    },
+    {
+     "w": "vira",
+     "start": 7.131,
+     "end": 7.385,
+     "hl": false
+    },
+    {
+     "w": "chorume",
+     "start": 7.385,
+     "end": 7.919,
+     "hl": true
+    },
+    {
+     "w": "um",
+     "start": 7.919,
+     "end": 8.046,
+     "hl": false
+    },
+    {
+     "w": "líquido",
+     "start": 8.046,
+     "end": 8.427,
+     "hl": false
+    },
+    {
+     "w": "tóxico",
+     "start": 8.427,
+     "end": 8.808,
+     "hl": true
+    },
+    {
+     "w": "que",
+     "start": 8.808,
+     "end": 8.935,
+     "hl": false
+    },
+    {
+     "w": "escorre",
+     "start": 8.935,
+     "end": 9.316,
+     "hl": false
+    },
+    {
+     "w": "até",
+     "start": 9.316,
+     "end": 9.57,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 9.57,
+     "end": 9.697,
+     "hl": false
+    },
+    {
+     "w": "rio",
+     "start": 9.697,
+     "end": 9.976,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "text": "Então você cava um buraco gigante e forra com argila e uma manta de plástico.",
+   "start": 10.196,
+   "end": 14.555,
+   "words": [
+    {
+     "w": "Então",
+     "start": 10.196,
+     "end": 10.485,
+     "hl": false
+    },
+    {
+     "w": "você",
+     "start": 10.485,
+     "end": 10.774,
+     "hl": false
+    },
+    {
+     "w": "cava",
+     "start": 10.774,
+     "end": 11.062,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 11.062,
+     "end": 11.207,
+     "hl": false
+    },
+    {
+     "w": "buraco",
+     "start": 11.207,
+     "end": 11.639,
+     "hl": false
+    },
+    {
+     "w": "gigante",
+     "start": 11.639,
+     "end": 12.072,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 12.072,
+     "end": 12.217,
+     "hl": false
+    },
+    {
+     "w": "forra",
+     "start": 12.217,
+     "end": 12.505,
+     "hl": false
+    },
+    {
+     "w": "com",
+     "start": 12.505,
+     "end": 12.65,
+     "hl": false
+    },
+    {
+     "w": "argila",
+     "start": 12.65,
+     "end": 13.083,
+     "hl": true
+    },
+    {
+     "w": "e",
+     "start": 13.083,
+     "end": 13.227,
+     "hl": false
+    },
+    {
+     "w": "uma",
+     "start": 13.227,
+     "end": 13.516,
+     "hl": false
+    },
+    {
+     "w": "manta",
+     "start": 13.516,
+     "end": 13.804,
+     "hl": true
+    },
+    {
+     "w": "de",
+     "start": 13.804,
+     "end": 13.948,
+     "hl": false
+    },
+    {
+     "w": "plástico",
+     "start": 13.948,
+     "end": 14.555,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "text": "Agora o chorume desce por canos até uma lagoa de tratamento.",
+   "start": 14.775,
+   "end": 18.053,
+   "words": [
+    {
+     "w": "Agora",
+     "start": 14.775,
+     "end": 15.181,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 15.181,
+     "end": 15.316,
+     "hl": false
+    },
+    {
+     "w": "chorume",
+     "start": 15.316,
+     "end": 15.723,
+     "hl": false
+    },
+    {
+     "w": "desce",
+     "start": 15.723,
+     "end": 15.994,
+     "hl": false
+    },
+    {
+     "w": "por",
+     "start": 15.994,
+     "end": 16.129,
+     "hl": false
+    },
+    {
+     "w": "canos",
+     "start": 16.129,
+     "end": 16.4,
+     "hl": false
+    },
+    {
+     "w": "até",
+     "start": 16.4,
+     "end": 16.671,
+     "hl": false
+    },
+    {
+     "w": "uma",
+     "start": 16.671,
+     "end": 16.942,
+     "hl": false
+    },
+    {
+     "w": "lagoa",
+     "start": 16.942,
+     "end": 17.213,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 17.213,
+     "end": 17.349,
+     "hl": false
+    },
+    {
+     "w": "tratamento",
+     "start": 17.349,
+     "end": 18.053,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "text": "O caminhão despeja, o trator compacta, e todo dia você cobre com terra.",
+   "start": 18.273,
+   "end": 22.338,
+   "words": [
+    {
+     "w": "O",
+     "start": 18.273,
+     "end": 18.42,
+     "hl": false
+    },
+    {
+     "w": "caminhão",
+     "start": 18.42,
+     "end": 18.862,
+     "hl": false
+    },
+    {
+     "w": "despeja",
+     "start": 18.862,
+     "end": 19.481,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 19.481,
+     "end": 19.628,
+     "hl": false
+    },
+    {
+     "w": "trator",
+     "start": 19.628,
+     "end": 19.923,
+     "hl": false
+    },
+    {
+     "w": "compacta",
+     "start": 19.923,
+     "end": 20.541,
+     "hl": true
+    },
+    {
+     "w": "e",
+     "start": 20.541,
+     "end": 20.689,
+     "hl": false
+    },
+    {
+     "w": "todo",
+     "start": 20.689,
+     "end": 20.983,
+     "hl": false
+    },
+    {
+     "w": "dia",
+     "start": 20.983,
+     "end": 21.13,
+     "hl": false
+    },
+    {
+     "w": "você",
+     "start": 21.13,
+     "end": 21.425,
+     "hl": false
+    },
+    {
+     "w": "cobre",
+     "start": 21.425,
+     "end": 21.719,
+     "hl": false
+    },
+    {
+     "w": "com",
+     "start": 21.719,
+     "end": 21.867,
+     "hl": false
+    },
+    {
+     "w": "terra",
+     "start": 21.867,
+     "end": 22.338,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "text": "Camada por camada, o morro de lixo cresce.",
+   "start": 22.558,
+   "end": 24.983,
+   "words": [
+    {
+     "w": "Camada",
+     "start": 22.558,
+     "end": 22.976,
+     "hl": true
+    },
+    {
+     "w": "por",
+     "start": 22.976,
+     "end": 23.116,
+     "hl": false
+    },
+    {
+     "w": "camada",
+     "start": 23.116,
+     "end": 23.701,
+     "hl": true
+    },
+    {
+     "w": "o",
+     "start": 23.701,
+     "end": 23.84,
+     "hl": false
+    },
+    {
+     "w": "morro",
+     "start": 23.84,
+     "end": 24.119,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 24.119,
+     "end": 24.259,
+     "hl": false
+    },
+    {
+     "w": "lixo",
+     "start": 24.259,
+     "end": 24.537,
+     "hl": false
+    },
+    {
+     "w": "cresce",
+     "start": 24.537,
+     "end": 24.983,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "text": "Mas lá embaixo, sem oxigênio, bilhões de bactérias começam a comer a comida podre.",
+   "start": 25.203,
+   "end": 29.881,
+   "words": [
+    {
+     "w": "Mas",
+     "start": 25.203,
+     "end": 25.352,
+     "hl": false
+    },
+    {
+     "w": "lá",
+     "start": 25.352,
+     "end": 25.5,
+     "hl": false
+    },
+    {
+     "w": "embaixo",
+     "start": 25.5,
+     "end": 26.121,
+     "hl": false
+    },
+    {
+     "w": "sem",
+     "start": 26.121,
+     "end": 26.269,
+     "hl": false
+    },
+    {
+     "w": "oxigênio",
+     "start": 26.269,
+     "end": 27.039,
+     "hl": false
+    },
+    {
+     "w": "bilhões",
+     "start": 27.039,
+     "end": 27.335,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 27.335,
+     "end": 27.483,
+     "hl": false
+    },
+    {
+     "w": "bactérias",
+     "start": 27.483,
+     "end": 27.927,
+     "hl": true
+    },
+    {
+     "w": "começam",
+     "start": 27.927,
+     "end": 28.371,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 28.371,
+     "end": 28.519,
+     "hl": false
+    },
+    {
+     "w": "comer",
+     "start": 28.519,
+     "end": 28.815,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 28.815,
+     "end": 28.963,
+     "hl": false
+    },
+    {
+     "w": "comida",
+     "start": 28.963,
+     "end": 29.407,
+     "hl": false
+    },
+    {
+     "w": "podre",
+     "start": 29.407,
+     "end": 29.881,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "text": "E enquanto comem, elas soltam gás. Metano e gás carbônico. Isso é o biogás.",
+   "start": 30.101,
+   "end": 34.304,
+   "words": [
+    {
+     "w": "E",
+     "start": 30.101,
+     "end": 30.237,
+     "hl": false
+    },
+    {
+     "w": "enquanto",
+     "start": 30.237,
+     "end": 30.647,
+     "hl": false
+    },
+    {
+     "w": "comem",
+     "start": 30.647,
+     "end": 31.084,
+     "hl": false
+    },
+    {
+     "w": "elas",
+     "start": 31.084,
+     "end": 31.356,
+     "hl": false
+    },
+    {
+     "w": "soltam",
+     "start": 31.356,
+     "end": 31.629,
+     "hl": false
+    },
+    {
+     "w": "gás",
+     "start": 31.629,
+     "end": 31.93,
+     "hl": false
+    },
+    {
+     "w": "Metano",
+     "start": 31.93,
+     "end": 32.339,
+     "hl": true
+    },
+    {
+     "w": "e",
+     "start": 32.339,
+     "end": 32.476,
+     "hl": false
+    },
+    {
+     "w": "gás",
+     "start": 32.476,
+     "end": 32.612,
+     "hl": false
+    },
+    {
+     "w": "carbônico",
+     "start": 32.612,
+     "end": 33.322,
+     "hl": false
+    },
+    {
+     "w": "Isso",
+     "start": 33.322,
+     "end": 33.595,
+     "hl": false
+    },
+    {
+     "w": "é",
+     "start": 33.595,
+     "end": 33.731,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 33.731,
+     "end": 33.868,
+     "hl": false
+    },
+    {
+     "w": "biogás",
+     "start": 33.868,
+     "end": 34.304,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "text": "O gás fica preso, a pressão sobe, e ele pode até pegar fogo.",
+   "start": 34.524,
+   "end": 37.869,
+   "words": [
+    {
+     "w": "O",
+     "start": 34.524,
+     "end": 34.655,
+     "hl": false
+    },
+    {
+     "w": "gás",
+     "start": 34.655,
+     "end": 34.786,
+     "hl": false
+    },
+    {
+     "w": "fica",
+     "start": 34.786,
+     "end": 35.047,
+     "hl": false
+    },
+    {
+     "w": "preso",
+     "start": 35.047,
+     "end": 35.465,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 35.465,
+     "end": 35.596,
+     "hl": false
+    },
+    {
+     "w": "pressão",
+     "start": 35.596,
+     "end": 35.857,
+     "hl": false
+    },
+    {
+     "w": "sobe",
+     "start": 35.857,
+     "end": 36.275,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 36.275,
+     "end": 36.406,
+     "hl": false
+    },
+    {
+     "w": "ele",
+     "start": 36.406,
+     "end": 36.667,
+     "hl": false
+    },
+    {
+     "w": "pode",
+     "start": 36.667,
+     "end": 36.929,
+     "hl": false
+    },
+    {
+     "w": "até",
+     "start": 36.929,
+     "end": 37.19,
+     "hl": false
+    },
+    {
+     "w": "pegar",
+     "start": 37.19,
+     "end": 37.451,
+     "hl": false
+    },
+    {
+     "w": "fogo",
+     "start": 37.451,
+     "end": 37.869,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "text": "Então você enfia tubos no morro e puxa esse gás pra fora.",
+   "start": 38.089,
+   "end": 41.419,
+   "words": [
+    {
+     "w": "Então",
+     "start": 38.089,
+     "end": 38.403,
+     "hl": false
+    },
+    {
+     "w": "você",
+     "start": 38.403,
+     "end": 38.717,
+     "hl": false
+    },
+    {
+     "w": "enfia",
+     "start": 38.717,
+     "end": 39.032,
+     "hl": false
+    },
+    {
+     "w": "tubos",
+     "start": 39.032,
+     "end": 39.346,
+     "hl": true
+    },
+    {
+     "w": "no",
+     "start": 39.346,
+     "end": 39.503,
+     "hl": false
+    },
+    {
+     "w": "morro",
+     "start": 39.503,
+     "end": 39.817,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 39.817,
+     "end": 39.974,
+     "hl": false
+    },
+    {
+     "w": "puxa",
+     "start": 39.974,
+     "end": 40.288,
+     "hl": false
+    },
+    {
+     "w": "esse",
+     "start": 40.288,
+     "end": 40.602,
+     "hl": false
+    },
+    {
+     "w": "gás",
+     "start": 40.602,
+     "end": 40.759,
+     "hl": false
+    },
+    {
+     "w": "pra",
+     "start": 40.759,
+     "end": 40.916,
+     "hl": false
+    },
+    {
+     "w": "fora",
+     "start": 40.916,
+     "end": 41.419,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "text": "Ele vai pra uma usina, queima num motor, e o motor gira um gerador.",
+   "start": 41.639,
+   "end": 44.905,
+   "words": [
+    {
+     "w": "Ele",
+     "start": 41.639,
+     "end": 41.875,
+     "hl": false
+    },
+    {
+     "w": "vai",
+     "start": 41.875,
+     "end": 41.994,
+     "hl": false
+    },
+    {
+     "w": "pra",
+     "start": 41.994,
+     "end": 42.112,
+     "hl": false
+    },
+    {
+     "w": "uma",
+     "start": 42.112,
+     "end": 42.349,
+     "hl": false
+    },
+    {
+     "w": "usina",
+     "start": 42.349,
+     "end": 42.846,
+     "hl": false
+    },
+    {
+     "w": "queima",
+     "start": 42.846,
+     "end": 43.083,
+     "hl": false
+    },
+    {
+     "w": "num",
+     "start": 43.083,
+     "end": 43.201,
+     "hl": false
+    },
+    {
+     "w": "motor",
+     "start": 43.201,
+     "end": 43.58,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 43.58,
+     "end": 43.698,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 43.698,
+     "end": 43.816,
+     "hl": false
+    },
+    {
+     "w": "motor",
+     "start": 43.816,
+     "end": 44.053,
+     "hl": false
+    },
+    {
+     "w": "gira",
+     "start": 44.053,
+     "end": 44.29,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 44.29,
+     "end": 44.408,
+     "hl": false
+    },
+    {
+     "w": "gerador",
+     "start": 44.408,
+     "end": 44.905,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "text": "Resultado: o lixo da cidade vira luz pra própria cidade.",
+   "start": 45.125,
+   "end": 48.283,
+   "words": [
+    {
+     "w": "Resultado",
+     "start": 45.125,
+     "end": 45.858,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 45.858,
+     "end": 45.999,
+     "hl": false
+    },
+    {
+     "w": "lixo",
+     "start": 45.999,
+     "end": 46.281,
+     "hl": false
+    },
+    {
+     "w": "da",
+     "start": 46.281,
+     "end": 46.422,
+     "hl": false
+    },
+    {
+     "w": "cidade",
+     "start": 46.422,
+     "end": 46.845,
+     "hl": false
+    },
+    {
+     "w": "vira",
+     "start": 46.845,
+     "end": 47.127,
+     "hl": false
+    },
+    {
+     "w": "luz",
+     "start": 47.127,
+     "end": 47.268,
+     "hl": true
+    },
+    {
+     "w": "pra",
+     "start": 47.268,
+     "end": 47.409,
+     "hl": false
+    },
+    {
+     "w": "própria",
+     "start": 47.409,
+     "end": 47.691,
+     "hl": false
+    },
+    {
+     "w": "cidade",
+     "start": 47.691,
+     "end": 48.283,
+     "hl": false
+    }
+   ]
+  }
+ ]
+}
