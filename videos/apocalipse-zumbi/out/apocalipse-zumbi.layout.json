@@ -1,0 +1,50 @@
+[
+ {
+  "t": 16.5,
+  "kind": "unsafe",
+  "severity": "warn",
+  "text": "ELES FICARAM\nPARADOS NO ESCURO.",
+  "box": [
+   108,
+   247,
+   972,
+   387
+  ]
+ },
+ {
+  "t": 17,
+  "kind": "unsafe",
+  "severity": "warn",
+  "text": "ELES FICARAM\nPARADOS NO ESCURO.",
+  "box": [
+   105,
+   242,
+   975,
+   383
+  ]
+ },
+ {
+  "t": 24.5,
+  "kind": "unsafe",
+  "severity": "warn",
+  "text": "N\u00c3O ABRA\nA PORTA.",
+  "box": [
+   201,
+   221,
+   879,
+   551
+  ]
+ },
+ {
+  "t": 25.5,
+  "kind": "unsafe",
+  "severity": "warn",
+  "text": "N\u00c3O ABRA\nA PORTA.",
+  "box": [
+   200,
+   219,
+   880,
+   443
+  ]
+ }
+]

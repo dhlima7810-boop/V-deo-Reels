@@ -1,0 +1,30 @@
+{
+ "name": "apocalipse-zumbi",
+ "title": "trailer cinematogr\u00e1fico de : hist\u00f3ria de um apocalipse zumbi, 60s, reels",
+ "brief": "trailer cinematogr\u00e1fico de horror: hist\u00f3ria de um apocalipse zumbi, 60s, vertical 9:16 reels, motion cinematic",
+ "template": "cinematic-trailer",
+ "style": "horror",
+ "motion": "cinematic",
+ "format": "9:16",
+ "fps": 24,
+ "duration": 60.0,
+ "seed": 1234,
+ "audio": {
+  "music": "auto",
+  "sfx": true,
+  "file": null,
+  "voiceover": null,
+  "lufs": -14
+ },
+ "vars": {
+  "headlines": [
+   "Atmosphere, world establishing",
+   "Introduce the stakes",
+   "Escalation montage",
+   "The breath",
+   "Title reveal",
+   "Date / CTA"
+  ]
+ },
+ "variants": []
+}

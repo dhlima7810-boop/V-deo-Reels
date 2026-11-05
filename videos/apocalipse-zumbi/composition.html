@@ -1,0 +1,269 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>O Último Sinal</title><link rel="stylesheet" href="/engine/ms.css"></head>
+<body>
+<script src="/__spec.js"></script>
+<script src="/engine/ms.js"></script>
+<script>
+/* O ÚLTIMO SINAL — 60 s, 9:16, horror + cinematic.
+   Concept: a survivor's radio log. A city goes quiet (fever → silence → the horde → the door → the glass → the radio),
+   collapses into a montage of days, cuts to dead silence, and resolves on the one red thing in the film: a signal light.
+   Silhouettes (zombie, survivor, hands, door) were drawn as vectors in Figma and exported to assets/figma/*.svg.
+   Every visual is token-driven (var(--fg), var(--accent) ...) and deterministic from time t. */
+MS.boot(C => {
+  const W = C.W, H = C.H, u = C.u, N = MS.noise1, hash = MS.hash;
+  const load = p => { const r = new XMLHttpRequest(); r.open('GET', p, false); r.send(); return r.responseText; };
+  const SVG = { zombie: load('assets/figma/zombie.svg'), survivor: load('assets/figma/survivor.svg'), hand: load('assets/figma/hand.svg'), door: load('assets/figma/door.svg') };
+  const css = v => getComputedStyle(C.stage).getPropertyValue(v).trim();
+  const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x)), sm = (a, b, x) => { const k = clamp((x - a) / (b - a)); return k * k * (3 - 2 * k); };
+
+  // Figma zombie -> canvas parts (same vector, drawn many times for the horde)
+  const ZP = [...new DOMParser().parseFromString(SVG.zombie, 'image/svg+xml').querySelectorAll('path')].map(p => ({
+    path: new Path2D(p.getAttribute('d')), fill: p.getAttribute('fill') && p.getAttribute('fill') !== 'none', w: +(p.getAttribute('stroke-width') || 0) }));
+  function zombie(g, x, y, h, ph, col, alpha = 1) {            // (x, y) = feet, h = height in px, ph = gait phase
+    const sc = h / 300, bob = Math.abs(Math.sin(ph)) * 6 * sc, sway = Math.sin(ph * .5) * .07 + .04;
+    g.save(); g.globalAlpha = alpha; g.translate(x, y - bob); g.rotate(sway); g.scale(sc, sc); g.translate(-64, -300);
+    g.fillStyle = g.strokeStyle = col; g.lineCap = g.lineJoin = 'round';
+    for (const p of ZP) { if (p.fill) g.fill(p.path); else { g.lineWidth = p.w; g.stroke(p.path); } }
+    g.restore();
+  }
+  function fog(g, lt, o = {}) {                                // drifting fog banks: soft, low-frequency, seeded
+    const n = o.n || 9, y0 = (o.y || .6) * H, col = o.color || '200,214,196';
+    for (let i = 0; i < n; i++) {
+      const sp = (o.speed || 18) * (.5 + hash(i * 3.1)), x = ((hash(i) * 1.6 - .3) * W + lt * sp * (i % 2 ? 1 : -.6)) % (W * 1.6) - W * .3;
+      const y = y0 + (hash(i * 7.7) - .5) * (o.spread || .35) * H + N(lt * .1 + i) * 30, r = (o.r || 60) * u * (.6 + hash(i * 5.3) * .8);
+      const gr = g.createRadialGradient(x, y, 0, x, y, r); const a = (o.a || .07) * (.6 + .4 * N(lt * .2 + i * 2));
+      gr.addColorStop(0, `rgba(${col},${a})`); gr.addColorStop(1, `rgba(${col},0)`); g.fillStyle = gr; g.fillRect(x - r, y - r, r * 2, r * 2);
+    }
+  }
+  function skyline(g, base, seed, o = {}) {                    // dead city: blocks, a few dark windows, one lit (returns its position)
+    const r = MS.rng(seed); let x = -20, lit = null, k = 0;
+    g.fillStyle = o.color || '#0b100d';
+    while (x < W + 20) {
+      const w = (7 + r() * 11) * u, h = (14 + Math.pow(r(), 1.6) * 62) * u; g.fillRect(x, base - h, w + 1, h + H);
+      if (k === (o.litIndex || 6)) lit = { x: x + w * .55, y: base - h * .72 };
+      if (o.antennas && r() < .3) g.fillRect(x + w * .4, base - h - 9 * u, 3, 9 * u);
+      x += w; k++;
+    }
+    return lit;
+  }
+  function blackout(s, times, len = .12) {                    // full-frame lamp failures (screen space, above everything)
+    const b = s.el('<div style="background:#000"></div>', { space: 'frame', x: 0, y: 0, anchor: 'top-left', w: W, h: H, layer: s.hud });
+    b.style.zIndex = 9;
+    s.every(b, (lt, st) => { let on = 0; for (const t of times) { const L = Array.isArray(t) ? t[1] : len, t0 = Array.isArray(t) ? t[0] : t; if (lt >= t0 && lt < t0 + L) on = 1; } st.o *= on; });
+    return b;
+  }
+
+  // ───────────────────────── 01 DIA 1 · 0–7 s · the city before (wide, still, one lit window)
+  C.scene('dia1', 0, 7, s => {
+    MS.canvasLayer(s, (g, W, H, lt) => {
+      const sky = g.createLinearGradient(0, 0, 0, H); sky.addColorStop(0, '#020302'); sky.addColorStop(.55, '#0d1511'); sky.addColorStop(.7, '#16201b'); sky.addColorStop(1, '#020302');
+      g.fillStyle = sky; g.fillRect(0, 0, W, H);
+      fog(g, lt, { y: .62, a: .05, r: 80, n: 7 });
+      skyline(g, H * .74, 11, { color: '#0e1411', antennas: true, litIndex: 99 });
+      const lit = skyline(g, H * .8, 5, { color: '#060907', litIndex: 5 });
+      const f = Math.floor(lt * 24), flick = lt < 1.2 ? 0 : (hash(f * .7) > .06 ? 1 : .25);
+      const gl = g.createRadialGradient(lit.x, lit.y, 0, lit.x, lit.y, 7 * u); gl.addColorStop(0, `rgba(232,224,200,${.35 * flick})`); gl.addColorStop(1, 'rgba(232,224,200,0)');
+      g.fillStyle = gl; g.fillRect(lit.x - 8 * u, lit.y - 8 * u, 16 * u, 16 * u); g.fillStyle = `rgba(232,224,200,${flick})`; g.fillRect(lit.x - 1.1 * u, lit.y - 1.4 * u, 2.2 * u, 2.8 * u);
+      fog(g, lt, { y: .84, a: .09, r: 70, n: 9, speed: 10 });
+    }, { depth: .5, res: .5 });
+    const tag = s.text('DIA 1 · 23:47', { size: 'caption', font: 'body', y: .06, tracking: .35, color: 'var(--accent2)' });
+    s.anim(tag, 'fadeIn', 1.0, { dur: 1.2 });
+    const l1 = s.text('Ninguém acreditou\nno primeiro alerta.', { size: 'h2', y: .26, split: 'lines', lead: 1.1 });
+    s.anim(l1, 'lineReveal', 2.4); s.exit(l1, 6.1);
+    s.push(.05);
+    C.cue(0, 'riser', { dur: 6.5, gain: .25 });
+  }, { energy: .15, purpose: 'establish the quiet city and the single lit window (callback in the ending)' });
+
+  // ───────────────────────── 02 A FEBRE · 7–13 s · type-led, heartbeat that flatlines
+  C.scene('febre', 7, 6, s => {
+    s.bg('solid');
+    MS.canvasLayer(s, (g, W, H, lt) => {                      // EKG across the lower third; flatlines at 4.4 s
+      g.clearRect(0, 0, W, H); const y = H * .62, beatT = [.5, 1.5, 2.4, 3.2, 3.85], flat = 4.4, head = (lt / 5.2) * W * 1.15;
+      g.lineWidth = 3; g.strokeStyle = 'rgba(217,220,212,.75)'; g.shadowColor = 'rgba(200,214,196,.6)'; g.shadowBlur = 12; g.beginPath();
+      for (let x = 0; x <= Math.min(W, head); x += 3) {
+        const tx = x / (W * 1.15) * 5.2; let v = 0;
+        if (tx < flat) for (const b of beatT) { const d = tx - b; v += Math.exp(-d * d * 2600) * -160 + Math.exp(-(d - .035) * (d - .035) * 2600) * 70; }
+        v += Math.sin(x * .09) * 1.2; x ? g.lineTo(x, y + v) : g.moveTo(x, y + v);
+      }
+      g.stroke(); g.shadowBlur = 0;
+      if (head < W) { g.fillStyle = '#d9dcd4'; g.beginPath(); g.arc(head, y, 5, 0, 7); g.fill(); }
+    }, { depth: .8, res: .5 });
+    const t = s.text('Primeiro,\nveio a febre.', { size: 'h1', y: .24, split: 'lines', lead: 1.05 });
+    s.anim(t, 'lineReveal', .5);
+    const b = s.text('Depois, o silêncio.', { size: 'h3', font: 'body', y: .84, color: 'var(--accent3)', tracking: .04 });
+    s.anim(b, 'fadeIn', 4.5, { dur: .9 });
+    const ticker = s.el(`<div style="white-space:nowrap;font:600 ${2.6 * u}px/1 Inter,sans-serif;letter-spacing:.32em;color:#030504;background:var(--accent2);padding:${1.2 * u}px 0">${'ALERTA DE EMERGÊNCIA · PERMANEÇA EM CASA · NÃO SE APROXIME DOS INFECTADOS · '.repeat(4)}</div>`,
+      { space: 'frame', x: 0, y: .085, anchor: 'top-left' });
+    s.every(ticker, (lt, st) => { st.x -= lt * 7 * u; st.o *= sm(.2, .8, lt) * (lt > 4.4 ? (Math.floor(lt * 24) % 6 < 3 ? 1 : .2) : 1); });
+    [.5, 1.5, 2.4, 3.2, 3.85].forEach(x => C.cue(7 + x, 'heartbeat', { gain: .7 }));
+    C.cue(11.4, 'beep', { dur: 1.5, gain: .35 });
+    s.drift();
+  }, { energy: .3, purpose: 'the outbreak, told as a heartbeat that stops' });
+
+  // ───────────────────────── 03 O POSTE · 13–20 s · each blackout, the figure is closer
+  C.scene('poste', 13, 7, s => {
+    s.bg('solid');
+    const L = s.layer(.7, 'light');
+    const light = s.el(`<div><div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(201,214,196,.5), rgba(201,214,196,.22) 70%, rgba(201,214,196,.05));clip-path:polygon(45% 0,55% 0,100% 100%,0 100%)"></div></div>`,
+      { space: 'frame', x: .5, y: .25, anchor: 'top', w: W * .82, h: H * .61, layer: L });
+    const pool = s.el(`<div style="background:radial-gradient(ellipse at center, rgba(201,214,196,.45), transparent 68%)"></div>`, { space: 'frame', x: .5, y: .86, w: W * .95, h: 16 * u, layer: L });
+    const pole = s.el(`<div style="background:#0d1310;width:${1.4 * u}px;height:${H * .9}px"></div>`, { space: 'frame', x: .7, y: .235, anchor: 'top', layer: L });
+    const arm = s.el(`<div style="background:#0d1310;height:${1 * u}px;width:${W * .2}px"></div>`, { space: 'frame', x: .5, y: .235, anchor: 'left', layer: L });
+    const lamp = s.el(`<div style="width:${11 * u}px;height:${2.2 * u}px;border-radius:${u}px;background:#dfe8da;box-shadow:0 0 ${8 * u}px ${3 * u}px rgba(201,214,196,.6)"></div>`, { space: 'frame', x: .5, y: .245, layer: L });
+    const z = s.svg(SVG.zombie, { space: 'frame', x: .5, y: .87, anchor: 'bottom', size: 25 * u, style: 'color:#020302' });
+    z.style.color = '#020302';
+    const steps = [[0, .55], [2.35, .78], [4.05, 1.08], [5.35, 1.6]];   // jump closer during each blackout
+    s.every(z, (lt, st) => { let k = steps[0][1]; for (const [t, v] of steps) if (lt >= t) k = v; st.s *= k; st.x += Math.sin(lt * 1.3) * .4 * u; st.r += Math.sin(lt * .8) * 1.2; st.y += (k - .55) * 9 * u; });
+    const flick = (lt, st) => { const f = Math.floor(lt * 24); st.o *= (lt > 1.5 && hash(f * 1.7) < .1 ? .35 : 1); };
+    [light, pool, lamp].forEach(n => s.every(n, flick));
+    blackout(s, [[2.2, .18], [3.95, .12], [5.25, .12], [6.6, .4]]);
+    const t = s.text('Eles ficaram\nparados no escuro.', { size: 'h2', y: .07, split: 'lines', lead: 1.1 });
+    s.anim(t, 'lineReveal', .4); s.exit(t, 4.9, { dur: .5 });
+    C.cue(13 + 2.35, 'hit', { gain: .5 }); C.cue(13 + 4.05, 'hit', { gain: .65 }); C.cue(13 + 5.35, 'stinger', { gain: .9 });
+    s.shake(5.35, .45, 1.2);
+    s.push(.07);
+  }, { energy: .35, purpose: 'first contact — stillness, then the jolt' });
+
+  // ───────────────────────── 04 A HORDA · 20–24.5 s · wide, three depth planes, pan
+  C.scene('horda', 20, 4.5, s => {
+    const plane = (depth, n, size, base, col, speed, seed, alpha) => MS.canvasLayer(s, (g, W, H, lt) => {
+      g.clearRect(0, 0, W, H);
+      for (let i = 0; i < n; i++) { const r = hash(i * 9.1 + seed), x = ((r * 1.4 - .2) * W - lt * speed * (.7 + hash(i + seed) * .6) * u + W * 2) % (W * 1.4) - W * .2;
+        const h = size * (.85 + hash(i * 3.3 + seed) * .3); zombie(g, x, base + hash(i * 2.2 + seed) * 4 * u, h, lt * 3.2 + i * 1.7, col, alpha); }
+    }, { depth, res: .5 });
+    MS.canvasLayer(s, (g, W, H, lt) => { const sky = g.createLinearGradient(0, 0, 0, H); sky.addColorStop(0, '#030504'); sky.addColorStop(.45, '#1a241f'); sky.addColorStop(.62, '#2c3a33'); sky.addColorStop(.75, '#0a0e0c'); sky.addColorStop(1, '#030504');
+      g.fillStyle = sky; g.fillRect(0, 0, W, H); skyline(g, H * .6, 21, { color: '#121a16', litIndex: 99 }); fog(g, lt, { y: .6, a: .08, r: 90 }); }, { depth: .25, res: .5 });
+    plane(.45, 26, 26 * u, H * .64, '#1b2520', 3, 1, 1);
+    MS.canvasLayer(s, (g, W, H, lt) => { g.clearRect(0, 0, W, H); fog(g, lt, { y: .66, a: .07, r: 70, n: 8 }); }, { depth: .6, res: .4 });
+    plane(.85, 12, 52 * u, H * .74, '#0b100d', 5, 7, 1);
+    plane(1.4, 3, 90 * u, H * .98, '#020302', 7.5, 13, 1);
+    const t = s.text('ELES ANDAM.', { size: 9, font: 'body', weight: 600, y: .08, tracking: .32 });
+    s.anim(t, 'blurIn', .35, { dur: 1 });
+    s.pan(-.05, 0); s.handheld(.4);
+  }, { energy: .7, purpose: 'scale of the threat' });
+
+  // ───────────────────────── 05 A PORTA · 24.5–28 s · tight, centred, accelerating bangs
+  C.scene('porta', 24.5, 3.5, s => {
+    s.bg('solid');
+    const glow = s.el(`<div style="background:linear-gradient(0deg, rgba(201,214,196,.55), transparent);filter:blur(${1.5 * u}px)"></div>`, { space: 'frame', x: .5, y: .815, anchor: 'bottom', w: 60 * u, h: 5 * u, layer: s.layer(.9, 'glow') });
+    s.every(glow, (lt, st) => { const k = Math.floor(lt * 6); st.o *= .35 + .65 * (hash(k * 2.3) > .4 ? 1 : .1); });   // feet passing under the door
+    const d = s.svg(SVG.door, { space: 'frame', x: .5, y: .82, anchor: 'bottom', size: 64 * u });
+    const bangs = [.55, 1.35, 1.95, 2.45, 2.8, 3.1];
+    s.every(d, (lt, st) => { for (const b of bangs) { const k = lt - b; if (k >= 0 && k < .25) { st.s *= 1 + .03 * (1 - k / .25); st.x += Math.sin(k * 90) * 1.2 * u * (1 - k / .25); } } });
+    bangs.forEach((b, i) => { C.cue(24.5 + b, 'impact', { gain: .45 + i * .08 }); s.particles({ type: 'dust', at: b, x: .5, y: .45, count: 26, colors: ['#7a8b7f'], speed: .5 }); });
+    s.camera([{ t: 0, zoom: 1.0 }, { t: 3.5, zoom: 1.12, ease: 'inCubic' }]);
+    bangs.forEach(b => s.shake(b, .22, .7));
+    const t = s.text('NÃO ABRA\nA PORTA.', { size: 8.5, font: 'body', weight: 600, y: .06, tracking: .26, split: 'lines', lead: 1.15 });
+    s.anim(t, 'lineReveal', .2);
+  }, { energy: .8, purpose: 'pressure in a closed space' });
+
+  // ───────────────────────── 06 O VIDRO · 28–31 s · hands hit the glass, out of focus → sharp
+  C.scene('vidro', 28, 3, s => {
+    MS.canvasLayer(s, (g, W, H, lt) => { const gr = g.createRadialGradient(W * .5, H * .45, 0, W * .5, H * .45, H * .6); gr.addColorStop(0, '#5d6d63'); gr.addColorStop(.5, '#26302b'); gr.addColorStop(1, '#050706');
+      g.fillStyle = gr; g.fillRect(0, 0, W, H); fog(g, lt, { y: .45, a: .12, r: 90, n: 10, spread: .8, speed: 6 }); }, { depth: .3, res: .4 });
+    const hands = [[.3, .55, -14, .4, 40], [.72, .42, 12, 1.05, 46], [.5, .72, -4, 1.6, 54]];
+    hands.forEach(([x, y, r, at, sz]) => {
+      const h = s.svg(SVG.hand, { space: 'frame', x, y, size: sz * u }); h.style.color = '#050706';
+      s.every(h, (lt, st) => { const k = lt - at; if (k < 0) { st.o = 0; return; } const hit = sm(0, .12, k); st.s *= 1.35 - .35 * hit; st.blur += (1 - hit) * 3 * u; st.r += r; st.o *= .25 + .75 * hit; st.y += Math.max(0, k - .6) * 2 * u; });
+      C.cue(28 + at + .1, 'hit', { gain: .7 });
+    });
+    const t = s.text('ELES OUVEM.', { size: 9, font: 'body', weight: 600, y: .07, tracking: .32 });
+    s.anim(t, 'fadeIn', .15, { dur: .5 });
+    s.handheld(.6);
+  }, { energy: .75, purpose: 'they are right there' });
+
+  // ───────────────────────── 07 O RÁDIO · 31–34 s · the human voice in the noise
+  C.scene('radio', 31, 3, s => {
+    s.bg('solid');
+    MS.canvasLayer(s, (g, W, H, lt) => { g.clearRect(0, 0, W, H); const y = H * .62; g.strokeStyle = 'rgba(217,220,212,.8)'; g.lineWidth = 2.5; g.beginPath();
+      for (let x = 0; x <= W; x += 4) { const a = (N(x * .02 + lt * 9) - .5) * 160 * (.35 + .65 * Math.abs(Math.sin(lt * 2.1))) * Math.sin(Math.PI * x / W); x ? g.lineTo(x, y + a) : g.moveTo(x, y + a); }
+      g.stroke(); g.fillStyle = 'rgba(217,220,212,.06)'; for (let i = 0; i < 260; i++) g.fillRect(hash(i + Math.floor(lt * 24) * 300) * W, hash(i * 3 + Math.floor(lt * 24)) * H, 2, 2); }, { depth: .8, res: .5 });
+    const f = s.text('FREQ 98.7 · DIA 29', { size: 'caption', font: 'body', y: .06, tracking: .35, color: 'var(--accent2)' });
+    s.anim(f, 'fadeIn', .1, { dur: .5 });
+    const q = s.text('Alguém na escuta?', { size: 'h1', y: .26, lead: 1.05 });
+    s.anim(q, 'typewriter', .35, { cps: 14, caret: false });
+    C.cue(31, 'static', { dur: 2.8, gain: .3 });
+    s.push(.06);
+  }, { energy: .55, purpose: 'the survivor — a voice in static' });
+
+  // ───────────────────────── 08 NOITES · 34–38.5 s · flash-cut montage of days, ends on a jolt
+  C.scene('noites', 34, 4.5, s => {
+    const shots = [0, .9, 1.7, 2.4, 3.0, 3.5];               // cuts accelerate
+    const on = (i, lt) => lt >= shots[i] && lt < (shots[i + 1] || 9);
+    MS.canvasLayer(s, (g, W, H, lt) => { g.fillStyle = '#030504'; g.fillRect(0, 0, W, H);
+      if (on(1, lt) || on(3, lt)) { const gr = g.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, '#030504'); gr.addColorStop(.6, '#2c3a33'); gr.addColorStop(1, '#030504'); g.fillStyle = gr; g.fillRect(0, 0, W, H);
+        const k = on(1, lt) ? 0 : 1; for (let i = 0; i < 7 + k * 6; i++) zombie(g, W * (hash(i * 4.4 + k) * 1.2 - .1), H * (.7 + k * .12), (60 + k * 50 + hash(i) * 25) * u, lt * 3 + i, '#030504'); fog(g, lt, { y: .65, a: .1, r: 80 }); }
+      if (on(5, lt)) { const k = lt - shots[5], gr = g.createRadialGradient(W / 2, H * .4, 0, W / 2, H * .4, H * .7); gr.addColorStop(0, '#7f9286'); gr.addColorStop(1, '#030504'); g.fillStyle = gr; g.fillRect(0, 0, W, H);
+        zombie(g, W * .48, H * (1.42 + k * .05), H * (1.25 + k * .25), 1.2 + k * 2, '#020302'); }
+    }, { depth: .99, res: .5 });
+    const day = (str, i) => { const t = s.text(str, { size: 'display', y: .32 }); s.every(t, (lt, st) => { st.o *= on(i, lt) ? 1 : 0; st.s *= 1 + (lt - shots[i]) * .05; }); };
+    day('Dia 12', 0); day('Dia 29', 2); day('Dia 46', 4);
+    shots.slice(1).forEach((t, i) => C.cue(34 + t, i === 4 ? 'stinger' : 'hit', { gain: .55 + i * .08 }));
+    s.shake(3.5, .6, 1.8); s.handheld(.8);
+  }, { energy: 1.0, purpose: 'escalation — the days blur together' });
+
+  // ───────────────────────── 09 SILÊNCIO · 38.5–42.5 s · the breath
+  C.scene('silencio', 38.5, 4, s => {
+    s.bg('solid');
+    const a = s.text('Dia 47.', { size: 'h3', font: 'body', y: .45, color: 'var(--accent2)', tracking: .2 });
+    s.anim(a, 'fadeIn', .7, { dur: 1.2 });
+    const b = s.text('Eu ainda estou aqui.', { size: 'h2', y: .55 });
+    s.anim(b, 'blurIn', 1.7, { dur: 1.3 });
+    s.exit(a, 3.4); s.exit(b, 3.4);
+  }, { energy: .05, purpose: 'silence before the title', hold: true });
+
+  // ───────────────────────── 10 O ÚLTIMO SINAL · 42.5–53 s · rooftop at first light; the only red in the film
+  C.scene('titulo', 42.5, 10.5, s => {
+    MS.canvasLayer(s, (g, W, H, lt) => { const dawn = sm(0, 8, lt), sky = g.createLinearGradient(0, 0, 0, H);
+      sky.addColorStop(0, '#020302'); sky.addColorStop(.5, `rgb(${12 + dawn * 22},${18 + dawn * 26},${15 + dawn * 22})`); sky.addColorStop(.68, `rgb(${40 + dawn * 70},${48 + dawn * 66},${42 + dawn * 52})`); sky.addColorStop(.72, '#0a0e0c'); sky.addColorStop(1, '#030504');
+      g.fillStyle = sky; g.fillRect(0, 0, W, H); skyline(g, H * .71, 33, { color: '#0d1310', antennas: true, litIndex: 99 }); fog(g, lt, { y: .7, a: .07, r: 90 }); }, { depth: .3, res: .5 });
+    const roof = s.el(`<div style="background:#020302"></div>`, { space: 'frame', x: 0, y: .86, anchor: 'top-left', w: W, h: H * .14, layer: s.layer(1.2, 'roof') });
+    const sv = s.svg(SVG.survivor, { space: 'frame', x: .5, y: .865, anchor: 'bottom', size: 30 * u, layer: s.layer(1.2, 'survivor') }); sv.style.color = '#020302';
+    const beaconX = .5 + (128 - 80) / 160 * 30 * u / W, beaconY = .865 - (300 - 40) / 302 * (30 * u * 302 / 160) / H;
+    const sig = s.el(`<div></div>`, { space: 'frame', x: beaconX, y: beaconY, layer: s.layer(1.2, 'signal') });
+    sig.innerHTML = `<div style="position:absolute;width:${1.6 * u}px;height:${1.6 * u}px;margin:${-.8 * u}px;border-radius:50%;background:var(--accent);box-shadow:0 0 ${3 * u}px ${u}px var(--accent)"></div>` +
+      [0, 1, 2].map(i => `<div class="ring" style="position:absolute;border:2px solid var(--fg);border-radius:50%;left:0;top:0"></div>`).join('');
+    const rings = [...sig.querySelectorAll('.ring')], dot = sig.firstChild;
+    s.every(sig, lt => { const on = lt > 1.2; dot.style.opacity = on ? (Math.floor(lt * 1.5) % 2 ? .25 : 1) : 0;
+      rings.forEach((r, i) => { const k = ((lt - 1.2) * .45 + i / 3) % 1, rad = k * 70 * u; r.style.width = r.style.height = rad * 2 + 'px'; r.style.transform = `translate(-50%,-50%)`; r.style.opacity = on ? (1 - k) * .35 : 0; }); });
+    const t = s.text('O Último\nSinal', { size: 'display', y: .2, split: 'lines', lead: .95, tracking: .06 });
+    s.anim(t, 'blurIn', .6, { dur: 2.2, cue: 'braam' });
+    const rule = s.el(`<div style="height:${.45 * u}px;background:var(--accent)"></div>`, { space: 'frame', x: .5, y: .385, w: 34 * u });
+    s.anim(rule, 'wipeIn', 2.4, { dur: 1.4 });
+    const sub = s.text('Alguém ainda está transmitindo.', { size: 'h3', font: 'body', y: .44, color: 'var(--accent3)', tracking: .02 });
+    s.anim(sub, 'fadeUp', 4.2, { dur: 1.4 });
+    C.cue(42.5 + .6, 'impact', { gain: .9 });
+    s.pull(.08);
+  }, { energy: 1.0, purpose: 'title reveal — hope as a signal' });
+
+  // ───────────────────────── 11 FIM · 53–60 s · callback: the window from shot 1 is still lit
+  C.scene('fim', 53, 7, s => {
+    MS.canvasLayer(s, (g, W, H, lt) => { const sky = g.createLinearGradient(0, 0, 0, H); sky.addColorStop(0, '#020302'); sky.addColorStop(.62, '#121b16'); sky.addColorStop(.75, '#1d2822'); sky.addColorStop(1, '#020302');
+      g.fillStyle = sky; g.fillRect(0, 0, W, H); fog(g, lt, { y: .66, a: .05, r: 80, n: 7 }); skyline(g, H * .74, 11, { color: '#0e1411', antennas: true, litIndex: 99 });
+      const lit = skyline(g, H * .8, 5, { color: '#060907', litIndex: 5 }), gl = g.createRadialGradient(lit.x, lit.y, 0, lit.x, lit.y, 9 * u);
+      gl.addColorStop(0, 'rgba(232,224,200,.45)'); gl.addColorStop(1, 'rgba(232,224,200,0)'); g.fillStyle = gl; g.fillRect(lit.x - 10 * u, lit.y - 10 * u, 20 * u, 20 * u);
+      g.fillStyle = '#e8e0c8'; g.fillRect(lit.x - 1.1 * u, lit.y - 1.4 * u, 2.2 * u, 2.8 * u); fog(g, lt, { y: .86, a: .09, r: 70, n: 9, speed: 10 }); }, { depth: .5, res: .5 });
+    const a = s.text('Se você está ouvindo isto,', { size: 'h3', font: 'body', y: .14, color: 'var(--accent3)' });
+    s.anim(a, 'fadeIn', .5, { dur: 1 });
+    const b = s.text('ainda não acabou.', { size: 'h1', y: .26 });
+    s.anim(b, 'blurIn', 1.8, { dur: 1.6 });
+    s.exit(a, 5.6); s.exit(b, 5.6);
+    const out = s.el('<div style="background:#000"></div>', { space: 'frame', x: 0, y: 0, anchor: 'top-left', w: W, h: H, layer: s.hud });
+    s.every(out, (lt, st) => { st.o *= sm(5.9, 6.9, lt); });
+    C.cue(53 + 1.8, 'boom', { gain: .5 });
+    s.pull(.04);
+  }, { energy: .25, purpose: 'callback and fade out' });
+
+  C.transition('dia1', 'febre', { type: 'fade', dur: .8, intent: 'calm' });
+  C.transition('febre', 'poste', { type: 'cut' });
+  C.transition('poste', 'horda', { type: 'flash', color: '#c9d6c4', intent: 'impact' });
+  C.transition('horda', 'porta', { type: 'cut' });
+  C.transition('porta', 'vidro', { type: 'distortion', dur: .35, intent: 'escalate' });
+  C.transition('vidro', 'radio', { type: 'cut' });
+  C.transition('radio', 'noites', { type: 'distortion', dur: .3, intent: 'escalate' });
+  C.transition('noites', 'silencio', { type: 'cut' });
+  C.transition('silencio', 'titulo', { type: 'flash', color: '#e8e0c8', dur: .5, intent: 'impact' });
+  C.transition('titulo', 'fim', { type: 'dissolve', dur: 1.2, intent: 'end' });
+});
+</script>
+</body></html>

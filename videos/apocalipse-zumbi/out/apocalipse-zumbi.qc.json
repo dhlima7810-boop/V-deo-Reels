@@ -1,0 +1,61 @@
+{
+ "video": "/home/claude/V-deo-Reels/videos/apocalipse-zumbi/out/apocalipse-zumbi.mp4",
+ "duration": 60.0,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 24.0,
+ "audio": true,
+ "loudness": {
+  "lufs": -14.2,
+  "true_peak": -1.3
+ },
+ "sync": {
+  "cues": 18,
+  "matched": 18,
+  "stacked": 11,
+  "median_offset_ms": -0.8,
+  "mux_offset_ms": 1.0
+ },
+ "black": [],
+ "frozen": [],
+ "scene_changes": 0,
+ "transitions": [
+  "fade",
+  "cut",
+  "flash",
+  "cut",
+  "distortion",
+  "cut",
+  "distortion",
+  "cut",
+  "flash",
+  "dissolve"
+ ],
+ "findings": [
+  {
+   "severity": "warn",
+   "check": "layout",
+   "msg": "text outside the title-safe area: 'ELES FICARAM\nPARADOS NO ESCURO.' at 16.50s",
+   "t": 16.5
+  },
+  {
+   "severity": "warn",
+   "check": "layout",
+   "msg": "text outside the title-safe area: 'N\u00c3O ABRA\nA PORTA.' at 24.50s",
+   "t": 24.5
+  },
+  {
+   "severity": "info",
+   "check": "sync",
+   "msg": "11 hits are stacked within 0.25-0.45 s of an earlier hit (they blur into one sound; drop duplicates or space them)"
+  }
+ ],
+ "sheet": "/home/claude/V-deo-Reels/videos/apocalipse-zumbi/out/apocalipse-zumbi.qc-sheet.png",
+ "counts": {
+  "error": 0,
+  "warn": 2,
+  "info": 1
+ }
+}

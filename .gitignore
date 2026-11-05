@@ -1,0 +1,6 @@
+videos/*/out/stills/
+videos/*/out/*.wav
+videos/*/out/frames*/
+videos/*/out/*.mp4
+videos/*/out/qc-frames/
+videos/*/out/*.png

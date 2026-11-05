@@ -1,0 +1,570 @@
+{
+ "engine": "1.0.0",
+ "width": 1080,
+ "height": 1920,
+ "fps": 24,
+ "duration": 60,
+ "bpm": 60,
+ "seed": 1234,
+ "scenes": [
+  {
+   "id": "dia1",
+   "start": 0,
+   "end": 7,
+   "energy": 0.15,
+   "purpose": "establish the quiet city and the single lit window (callback in the ending)",
+   "hold": null
+  },
+  {
+   "id": "febre",
+   "start": 7,
+   "end": 13,
+   "energy": 0.3,
+   "purpose": "the outbreak, told as a heartbeat that stops",
+   "hold": null
+  },
+  {
+   "id": "poste",
+   "start": 13,
+   "end": 20,
+   "energy": 0.35,
+   "purpose": "first contact \u2014 stillness, then the jolt",
+   "hold": null
+  },
+  {
+   "id": "horda",
+   "start": 20,
+   "end": 24.5,
+   "energy": 0.7,
+   "purpose": "scale of the threat",
+   "hold": null
+  },
+  {
+   "id": "porta",
+   "start": 24.5,
+   "end": 28,
+   "energy": 0.8,
+   "purpose": "pressure in a closed space",
+   "hold": null
+  },
+  {
+   "id": "vidro",
+   "start": 28,
+   "end": 31,
+   "energy": 0.75,
+   "purpose": "they are right there",
+   "hold": null
+  },
+  {
+   "id": "radio",
+   "start": 31,
+   "end": 34,
+   "energy": 0.55,
+   "purpose": "the survivor \u2014 a voice in static",
+   "hold": null
+  },
+  {
+   "id": "noites",
+   "start": 34,
+   "end": 38.5,
+   "energy": 1,
+   "purpose": "escalation \u2014 the days blur together",
+   "hold": null
+  },
+  {
+   "id": "silencio",
+   "start": 38.5,
+   "end": 42.5,
+   "energy": 0.05,
+   "purpose": "silence before the title",
+   "hold": true
+  },
+  {
+   "id": "titulo",
+   "start": 42.5,
+   "end": 53,
+   "energy": 1,
+   "purpose": "title reveal \u2014 hope as a signal",
+   "hold": null
+  },
+  {
+   "id": "fim",
+   "start": 53,
+   "end": 60,
+   "energy": 0.25,
+   "purpose": "callback and fade out",
+   "hold": null
+  }
+ ],
+ "transitions": [
+  {
+   "from": "dia1",
+   "to": "febre",
+   "at": 7,
+   "dur": 0.8,
+   "type": "fade"
+  },
+  {
+   "from": "febre",
+   "to": "poste",
+   "at": 13,
+   "dur": 0,
+   "type": "cut"
+  },
+  {
+   "from": "poste",
+   "to": "horda",
+   "at": 20,
+   "dur": 0.3,
+   "type": "flash"
+  },
+  {
+   "from": "horda",
+   "to": "porta",
+   "at": 24.5,
+   "dur": 0,
+   "type": "cut"
+  },
+  {
+   "from": "porta",
+   "to": "vidro",
+   "at": 28,
+   "dur": 0.35,
+   "type": "distortion"
+  },
+  {
+   "from": "vidro",
+   "to": "radio",
+   "at": 31,
+   "dur": 0,
+   "type": "cut"
+  },
+  {
+   "from": "radio",
+   "to": "noites",
+   "at": 34,
+   "dur": 0.3,
+   "type": "distortion"
+  },
+  {
+   "from": "noites",
+   "to": "silencio",
+   "at": 38.5,
+   "dur": 0,
+   "type": "cut"
+  },
+  {
+   "from": "silencio",
+   "to": "titulo",
+   "at": 42.5,
+   "dur": 0.5,
+   "type": "flash"
+  },
+  {
+   "from": "titulo",
+   "to": "fim",
+   "at": 53,
+   "dur": 1.2,
+   "type": "dissolve"
+  }
+ ],
+ "cues": [
+  {
+   "t": 0,
+   "type": "riser",
+   "dur": 6.5,
+   "gain": 0.25
+  },
+  {
+   "t": 7.5,
+   "type": "heartbeat",
+   "gain": 0.7
+  },
+  {
+   "t": 8.5,
+   "type": "heartbeat",
+   "gain": 0.7
+  },
+  {
+   "t": 9.4,
+   "type": "heartbeat",
+   "gain": 0.7
+  },
+  {
+   "t": 10.2,
+   "type": "heartbeat",
+   "gain": 0.7
+  },
+  {
+   "t": 10.85,
+   "type": "heartbeat",
+   "gain": 0.7
+  },
+  {
+   "t": 11.4,
+   "type": "beep",
+   "dur": 1.5,
+   "gain": 0.35
+  },
+  {
+   "t": 15.35,
+   "type": "hit",
+   "gain": 0.5
+  },
+  {
+   "t": 17.05,
+   "type": "hit",
+   "gain": 0.65
+  },
+  {
+   "t": 18.35,
+   "type": "stinger",
+   "gain": 0.9
+  },
+  {
+   "t": 18.35,
+   "type": "impact",
+   "auto": true,
+   "gain": 0.8
+  },
+  {
+   "t": 20,
+   "type": "impact",
+   "auto": true,
+   "dur": 0.3
+  },
+  {
+   "t": 25.05,
+   "type": "impact",
+   "gain": 0.45
+  },
+  {
+   "t": 25.05,
+   "type": "impact",
+   "auto": true,
+   "gain": 0.8
+  },
+  {
+   "t": 25.85,
+   "type": "impact",
+   "gain": 0.53
+  },
+  {
+   "t": 25.85,
+   "type": "impact",
+   "auto": true,
+   "gain": 0.8
+  },
+  {
+   "t": 26.45,
+   "type": "impact",
+   "gain": 0.61
+  },
+  {
+   "t": 26.45,
+   "type": "impact",
+   "auto": true,
+   "gain": 0.8
+  },
+  {
+   "t": 26.95,
+   "type": "impact",
+   "gain": 0.69
+  },
+  {
+   "t": 26.95,
+   "type": "impact",
+   "auto": true,
+   "gain": 0.8
+  },
+  {
+   "t": 27.3,
+   "type": "impact",
+   "gain": 0.77
+  },
+  {
+   "t": 27.3,
+   "type": "impact",
+   "auto": true,
+   "gain": 0.8
+  },
+  {
+   "t": 27.6,
+   "type": "impact",
+   "gain": 0.8500000000000001
+  },
+  {
+   "t": 27.6,
+   "type": "impact",
+   "auto": true,
+   "gain": 0.8
+  },
+  {
+   "t": 27.825,
+   "type": "glitch",
+   "auto": true,
+   "dur": 0.35
+  },
+  {
+   "t": 28.5,
+   "type": "hit",
+   "gain": 0.7
+  },
+  {
+   "t": 29.15,
+   "type": "hit",
+   "gain": 0.7
+  },
+  {
+   "t": 29.7,
+   "type": "hit",
+   "gain": 0.7
+  },
+  {
+   "t": 31,
+   "type": "static",
+   "dur": 2.8,
+   "gain": 0.3
+  },
+  {
+   "t": 31.35,
+   "type": "type",
+   "auto": true,
+   "gain": 0.5
+  },
+  {
+   "t": 31.4929,
+   "type": "type",
+   "auto": true,
+   "gain": 0.5
+  },
+  {
+   "t": 31.6357,
+   "type": "type",
+   "auto": true,
+   "gain": 0.5
+  },
+  {
+   "t": 31.7786,
+   "type": "type",
+   "auto": true,
+   "gain": 0.5
+  },
+  {
+   "t": 31.9214,
+   "type": "type",
+   "auto": true,
+   "gain": 0.5
+  },
+  {
+   "t": 32.0643,
+   "type": "type",
+   "auto": true,
+   "gain": 0.5
+  },
+  {
+   "t": 32.2071,
+   "type": "type",
+   "auto": true,
+   "gain": 0.5
+  },
+  {
+   "t": 32.35,
+   "type": "type",
+   "auto": true,
+   "gain": 0.5
+  },
+  {
+   "t": 32.4929,
+   "type": "type",
+   "auto": true,
+   "gain": 0.5
+  },
+  {
+   "t": 33.85,
+   "type": "glitch",
+   "auto": true,
+   "dur": 0.3
+  },
+  {
+   "t": 34.9,
+   "type": "hit",
+   "gain": 0.55
+  },
+  {
+   "t": 35.7,
+   "type": "hit",
+   "gain": 0.63
+  },
+  {
+   "t": 36.4,
+   "type": "hit",
+   "gain": 0.7100000000000001
+  },
+  {
+   "t": 37,
+   "type": "hit",
+   "gain": 0.79
+  },
+  {
+   "t": 37.5,
+   "type": "stinger",
+   "gain": 0.8700000000000001
+  },
+  {
+   "t": 37.5,
+   "type": "impact",
+   "auto": true,
+   "gain": 0.8
+  },
+  {
+   "t": 42.5,
+   "type": "impact",
+   "auto": true,
+   "dur": 0.5
+  },
+  {
+   "t": 43.1,
+   "type": "braam"
+  },
+  {
+   "t": 43.1,
+   "type": "impact",
+   "gain": 0.9
+  },
+  {
+   "t": 54.8,
+   "type": "boom",
+   "gain": 0.5
+  }
+ ],
+ "texts": 19,
+ "textList": [
+  {
+   "scene": "dia1",
+   "words": 4,
+   "text": "DIA 1 \u00b7 23:47"
+  },
+  {
+   "scene": "dia1",
+   "words": 5,
+   "text": "NINGU\u00c9M ACREDITOU\nNO PRIMEIRO ALERTA."
+  },
+  {
+   "scene": "febre",
+   "words": 4,
+   "text": "PRIMEIRO,\nVEIO A FEBRE."
+  },
+  {
+   "scene": "febre",
+   "words": 3,
+   "text": "Depois, o sil\u00eancio."
+  },
+  {
+   "scene": "poste",
+   "words": 5,
+   "text": "ELES FICARAM\nPARADOS NO ESCURO."
+  },
+  {
+   "scene": "horda",
+   "words": 2,
+   "text": "ELES ANDAM."
+  },
+  {
+   "scene": "porta",
+   "words": 4,
+   "text": "N\u00c3O ABRA\nA PORTA."
+  },
+  {
+   "scene": "vidro",
+   "words": 2,
+   "text": "ELES OUVEM."
+  },
+  {
+   "scene": "radio",
+   "words": 5,
+   "text": "FREQ 98.7 \u00b7 DIA 29"
+  },
+  {
+   "scene": "radio",
+   "words": 3,
+   "text": "ALGU\u00c9M NA ESCUTA?"
+  },
+  {
+   "scene": "noites",
+   "words": 2,
+   "text": "DIA 12"
+  },
+  {
+   "scene": "noites",
+   "words": 2,
+   "text": "DIA 29"
+  },
+  {
+   "scene": "noites",
+   "words": 2,
+   "text": "DIA 46"
+  },
+  {
+   "scene": "silencio",
+   "words": 2,
+   "text": "Dia 47."
+  },
+  {
+   "scene": "silencio",
+   "words": 4,
+   "text": "EU AINDA ESTOU AQUI."
+  },
+  {
+   "scene": "titulo",
+   "words": 3,
+   "text": "O \u00daLTIMO\nSINAL"
+  },
+  {
+   "scene": "titulo",
+   "words": 4,
+   "text": "Algu\u00e9m ainda est\u00e1 transmitindo."
+  },
+  {
+   "scene": "fim",
+   "words": 5,
+   "text": "Se voc\u00ea est\u00e1 ouvindo isto,"
+  },
+  {
+   "scene": "fim",
+   "words": 3,
+   "text": "AINDA N\u00c3O ACABOU."
+  }
+ ],
+ "safe": {
+  "x": 75.60000000000001,
+  "y": 249.60000000000002,
+  "w": 928.8,
+  "h": 1286.4
+ },
+ "minTextPx": 24,
+ "style": "horror",
+ "motion": "cinematic",
+ "missingFonts": [],
+ "style_ids": [
+  "horror"
+ ],
+ "motion_ids": [
+  "cinematic"
+ ],
+ "sound": {
+  "music": "horror",
+  "bpm": 60,
+  "key": "C",
+  "sfx": "dark",
+  "mood": "dread"
+ },
+ "audio": {
+  "music": "auto",
+  "sfx": true,
+  "file": null,
+  "voiceover": null,
+  "lufs": -14
+ },
+ "pageErrors": []
+}
