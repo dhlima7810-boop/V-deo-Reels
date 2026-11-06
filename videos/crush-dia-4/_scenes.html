@@ -1,0 +1,168 @@
+  const party = (lights = 1) => frameSvg(`<rect x="-10" y="-10" width="${W + 20}" height="${H + 20}" fill="#1c0b3a" stroke="none"/>
+    ${lights ? Array.from({ length: 5 }, (_, i) => `<polygon points="${120 + i * 210},0 ${60 + i * 210},1500 ${260 + i * 210},1500" fill="${['#ff2e63', '#43c6ac', '#ffd23f', '#7b2ff7', '#4cc9f0'][i]}" opacity=".16" stroke="none"/>`).join('') : ''}
+    <path d="M-20 150 Q270 260 540 150 T1100 150" fill="none" stroke-width="5"/>${Array.from({ length: 11 }, (_, i) => { const x = i * 108, y = 150 + Math.sin(i / 10 * Math.PI * 2) * 0 + (i % 5 === 0 ? 0 : 60 * Math.sin((i % 5) / 5 * Math.PI)); return `<circle cx="${x}" cy="${y + 26}" r="18" fill="${['#ffd23f', '#ff2e63', '#43c6ac', '#4cc9f0'][i % 4]}"/>`; }).join('')}
+    <circle cx="540" cy="420" r="90" fill="#c9cfe6"/>${Array.from({ length: 6 }, (_, i) => `<path d="M${460 + i * 32} 345 v150" stroke="#8a90a8" stroke-width="4"/>`).join('')}<path d="M540 230 v100" stroke-width="5"/>
+    ${[[110, 700, '#ff2e63'], [960, 640, '#7b2ff7'], [190, 900, '#ffd23f'], [900, 880, '#43c6ac']].map(([x, y, c]) => `<ellipse cx="${x}" cy="${y}" rx="60" ry="74" fill="${c}"/><path d="M${x} ${y + 74} q-14 60 10 120" fill="none" stroke-width="4"/>`).join('')}
+    <rect x="160" y="540" width="760" height="120" rx="20" fill="#ff2e63"/><text x="540" y="628" text-anchor="middle" font-family="Anton" font-size="84" fill="#fff" stroke="none">16 DA BIA</text>
+    <rect x="-10" y="1380" width="${W + 20}" height="600" fill="#2d1660"/>${Array.from({ length: 8 }, (_, i) => `<rect x="${i * 140 - 10}" y="1380" width="140" height="600" fill="${i % 2 ? '#3a1f7a' : '#2d1660'}" stroke="none"/>`).join('')}<path d="M-10 1380 h${W + 20}" stroke-width="8"/>`);
+  const mic = `<svg viewBox="0 0 80 220" width="120" height="330"><g stroke="${INK}" stroke-width="6"><rect x="28" y="90" width="24" height="120" rx="10" fill="#333"/><circle cx="40" cy="52" r="38" fill="#bbb"/><path d="M12 40 h56 M10 58 h60" stroke="#777" stroke-width="4"/></g></svg>`;
+  const BIAF = { top: '#ff5c8a', topType: 'tee' };   // party outfit
+
+  // ═════════ 01 O TUTORIAL · his room, can't dance
+  const S1 = T('chegou');
+  C.scene('tutorial', 0, S1, s => {
+    full(s, frameSvg(`<rect x="-10" y="-10" width="${W + 20}" height="${H + 20}" fill="#ffd8a8" stroke="none"/><rect x="640" y="260" width="340" height="420" fill="#8fd3ff" stroke-width="12"/><path d="M810 260 v420 M640 470 h340" stroke-width="10"/>
+      <rect x="90" y="300" width="300" height="400" fill="#7b2ff7" stroke-width="8" transform="rotate(-5 240 500)"/><text x="240" y="520" text-anchor="middle" font-family="Anton" font-size="80" fill="#ffc93c" stroke="none" transform="rotate(-5 240 500)">GAME</text>
+      <rect x="-10" y="1400" width="${W + 20}" height="600" fill="#b5835a"/><path d="M-10 1400 h${W + 20}" stroke-width="8"/>`), .6);
+    const lap = s.el(`<div style="width:760px;height:500px;background:#2c2c36;border:10px solid ${INK};border-radius:24px;position:relative">
+      <div style="position:absolute;inset:18px;background:#111;border-radius:10px;overflow:hidden"><div class="ui" style="position:absolute;left:20px;top:16px;font-size:34px;color:#fff">COMO DANÇAR EM 5 MIN</div>
+      <svg class="stick" viewBox="0 0 100 120" width="200" height="240" style="position:absolute;left:260px;top:90px"><g stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"><circle cx="50" cy="18" r="12"/><path d="M50 30 v46 M50 76 l-20 36 M50 76 l20 36"/><path class="arms" d="M50 44 l-30 -16 M50 44 l30 -16"/></g></svg>
+      <div style="position:absolute;left:0;bottom:0;height:10px;width:100%;background:#444"><div class="prog" style="height:100%;width:0;background:#e63946"></div></div></div></div>`, { space: 'frame', x: .5, y: .33 });
+    const stick = lap.querySelector('.stick'), prog = lap.querySelector('.prog');
+    s.every(lap, (lt) => { stick.style.transform = `rotate(${Math.sin(lt * 8) * 14}deg)`; prog.style.width = (lt / S1 * 100) + '%'; });
+    const d = bust(s, DAVI, { expr: 'nervous', look: [0, -8] }, 560, .42, 1.04);
+    const dw = bust(s, DAVI, { expr: 'wow', look: [6, 0] }, 560, .42, 1.04);
+    const crash = T('tutorial') + 1.9, ouch = T('tutorial') + 3.0;
+    s.every(d, (lt, st) => { const t = s.start + lt; st.o *= t < crash ? 1 : 0; st.r += Math.sin(t * 6) * 10 * (t > T('tutorial') ? 1 : 0); st.x += Math.sin(t * 3) * 40 * (t > T('tutorial') ? 1 : 0); });
+    s.every(dw, (lt, st) => { const t = s.start + lt; st.o *= t >= crash ? 1 : 0; st.y += t > ouch ? Math.abs(Math.sin(t * 14)) * -30 : 0; });
+    const lamp = s.el(`<div style="width:200px">${`<svg viewBox="0 0 100 160" width="200" height="320"><g stroke="${INK}" stroke-width="6"><path d="M20 10 h60 l14 50 h-88 z" fill="#ffd23f"/><path d="M50 60 v80" stroke-width="8"/><rect x="24" y="138" width="52" height="16" rx="6" fill="#555"/></g></svg>`}</div>`, { space: 'frame', x: .84, y: .78 });
+    s.every(lamp, (lt, st) => { const t = s.start + lt; st.r += sm(crash - .3, crash, t) * 95; st.y += sm(crash - .3, crash, t) * 60; });
+    const fx = (txt, col, at, x, y) => { const n = s.el(`<div style="font:400 170px/1 Anton;color:${col};-webkit-text-stroke:14px ${INK};paint-order:stroke fill">${txt}</div>`, { space: 'frame', x, y, layer: s.hud });
+      s.every(n, (lt, st) => { const t = s.start + lt; st.o *= t >= at && t < at + 1.1 ? 1 : 0; st.s *= .7 + .3 * sm(at, at + .12, t); st.r += -8; }); C.cue(at, 'impact', { gain: .7 }); };
+    fx('CRASH!', '#ffd23f', crash, .62, .6); fx('AI!', '#ff3b3b', ouch, .3, .55);
+    capL(s, 'dancar', 'EU NÃO SEI DANÇAR', { y: .66, size: 14, until: 2.3 });
+    capL(s, 'dancar', 'E ELA VAI ME CHAMAR', { y: .66, size: 13, color: '#ff6fa5', off: 2.3 });
+    capL(s, 'tutorial', 'A TARDE VENDO TUTORIAL', { y: .66, size: 12, until: 1.9 });
+    capL(s, 'tutorial', 'QUEBREI UM ABAJUR', { y: .66, size: 13, color: '#ffc93c', off: 1.9 });
+    hud(s);
+  }, { energy: .7, purpose: 'hook: he cannot dance' });
+
+  // ═════════ 02 A FESTA · she's beautiful; apology
+  const S2 = T('parou');
+  C.scene('festa', S1, S2 - S1, s => {
+    full(s, party(), .6);
+    const glow = s.el(`<div style="width:1300px;height:1300px;background:radial-gradient(circle, rgba(255,255,255,.7), rgba(255,180,210,.3) 40%, transparent 70%)"></div>`, { space: 'frame', x: .5, y: .62, layer: s.layer(.7, 'glow') });
+    s.every(glow, (lt, st) => { const t = s.start + lt; st.o *= t < T('desculpa') ? sm(T('chegou') + 2, T('chegou') + 2.6, t) : 0; st.r += lt * 8; });
+    const b = bust(s, BIA, Object.assign({ expr: 'happy' }, BIAF), 740, .5, 1.04);
+    s.every(b, (lt, st) => { const t = s.start + lt; st.o *= t < T('desculpa') ? 1 : 0; st.y += (1 - sm(T('chegou') + 1.8, T('chegou') + 2.2, t)) * 600; });
+    s.particles({ type: 'burst', at: T('chegou') + 2.2 - s.start, x: .5, y: .5, count: 30, colors: ['#ffd23f', '#fff', '#ff8fb8'], speed: .8 });
+    C.cue(T('chegou') + 2.2, 'shimmer', { gain: .7 });
+    const b2 = bust(s, BIA, Object.assign({ expr: 'sad', look: [-8, 0] }, BIAF), 560, .72, 1.03);
+    const b3 = bust(s, BIA, Object.assign({ expr: 'smile', look: [-8, 0] }, BIAF), 560, .72, 1.03);
+    const d = bust(s, DAVI, { expr: 'smile', look: [8, 0], blush: true }, 520, .28, 1.03);
+    s.every(b2, (lt, st) => { const t = s.start + lt; st.o *= t >= T('desculpa') && t < T('confessar') ? 1 : 0; });
+    s.every(b3, (lt, st) => { const t = s.start + lt; st.o *= t >= T('confessar') ? 1 : 0; });
+    s.every(d, (lt, st) => { const t = s.start + lt; st.o *= t >= T('desculpa') ? 1 : 0; });
+    capL(s, 'chegou', 'CHEGUEI NA FESTA', { y: .43, size: 13, until: 2.0 });
+    capL(s, 'chegou', 'ELA TAVA LINDA', { y: .43, size: 15, color: '#ff6fa5', off: 2.0 });
+    capL(s, 'desculpa', '"DESCULPA..."', { y: .43, size: 15, until: 2.0 });
+    capL(s, 'desculpa', '"...POR ACREDITAR NELE"', { y: .43, size: 11, off: 2.0 });
+    capL(s, 'confessar', 'EU TINHA QUE CONFESSAR', { y: .43, size: 12, color: '#ffc93c' });
+    hud(s);
+    s.push(.06);
+  }, { energy: .6, purpose: 'the party, the apology' });
+
+  // ═════════ 03 O MICROFONE · Kaique calls him out
+  const S3 = T('mao');
+  C.scene('microfone', S2, S3 - S2, s => {
+    const bg = full(s, party(0), .6);
+    s.every(bg, (lt, st) => { st.o *= s.start + lt < T('olhou') ? 1 : 0; });
+    const k = bust(s, KAI, { expr: 'smug', look: [0, 0] }, 800, .5, 1.05);
+    const m = s.el(`<div>${mic}</div>`, { space: 'frame', x: .74, y: .88 });
+    [k, m].forEach(n => s.every(n, (lt, st) => { const t = s.start + lt; st.o *= t >= T('parou') + 1.2 && t < T('olhou') ? 1 : 0; st.y += (1 - sm(T('parou') + 1.2, T('parou') + 1.5, t)) * 500; }));
+    s.every(m, (lt, st) => { st.r += -14; });
+    C.cue(T('parou') + .3, 'reverse', { gain: .8 });
+    const bub = s.el(`<div class="ui" style="max-width:880px;padding:30px 44px;background:#fff;border:8px solid ${INK};border-radius:50px;font-size:70px;line-height:1.1;text-align:center;box-shadow:0 12px 0 rgba(0,0,0,.35)">"MOSTRA COMO VOCÊ DANÇA!"</div>`, { space: 'frame', x: .5, y: .44, layer: s.hud });
+    s.every(bub, (lt, st) => { const t = s.start + lt; st.o *= t >= T('mostra') + .8 && t < T('olhou') ? 1 : 0; });
+    C.cue(T('mostra') + .8, 'pop', { gain: .6 });
+    // spotlight + eyes
+    const dark = s.el(`<div style="width:${W}px;height:${H}px;background:radial-gradient(circle at 50% 72%, rgba(255,250,210,.35) 0 240px, #000 330px)"></div>`, { space: 'frame', x: 0, y: 0, anchor: 'top-left', layer: s.layer(.62, 'dark') });
+    s.every(dark, (lt, st) => { st.o *= s.start + lt >= T('olhou') ? 1 : 0; });
+    const eyes = s.el(`<div style="width:${W}px;height:900px">${`<svg viewBox="0 0 ${W} 900" width="${W}" height="900">${Array.from({ length: 22 }, (_, i) => { const x = 60 + hash(i) * (W - 120), y = 40 + hash(i * 3.1) * 760; return `<g><ellipse cx="${x - 18}" cy="${y}" rx="14" ry="18" fill="#fff"/><ellipse cx="${x + 18}" cy="${y}" rx="14" ry="18" fill="#fff"/><circle cx="${x - 18 + (540 - x) * .02}" cy="${y + 6}" r="6" fill="#000"/><circle cx="${x + 18 + (540 - x) * .02}" cy="${y + 6}" r="6" fill="#000"/></g>`; }).join('')}</svg>`}</div>`, { space: 'frame', x: 0, y: .06, anchor: 'top-left' });
+    s.every(eyes, (lt, st) => { const t = s.start + lt; st.o *= t >= T('olhou') ? sm(T('olhou'), T('olhou') + .6, t) : 0; });
+    const d = bust(s, DAVI, { expr: 'wow', look: [0, -4] }, 560, .5, 1.03);
+    s.every(d, (lt, st) => { const t = s.start + lt; st.o *= t >= T('olhou') ? 1 : 0; st.x += t > T('travei') ? Math.sin(t * 50) * 4 : 0; });
+    C.cue(T('olhou'), 'drop', { gain: .6 }); C.cue(T('travei'), 'heartbeat', { gain: .7 }); C.cue(T('travei') + .5, 'heartbeat', { gain: .7 });
+    capL(s, 'parou', 'A MÚSICA PAROU', { y: .43, size: 14 });
+    capL(s, 'olhou', 'TODO MUNDO OLHOU', { y: .25, size: 14, color: '#ffc93c' });
+    capL(s, 'travei', 'EU TRAVEI', { y: .25, size: 17, color: '#e63946' });
+    hud(s);
+    s.push(.06);
+  }, { energy: .8, purpose: 'the public humiliation attempt' });
+
+  // ═════════ 04 VEM · she takes his hand; they dance badly; everyone joins
+  const S4 = T('sozinho');
+  C.scene('danca', S3, S4 - S3, s => {
+    const bg = full(s, party(), .6);
+    s.every(bg, (lt, st) => { st.x += Math.sin(lt * 9) * (s.start + lt > T('errado') ? 10 : 0); });
+    const b = bust(s, BIA, Object.assign({ expr: 'smile' }, BIAF), 600, .7, 1.03);
+    const d = bust(s, DAVI, { expr: 'smile', blush: true }, 560, .3, 1.03);
+    const hand = s.el(`<div style="width:300px">${`<svg viewBox="0 0 150 90" width="300" height="180"><g stroke="${INK}" stroke-width="6"><rect x="0" y="30" width="80" height="34" rx="16" fill="${DAVI.skin}"/><rect x="66" y="26" width="84" height="38" rx="18" fill="${BIA.skin}"/></g></svg>`}</div>`, { space: 'frame', x: .5, y: .9 });
+    s.every(hand, (lt, st) => { const t = s.start + lt; st.o *= t >= T('mao') + .6 && t < T('errado') ? 1 : 0; st.s *= .6 + .4 * sm(T('mao') + .6, T('mao') + .9, t); });
+    C.cue(T('mao') + .6, 'chime', { gain: .6 });
+    const dance = (n, ph) => s.every(n, (lt, st) => { const t = s.start + lt; if (t < T('errado')) return; st.r += Math.sin(t * 7 + ph) * 16; st.y -= Math.abs(Math.sin(t * 7 + ph)) * 60; st.x += Math.sin(t * 3.5 + ph) * 50; });
+    dance(b, 0); dance(d, 1.6);
+    const crowd = [[.1, .9, 260, '#2f9e44'], [.9, .9, 260, '#1c7ed6'], [.25, .98, 300, '#f08c00'], [.75, .98, 300, '#7048e8']].map(([x, y, w, c], i) => { const n = bust(s, { skin: ['#c98a5e', '#6b4226', '#f0c09a', '#8d5a3b'][i], hair: i % 2 ? 'pony' : 'messy', hairC: ['#151515', '#3a2416', '#d9a441', '#151515'][i], top: c, topType: 'tee' }, { expr: 'happy' }, w, x, y);
+      s.every(n, (lt, st) => { const t = s.start + lt; st.o *= t >= T('errado') + 2.4 ? 1 : 0; st.y -= Math.abs(Math.sin(t * 8 + i)) * 50 + (1 - sm(T('errado') + 2.4, T('errado') + 2.8, t)) * -400; st.r += Math.sin(t * 6 + i) * 10; }); return n; });
+    s.particles({ type: 'confetti', at: T('errado') + 2.4 - s.start, x: .5, y: .1, count: 80, colors: ['#ffc93c', '#ff2e63', '#43c6ac', '#ffffff', '#7b2ff7'] });
+    for (let t = T('errado'); t < S4 - .2; t += .5) C.cue(t, 'hit', { gain: .3 });
+    capL(s, 'mao', '"NINGUÉM SABE DANÇAR."', { y: .43, size: 11, until: 2.9 });
+    capL(s, 'mao', '"VEM."', { y: .43, size: 18, color: '#ff6fa5', off: 2.9 });
+    capL(s, 'errado', 'DO JEITO MAIS ERRADO', { y: .43, size: 12, until: 2.4 });
+    capL(s, 'errado', 'E TODO MUNDO ENTROU', { y: .43, size: 12, color: '#ffc93c', off: 2.4 });
+    hud(s);
+  }, { energy: 1, purpose: 'the payoff' });
+
+  // ═════════ 05 SOZINHO · Kaique alone
+  const S5 = T('bochecha');
+  C.scene('sozinho', S4, S5 - S4, s => {
+    full(s, `<div style="width:100%;height:100%;background:radial-gradient(circle at 50% 60%, rgba(255,250,210,.45) 0 300px, #05030c 420px)"></div>`, .5);
+    const k = bust(s, KAI, { expr: 'sad', look: [0, 8] }, 700, .5, 1.04);
+    const m = s.el(`<div>${mic}</div>`, { space: 'frame', x: .74, y: .9 });
+    s.every(m, (lt, st) => { st.r += -30 - lt * 4; });
+    s.every(k, (lt, st) => { st.s *= 1 - lt * .01; });
+    C.cue(S4 + .2, 'drop', { gain: .5 });
+    capL(s, 'sozinho', 'O KAIQUE FICOU SOZINHO', { y: .25, size: 12 });
+    hud(s);
+  }, { energy: .3, purpose: 'rival defeated' });
+
+  // ═════════ 06 A BOCHECHA · the ending
+  const S6 = T('fim');
+  C.scene('bochecha', S5, S6 - S5, s => {
+    full(s, `<div style="width:100%;height:100%;background:radial-gradient(circle at 50% 45%, #ff8fb8, #c2185b 70%)"></div>`, .5);
+    const b = bust(s, BIA, Object.assign({ expr: 'smile' }, BIAF), 620, .7, 1.03);
+    const d = bust(s, DAVI, { expr: 'smile', blush: true }, 580, .3, 1.03);
+    const dh = bust(s, DAVI, { expr: 'smile', hearts: true, blush: true }, 580, .3, 1.03);
+    const kiss = T('bochecha') + 1.6;
+    s.every(b, (lt, st) => { const t = s.start + lt; const k = sm(kiss - .5, kiss, t) - sm(kiss + .6, kiss + 1.0, t); st.x -= k * 150; st.r += -k * 14; });
+    s.every(d, (lt, st) => { st.o *= s.start + lt < kiss ? 1 : 0; });
+    s.every(dh, (lt, st) => { st.o *= s.start + lt >= kiss ? 1 : 0; });
+    const lips = s.el(`<div style="width:110px">${`<svg viewBox="0 0 100 60" width="110" height="66"><path d="M5 30 Q25 5 50 22 Q75 5 95 30 Q50 70 5 30Z" fill="#e91e63" stroke="${INK}" stroke-width="5"/></svg>`}</div>`, { space: 'frame', x: .4, y: .73 });
+    s.every(lips, (lt, st) => { const t = s.start + lt; st.o *= t >= kiss ? 1 : 0; st.s *= .6 + .4 * sm(kiss, kiss + .15, t); st.r += -12; });
+    C.cue(kiss, 'pop', { gain: .7 }); C.cue(T('bochecha') + 3, 'chime', { gain: .8 });
+    s.particles({ type: 'burst', at: kiss - s.start, x: .4, y: .7, count: 30, colors: ['#ff2e63', '#fff'], speed: .8 });
+    capL(s, 'bochecha', 'UM BEIJO NA BOCHECHA', { y: .3, size: 12, until: 2.6 });
+    capL(s, 'bochecha', '"VALEU POR NÃO DESISTIR"', { y: .3, size: 11, color: '#ffd23f', off: 2.6 });
+    hud(s);
+  }, { energy: .8, purpose: 'the reward' });
+
+  // ═════════ 07 FIM · 4 dias, 100%
+  C.scene('fim', S6, 62 - S6, s => {
+    full(s, `<div style="width:100%;height:100%;background:#120818"></div>`, .5);
+    const big = s.el(`<div style="text-align:center"><div class="hudlbl" style="font-size:60px">CHANCE COM A BIA</div><div style="font:400 360px/1 Anton;color:#7dff9a;-webkit-text-stroke:18px #000;paint-order:stroke fill">100%</div></div>`, { space: 'frame', x: .5, y: .42 });
+    s.anim(big, 'slam', .2);
+    s.particles({ type: 'confetti', at: .3, x: .5, y: .1, count: 90, colors: ['#ffc93c', '#ff2e63', '#43c6ac', '#ffffff', '#7b2ff7'] });
+    const t1 = s.text('FIM', { size: 16, space: 'frame', x: .5, y: .64, color: '#ffffff', css: 'font-family:Anton,sans-serif', layer: s.hud }); t1.classList.add('cap'); s.anim(t1, 'pop', 2.2);
+    C.cue(S6 + .2, 'impact', { gain: .8 }); C.cue(S6 + 2.2, 'chime', { gain: .7 });
+    capL(s, 'fim', '4 DIAS', { y: .2, size: 15, color: '#ffc93c', until: 5 });
+  }, { energy: .9, purpose: 'ending' });
+
+  C.transition('tutorial', 'festa', { type: 'whip', dir: 'left' });
+  C.transition('festa', 'microfone', { type: 'cut' });
+  C.transition('microfone', 'danca', { type: 'flash', color: '#ffffff' });
+  C.transition('danca', 'sozinho', { type: 'cut' });
+  C.transition('sozinho', 'bochecha', { type: 'fade' });
+  C.transition('bochecha', 'fim', { type: 'flash', color: '#ffffff' });
+});
+</script>
+</body></html>

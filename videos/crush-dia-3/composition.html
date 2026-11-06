@@ -1,0 +1,314 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>4 dias pra conquistar a crush — Dia 3</title><link rel="stylesheet" href="/engine/ms.css">
+<style>
+  .cap { font-family: Anton, sans-serif !important; -webkit-text-stroke: 16px #141414; paint-order: stroke fill; letter-spacing: .01em; line-height: 1; filter: drop-shadow(0 8px 0 rgba(0,0,0,.35)); }
+  .hudbox { position: absolute; background: #2a1638; border: 6px solid #120818; border-radius: 26px; box-shadow: 0 8px 0 rgba(0,0,0,.35); }
+  .hudlbl { font: 400 34px/1 Anton, sans-serif; color: #f1d6ff; letter-spacing: .08em; }
+  .hudval { font: 400 104px/1 Anton, sans-serif; -webkit-text-stroke: 10px #120818; paint-order: stroke fill; }
+  .ui { font-family: Fredoka, sans-serif; font-weight: 600; color: #1b1b1b; }
+</style></head>
+<body>
+<script src="/__spec.js"></script>
+<script src="/engine/ms.js"></script>
+<script>
+/* 4 DIAS PRA CONQUISTAR A CRUSH — Dia 3 de 4. No music; slow captions (one per narration line, held for the whole line). Same characters/HUD/captions as Dia 1. Narrated by Davi (assets/narracao.wav, timings in
+   assets/narracao.json). No audience choice: the story just happens and ends on a cliffhanger.
+   Persistent HUD from scene 2: DIA 1/4 + CHANCE COM A BIA meter. Captions carry the key words for muted autoplay. */
+MS.boot(C => {
+  const N = [{"id": "grupo", "t": 0.35, "d": 5.083}, {"id": "nunca", "t": 5.833, "d": 2.277}, {"id": "texto", "t": 8.71, "d": 3.856}, {"id": "quarenta", "t": 13.166, "d": 2.565}, {"id": "saiu", "t": 16.33, "d": 3.341}, {"id": "vestiario", "t": 20.371, "d": 5.367}, {"id": "julia", "t": 26.238, "d": 3.978}, {"id": "camera", "t": 30.715, "d": 4.59}, {"id": "video", "t": 35.905, "d": 4.104}, {"id": "mandou", "t": 40.509, "d": 2.522}, {"id": "visualizou", "t": 43.631, "d": 1.99}, {"id": "meianoite", "t": 46.521, "d": 6.963}, {"id": "problema", "t": 54.184, "d": 2.565}];
+  const T = id => N.find(c => c.id === id).t;
+  const E = id => { const i = N.findIndex(c => c.id === id); return i < N.length - 1 ? N[i + 1].t - .08 : N[i].t + N[i].d + .6; };
+  const W = C.W, H = C.H, hash = MS.hash;
+  const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x)), sm = (a, b, x) => { const k = clamp((x - a) / (b - a)); return k * k * (3 - 2 * k); };
+  const INK = '#1b1b1b';
+  const DAVI = { skin: '#e0a477', hair: 'messy', hairC: '#3b2416', top: '#3a7bd5', topType: 'hoodie' };
+  const BIA = { skin: '#a86b45', hair: 'pony', hairC: '#2a160d', top: '#6f9be0', topType: 'jacket' };
+  const KAI = { skin: '#7a4a2c', hair: 'cap', hairC: '#151515', top: '#e63946', topType: 'jersey', chain: true };
+  const JU = { skin: '#5c3a24', hair: 'puffs', hairC: '#1b120c', top: '#ffc93c', topType: 'tee', glasses: true };
+
+  // ───────── characters: bust builder (original designs). viewBox 0 0 300 420
+  function person(base, o = {}) {
+    o = Object.assign({}, base, o);
+    const ex = o.expr || 'neutral', lk = o.look || [0, 0], S = o.skin, HC = o.hairC;
+    let torso = `<path d="M34 420 Q34 316 150 304 Q266 316 266 420 Z" fill="${o.top}"/>`;
+    if (o.topType === 'hoodie') torso += `<path d="M96 306 Q150 280 204 306 Q150 346 96 306 Z" fill="#2b5fae"/><path d="M136 330 v46 M164 330 v46" fill="none" stroke-width="5"/><path d="M96 396 h108" fill="none" stroke-width="5" opacity=".5"/>`;
+    if (o.topType === 'jacket') torso += `<path d="M124 310 L150 372 L176 310 Z" fill="#fff"/><path d="M150 312 L112 420 M150 312 L188 420" fill="none" stroke-width="6"/><circle cx="206" cy="372" r="7" fill="#f4c542"/>`;
+    if (o.topType === 'jersey') torso += `<path d="M120 308 Q150 340 180 308" fill="none"/><text x="150" y="404" text-anchor="middle" font-family="Anton" font-size="64" fill="#fff" stroke="${INK}" stroke-width="4">7</text>`;
+    if (o.chain) torso += `<path d="M112 312 Q150 366 188 312" fill="none" stroke="#ffd23f" stroke-width="7"/><path d="M112 312 Q150 366 188 312" fill="none" stroke="${INK}" stroke-width="2" stroke-dasharray="4 8"/>`;
+    const neck = `<rect x="128" y="232" width="44" height="84" fill="${S}"/>`;
+    if (o.back) {
+      return `<svg viewBox="0 0 300 420" width="300" height="420" xmlns="http://www.w3.org/2000/svg"><g stroke="${INK}" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+        ${torso.replace(/<path d="M124 310[^>]*>/, '')}${neck}
+        <ellipse cx="72" cy="176" rx="15" ry="20" fill="${S}"/><ellipse cx="228" cy="176" rx="15" ry="20" fill="${S}"/>
+        <ellipse cx="150" cy="166" rx="80" ry="88" fill="${HC}"/>
+        <path d="M134 116 Q112 230 150 330 Q190 230 166 116 Z" fill="${HC}"/><circle cx="150" cy="112" r="16" fill="#ff5c8a"/>
+        <path d="M110 120 Q150 100 190 120 M104 170 Q150 150 196 170" fill="none" stroke="#4a2c1d" stroke-width="5"/></g></svg>`;
+    }
+    const brows = { neutral: ['M100 134 q20 -8 40 0', 'M160 134 q20 -8 40 0'], happy: ['M100 128 q20 -14 40 -2', 'M160 126 q20 -12 40 2'], smile: ['M100 130 q20 -12 40 -2', 'M160 128 q20 -10 40 2'],
+      sad: ['M100 140 L140 128', 'M160 128 L200 140'], wow: ['M100 120 q20 -14 40 -2', 'M160 118 q20 -12 40 2'], smug: ['M100 136 L140 132', 'M160 124 q20 -6 40 4'], nervous: ['M100 136 L140 128', 'M160 128 L200 136'] }[ex];
+    const mouth = { neutral: '<path d="M132 228 q18 8 36 0" fill="none"/>', happy: '<path d="M118 218 q32 44 64 0 z" fill="#7a1f1f"/><path d="M126 220 h48" stroke="#fff" stroke-width="6"/>',
+      smile: '<path d="M126 222 q24 22 48 0" fill="none"/>', sad: '<path d="M130 238 q20 -16 40 0" fill="none"/>', wow: '<ellipse cx="150" cy="232" rx="14" ry="18" fill="#7a1f1f"/>',
+      smug: '<path d="M128 228 q24 10 46 -8" fill="none"/>', nervous: '<path d="M124 232 q8 -8 16 0 t16 0 t16 0 t10 -2" fill="none"/>' }[ex];
+    let hairBack = '', hairFront = '';
+    if (o.hair === 'messy') hairFront = `<path d="M70 190 Q58 96 150 84 Q244 92 230 190 Q222 150 204 150 Q196 122 172 138 Q160 112 140 136 Q122 116 110 146 Q86 136 82 168 Z M96 108 L82 64 L124 92 Z M140 88 L150 40 L172 86 Z M190 96 L226 62 L216 112 Z" fill="${HC}"/>`;
+    if (o.hair === 'pony') { hairBack = `<path d="M212 120 Q318 150 282 316 Q262 232 222 214 Z" fill="${HC}"/><circle cx="222" cy="122" r="17" fill="#ff5c8a"/>`;
+      hairFront = `<path d="M68 200 Q52 82 150 78 Q248 82 232 200 Q226 136 196 118 Q150 150 96 126 Q74 150 68 200 Z" fill="${HC}"/>`; }
+    if (o.hair === 'puffs') { hairBack = `<circle cx="84" cy="96" r="50" fill="${HC}"/><circle cx="216" cy="96" r="50" fill="${HC}"/><path d="M60 82 q24 -10 48 0 M192 82 q24 -10 48 0" fill="none" stroke="#3a2618" stroke-width="5"/>`;
+      hairFront = `<path d="M70 176 Q64 86 150 84 Q236 86 230 176 Q224 124 150 118 Q76 124 70 176 Z" fill="${HC}"/><path d="M112 92 q10 -12 22 0 M160 92 q10 -12 22 0" fill="none" stroke="#ff5c8a" stroke-width="8"/>`; }
+    if (o.hair === 'cap') hairFront = `<path d="M72 196 Q70 150 84 136 L216 136 Q230 150 228 196 Q220 168 210 166 L90 166 Q80 168 72 196 Z" fill="${HC}"/>
+      <path d="M72 150 Q78 70 150 66 Q222 70 228 150 Z" fill="${o.capC || '#e63946'}"/><path d="M74 146 Q160 126 262 142 Q276 162 226 166 L74 160 Z" fill="${o.capB || '#b51f2c'}"/><circle cx="150" cy="70" r="7" fill="${o.capB || '#b51f2c'}"/><path d="M128 112 h44" stroke="#fff" stroke-width="8"/>`;
+    const lids = ex === 'smug' ? `<path d="M100 160 h40 M160 160 h40" stroke="${S}" stroke-width="18"/><path d="M100 168 h40 M160 168 h40" stroke-width="6"/>` : '';
+    const glasses = o.glasses ? `<circle cx="120" cy="174" r="31" fill="none" stroke-width="7"/><circle cx="180" cy="174" r="31" fill="none" stroke-width="7"/><path d="M151 172 h-2 M89 168 l-16 -4 M211 168 l16 -4" stroke-width="7"/>` : '';
+    const blush = (o.blush || ex === 'smile') ? `<ellipse cx="104" cy="212" rx="16" ry="9" fill="#ff7a8a" opacity=".6" stroke="none"/><ellipse cx="196" cy="212" rx="16" ry="9" fill="#ff7a8a" opacity=".6" stroke="none"/>` : '';
+    const stache = o.mustache ? `<path d="M112 212 q38 -22 76 0 q-38 14 -76 0 z" fill="#8a8a8a"/>` : '';
+    const sweat = ex === 'nervous' ? `<path d="M226 122 q14 22 0 30 q-14 -8 0 -30 z" fill="#8fd3ff" stroke-width="4"/>` : '';
+    const eyes = o.hearts
+      ? `<path d="M120 186 l-18 -18 a10 10 0 0 1 18 -12 a10 10 0 0 1 18 12 z M180 186 l-18 -18 a10 10 0 0 1 18 -12 a10 10 0 0 1 18 12 z" fill="#ff2e63" stroke-width="5"/>`
+      : `<g class="eyes" style="transform-box:fill-box;transform-origin:center"><ellipse cx="120" cy="174" rx="18" ry="21" fill="#fff"/><ellipse cx="180" cy="174" rx="18" ry="21" fill="#fff"/>
+        <circle cx="${122 + lk[0]}" cy="${178 + lk[1]}" r="8.5" fill="${INK}" stroke="none"/><circle cx="${182 + lk[0]}" cy="${178 + lk[1]}" r="8.5" fill="${INK}" stroke="none"/></g>${lids}`;
+    return `<svg viewBox="0 0 300 420" width="300" height="420" xmlns="http://www.w3.org/2000/svg"><g stroke="${INK}" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+      ${hairBack}${torso}${neck}
+      <ellipse cx="72" cy="178" rx="16" ry="21" fill="${S}"/><ellipse cx="228" cy="178" rx="16" ry="21" fill="${S}"/>
+      <ellipse cx="150" cy="170" rx="80" ry="86" fill="${S}"/>
+      ${hairFront}${eyes}${o.hearts ? '' : glasses}${stache}
+      <path d="${brows[0]}" fill="none" stroke-width="8"/><path d="${brows[1]}" fill="none" stroke-width="8"/>
+      <path d="M150 186 q-9 20 4 24" fill="none" stroke-width="5"/>${blush}${mouth}${sweat}
+    </g></svg>`;
+  }
+  // place a bust (width px) and return {node, svg}
+  const bust = (s, base, o, w, x, y, layer) => { const n = s.el(`<div style="width:${w}px">${person(base, o)}</div>`, { space: 'frame', x, y, anchor: 'bottom', layer });
+    const sv = n.querySelector('svg'); sv.setAttribute('width', w); sv.setAttribute('height', w * 1.4); return n; };
+  const blink = (node, seed) => { const e = node.querySelector('.eyes'); return lt => { if (!e) return; const k = (lt + seed) % 3.3; e.style.transform = k < .12 ? 'scaleY(.1)' : ''; }; };
+  const full = (s, html, depth = .6, name = 'bg') => s.el(`<div style="width:${W}px;height:${H}px;overflow:hidden;position:relative">${html}</div>`, { space: 'frame', x: 0, y: 0, anchor: 'top-left', layer: s.layer(depth, name) });
+  const frameSvg = inner => `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg"><g stroke="${INK}" stroke-width="7" stroke-linejoin="round">${inner}</g></svg>`;
+  const classroom = (light = 1) => frameSvg(`<rect x="-10" y="-10" width="${W + 20}" height="${H + 20}" fill="${light ? '#ffe6c4' : '#e9cfa9'}" stroke="none"/>
+    <rect x="90" y="360" width="900" height="470" rx="18" fill="#2f6b4f" stroke-width="14"/><rect x="90" y="830" width="900" height="26" fill="#a0703f"/>
+    <text x="540" y="560" text-anchor="middle" font-family="Fredoka" font-weight="600" font-size="88" fill="#f4f4ec" stroke="none">x² + 5x + 6 = 0</text>
+    <text x="300" y="720" font-family="Fredoka" font-size="54" fill="#f4f4ec" opacity=".8" stroke="none">Δ = b² − 4ac</text>
+    <circle cx="930" cy="230" r="70" fill="#fff"/><path d="M930 230 v-44 M930 230 l30 16" fill="none" stroke-width="8"/>
+    <rect x="-10" y="1180" width="${W + 20}" height="800" fill="#c99a68"/><path d="M-10 1180 h${W + 20}" stroke-width="10"/>`);
+  const desk = (x, y, w) => `<rect x="${x - w / 2}" y="${y}" width="${w}" height="${w * .22}" rx="10" fill="#d9a066"/><rect x="${x - w / 2 + 20}" y="${y + w * .22}" width="16" height="${w * .3}" fill="#6b6b78"/><rect x="${x + w / 2 - 36}" y="${y + w * .22}" width="16" height="${w * .3}" fill="#6b6b78"/>`;
+  const phoneShell = (w, h, inner, bg = '#fff') => `<div style="width:${w}px;height:${h}px;border-radius:${w * .13}px;background:#121218;border:14px solid #2c2c36;box-shadow:0 0 0 8px #0b0b10,0 40px 80px rgba(0,0,0,.5);position:relative;overflow:hidden">
+      <div style="position:absolute;inset:18px;border-radius:${w * .1}px;background:${bg};overflow:hidden">${inner}</div>
+      <div style="position:absolute;top:30px;left:50%;transform:translateX(-50%);width:170px;height:42px;border-radius:21px;background:#000;z-index:3"></div></div>`;
+  const avatar = (sz, base) => `<div style="width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;background:#ffd1dc;border:5px solid ${INK};flex:none"><div style="margin:${sz * .06}px 0 0 ${-sz * .02}px">${person(base, { expr: 'happy' }).replace('width="300" height="420"', `width="${sz * 1.05}" height="${sz * 1.47}"`)}</div></div>`;
+
+  // ───────── HUD: DIA 1/4 + CHANCE COM A BIA (value is a function of absolute time)
+  const METER = t => t < T('quarenta') + 1 ? 42 : t < T('video') + 2 ? 42 - Math.round(39 * sm(T('quarenta') + 1, T('quarenta') + 1.6, t)) : t < T('meianoite') + 5 ? 3 + Math.round(22 * sm(T('video') + 2, T('video') + 3, t)) : 25 + Math.round(45 * sm(T('meianoite') + 5, T('meianoite') + 6.2, t));
+  function hud(s, enterAt = -1) {
+    const root = s.el(`<div style="width:${W}px;height:300px"></div>`, { space: 'frame', x: 0, y: 0, anchor: 'top-left', layer: s.hud });
+    root.innerHTML = `<div class="hudbox" style="left:40px;top:120px;width:260px;height:170px;text-align:center"><div class="hudlbl" style="margin-top:16px">DIA</div><div class="hudval" style="color:#ffc93c">3<span style="font-size:58px;color:#f1d6ff">/4</span></div></div>
+      <div class="hudbox" style="left:330px;top:120px;width:710px;height:170px"><div class="hudlbl" style="position:absolute;left:34px;top:22px">CHANCE COM A BIA</div>
+        <div class="hudval pct" style="position:absolute;left:34px;top:56px;color:#ff6fa5">42%</div>
+        <div style="position:absolute;left:290px;top:92px;width:380px;height:40px;background:#120818;border-radius:20px;overflow:hidden"><div class="bar" style="height:100%;width:3%;background:#ff6fa5;border-radius:20px"></div></div></div>`;
+    const pct = root.querySelector('.pct'), bar = root.querySelector('.bar');
+    s.every(root, (lt, st) => { const t = s.start + lt, v = METER(t), drop = t > T('quarenta') + 1 && t < T('quarenta') + 2.6, up = (t > T('video') + 2 && t < T('video') + 3.4) || (t > T('meianoite') + 5 && t < T('meianoite') + 6.6);
+      pct.textContent = v + '%'; bar.style.width = Math.min(100, Math.max(2, v * 2.2)) + '%';
+      const col = drop && Math.floor(t * 8) % 2 ? '#ff3b3b' : up && Math.floor(t * 8) % 2 ? '#7dff9a' : '#ff6fa5'; pct.style.color = col; bar.style.background = col;
+      if (enterAt >= 0) { const e = sm(enterAt, enterAt + .35, lt); st.y -= (1 - e) * 320; } });
+    return root;
+  }
+  // ───────── captions keyed to ABSOLUTE narration time
+  function cap(s, at, dur, str, o = {}) {
+    const t = s.text(str, { size: o.size || 15, space: 'frame', x: o.x || .5, y: o.y || .69, color: o.color || '#ffffff', css: 'font-family:Anton,sans-serif', layer: s.hud, minSize: 8 });
+    t.classList.add('cap'); t.style.zIndex = 8; const l = at - s.start;
+    s.anim(t, o.anim || 'fadeUp', l, { cue: o.cue, dur: .35 });
+    s.every(t, (lt, st) => { st.o *= lt >= l && lt < l + dur ? 1 : 0; st.r += o.rot || 0; });
+    return t;
+  }
+  const capL = (s, id, str, o = {}) => { const a = T(id) + (o.off || 0), b = o.until != null ? T(id) + o.until : E(id); return cap(s, a, b - a, str, o); };
+  const win = (s, a, b) => (lt, st) => { const t = s.start + lt; st.o *= t >= a && t < b ? 1 : 0; };
+
+  const heartSvg = (n, col = '#ff2e63') => `<svg viewBox="0 0 100 90" width="${n}" height="${n * .9}"><path d="M50 86 L10 46 A22 22 0 0 1 50 16 A22 22 0 0 1 90 46 Z" fill="${col}" stroke="${INK}" stroke-width="6" stroke-linejoin="round"/></svg>`;
+  const lockers = (dark = 0) => frameSvg(`<rect x="-10" y="-10" width="${W + 20}" height="${H + 20}" fill="${dark ? '#3a0a10' : '#dfe7f2'}" stroke="none"/>
+    ${Array.from({ length: 6 }, (_, i) => `<rect x="${i * 190 - 30}" y="420" width="180" height="900" rx="8" fill="${dark ? '#5a1820' : ['#4c8bd6', '#3f7cc6'][i % 2]}"/>
+      ${[0, 1, 2, 3].map(k => `<path d="M${i * 190 + 20} ${480 + k * 22} h80" stroke-width="5"/>`).join('')}<rect x="${i * 190 + 120}" y="820" width="16" height="70" rx="6" fill="#d9d9e0"/>`).join('')}
+    <rect x="-10" y="1320" width="${W + 20}" height="700" fill="${dark ? '#24060a' : '#b9c0cc'}"/><path d="M-10 1320 h${W + 20}" stroke-width="10"/>`);
+  const yard = () => frameSvg(`<rect x="-10" y="-10" width="${W + 20}" height="${H + 20}" fill="#8fd3ff" stroke="none"/><circle cx="880" cy="340" r="80" fill="#ffd166"/>
+    <rect x="-10" y="560" width="${W + 20}" height="640" fill="#f0b46a"/>${Array.from({ length: 9 }, (_, i) => `<rect x="${i * 130 + 10}" y="640" width="80" height="110" fill="#5b7bb5"/>`).join('')}
+    <text x="540" y="960" text-anchor="middle" font-family="Anton" font-size="150" fill="#fff" stroke="${INK}" stroke-width="6">ESCOLA</text>
+    <rect x="-10" y="1200" width="${W + 20}" height="800" fill="#e07a3f"/><path d="M-10 1200 h${W + 20}" stroke-width="10"/><path d="M540 1200 v800 M-10 1600 h${W + 20}" stroke="#fff" stroke-width="12"/><circle cx="540" cy="1600" r="150" fill="none" stroke="#fff" stroke-width="12"/>`);
+
+  const ZE = { skin: '#c98a5e', hair: 'cap', hairC: '#9a9a9a', top: '#4a5a78', topType: 'tee', capC: '#2b5fae', capB: '#1d3f7a', mustache: true };
+  const msg = (who, txt, col = '#ece8f2', extra = '') => `<div style="margin:0 0 22px;max-width:640px;padding:22px 30px;border-radius:36px 36px 36px 10px;background:${col};font:600 42px/1.15 Fredoka,sans-serif;${extra}"><div style="font-size:28px;color:#7b2ff7;margin-bottom:4px">${who}</div>${txt}</div>`;
+
+  // ═════════ 01 O GRUPO · fake message in the class group
+  const S1 = T('quarenta');
+  C.scene('grupo', 0, S1, s => {
+    full(s, `<div style="width:100%;height:100%;background:radial-gradient(circle at 50% 40%, #b0183a, #5a0b1d 60%, #2a0410)"></div>`, .5);
+    const ph = s.el(phoneShell(800, 1280, `
+      <div style="height:200px;background:#f4f0fa;border-bottom:4px solid #ddd;display:flex;align-items:flex-end;gap:24px;padding:0 36px 24px"><div style="width:110px;height:110px;border-radius:50%;background:#43c6ac;border:5px solid ${INK};font:400 54px/100px Anton;text-align:center;color:#fff">2B</div><div class="ui" style="font-size:52px">2º ANO B<div style="font-size:30px;font-weight:500;color:#7a7a8a">41 participantes</div></div></div>
+      <div class="feed" style="position:absolute;left:30px;right:30px;top:240px">
+        ${msg('Lucas', 'alguém fez a lição de química?')}${msg('Mari', 'kkkkk ninguém')}
+        <div class="fake" style="opacity:0">${msg('Davi', 'a Bia é chata. só vou na festa dela pela comida', '#ffd6dc', 'border:6px solid #e63946')}</div>
+        <div class="r1" style="opacity:0">${msg('Pedro', 'MANO 😳'.replace('😳', '!!!'))}</div><div class="r2" style="opacity:0">${msg('Lari', 'que isso davi???')}</div></div>`), { space: 'frame', x: .5, y: .51 });
+    const fake = ph.querySelector('.fake'), r1 = ph.querySelector('.r1'), r2 = ph.querySelector('.r2');
+    s.every(ph, (lt, st) => { const t = lt; st.s *= 1 + t * .012; fake.style.opacity = sm(T('nunca') - .4, T('nunca'), t); fake.style.transform = t > T('texto') && t < T('texto') + 3.8 ? `translateX(${Math.sin(t * 40) * 6}px)` : '';
+      r1.style.opacity = t > T('texto') + 2.6 ? 1 : 0; r2.style.opacity = t > T('texto') + 3.4 ? 1 : 0; });
+    C.cue(.4, 'notify', { gain: .8 }); C.cue(T('nunca') - .4, 'notify', { gain: .9 }); C.cue(T('texto') + 2.6, 'pop', { gain: .5 }); C.cue(T('texto') + 3.4, 'pop', { gain: .5 });
+    const d = bust(s, DAVI, { expr: 'wow', look: [-6, -8] }, 420, .82, 1.06);
+    s.every(d, (lt, st) => { st.y += (1 - sm(T('nunca'), T('nunca') + .3, lt)) * 500; st.r += -8; });
+    capL(s, 'grupo', 'UMA MENSAGEM MINHA', { y: .69, size: 13, until: 5.0 });
+    capL(s, 'nunca', 'QUE EU NUNCA MANDEI', { y: .69, size: 13, color: '#ff6fa5' });
+    capL(s, 'texto', 'NO GRUPO DA SALA', { y: .69, size: 13, color: '#ffc93c' });
+    hud(s);
+  }, { energy: .8, purpose: 'hook: a fake message' });
+
+  // ═════════ 02 40 PESSOAS · she leaves and blocks him
+  const S2 = T('vestiario');
+  C.scene('quarenta', S1, S2 - S1, s => {
+    full(s, classroom(0), .6);
+    const eye = s.el(`<div style="display:flex;align-items:center;gap:24px;padding:24px 44px;background:#fff;border:8px solid ${INK};border-radius:40px;box-shadow:0 12px 0 rgba(0,0,0,.35)"><svg viewBox="0 0 100 60" width="150" height="90"><path d="M5 30 Q50 -10 95 30 Q50 70 5 30Z" fill="#fff" stroke="${INK}" stroke-width="7"/><circle cx="50" cy="30" r="14" fill="${INK}"/></svg><div class="n" style="font:400 150px/1 Anton;color:#e63946">0</div></div>`, { space: 'frame', x: .5, y: .3 });
+    const n = eye.querySelector('.n');
+    s.every(eye, (lt, st) => { const t = s.start + lt; n.textContent = Math.round(40 * sm(T('quarenta') + .2, T('quarenta') + 1.6, t)); st.o *= t < T('saiu') ? 1 : 0; });
+    const b = bust(s, BIA, { expr: 'sad', look: [0, 6] }, 620, .5, 1.03);
+    s.every(b, (lt, st) => { const t = s.start + lt; st.o *= t >= T('quarenta') + 1.4 && t < T('saiu') ? 1 : 0; st.y += (1 - sm(T('quarenta') + 1.4, T('quarenta') + 1.7, t)) * 400; });
+    const bb = bust(s, BIA, { back: true }, 620, .5, 1.03);
+    s.every(bb, (lt, st) => { const t = s.start + lt; st.o *= t >= T('saiu') ? 1 : 0; st.x += sm(T('saiu') + .3, T('saiu') + 3.4, t) * W * .9; });
+    const blk = s.el(`<div style="padding:10px 40px;border:14px solid #e63946;border-radius:24px;font:400 150px/1 Anton,sans-serif;color:#e63946;background:rgba(255,255,255,.8)">BLOQUEADO</div>`, { space: 'frame', x: .5, y: .45, layer: s.hud });
+    s.every(blk, (lt, st) => { const t = s.start + lt, a = T('saiu') + 2.3; st.o *= t >= a ? 1 : 0; st.s *= 1.6 - .6 * sm(a, a + .15, t); st.r += -10; });
+    C.cue(T('saiu') + 2.3, 'impact', { gain: .8 }); C.cue(T('quarenta') + 1, 'drop', { gain: .7 });
+    capL(s, 'quarenta', '40 PESSOAS VIRAM', { y: .66, size: 14 });
+    capL(s, 'saiu', 'ELA SAIU SEM OLHAR', { y: .66, size: 13, color: '#ff6fa5', until: 2.2 });
+    capL(s, 'saiu', 'E ME BLOQUEOU', { y: .66, size: 14, color: '#e63946', off: 2.2 });
+    hud(s);
+  }, { energy: .4, purpose: 'the damage' });
+
+  // ═════════ 03 VESTIÁRIO · flashback
+  const S3 = T('julia');
+  C.scene('vestiario', S2, S3 - S2, s => {
+    const bg = full(s, lockers(), .6); bg.style.filter = 'sepia(.8) saturate(.8)';
+    const tag = s.el(`<div style="padding:12px 30px;background:#fff;border:7px solid ${INK};border-radius:16px;font:400 64px/1 Anton;color:${INK};letter-spacing:.1em">FLASHBACK</div>`, { space: 'frame', x: .5, y: .2, layer: s.hud });
+    s.every(tag, (lt, st) => { st.r += -4; });
+    const bench = s.el(`<div style="width:${W}px;height:140px;background:#a0703f;border-top:10px solid ${INK};border-bottom:10px solid ${INK}"></div>`, { space: 'frame', x: 0, y: .78, anchor: 'left' });
+    const phone = s.el(`<div style="width:150px;height:270px;border-radius:26px;background:#121218;border:8px solid #2c2c36;box-shadow:0 0 0 5px #0b0b10"><div style="margin:14px;height:220px;border-radius:16px;background:#3a7bd5"></div></div>`, { space: 'frame', x: .45, y: .72 });
+    const kh = s.el(`<div style="width:900px;height:110px"><div style="position:absolute;right:0;top:0;width:800px;height:110px;background:${KAI.top};border:7px solid ${INK};border-radius:55px"></div><div style="position:absolute;left:0;top:-10px;width:140px;height:130px;background:${KAI.skin};border:7px solid ${INK};border-radius:60px"></div></div>`, { space: 'frame', x: 1.9, y: .7, anchor: 'right' });
+    const a = T('vestiario') + 2.4;
+    s.every(kh, (lt, st) => { const t = s.start + lt; st.x -= sm(a, a + .4, t) * W * .58 - sm(a + .8, a + 1.4, t) * W * .9; });
+    s.every(phone, (lt, st) => { const t = s.start + lt; st.x += sm(a + .8, a + 1.4, t) * W * .9; st.r += Math.sin(lt * 2) * 2; });
+    C.cue(a + .4, 'whoosh', { gain: .6 });
+    s.every(bench, () => {});
+    capL(s, 'vestiario', 'FOI AÍ QUE EU ENTENDI', { y: .36, size: 13, until: 2.0 });
+    capL(s, 'vestiario', 'O KAIQUE PEGOU MEU CELULAR', { y: .36, size: 11, color: '#ff6fa5', off: 2.0 });
+    hud(s);
+  }, { energy: .5, purpose: 'what really happened' });
+
+  // ═════════ 04 JÚLIA + SEU ZÉ · the plan
+  const S4 = T('video');
+  C.scene('plano', S3, S4 - S3, s => {
+    full(s, lockers(), .6);
+    const dv = bust(s, DAVI, { expr: 'sad', look: [8, 0] }, 520, .27, 1.02);
+    const j = bust(s, JU, { expr: 'smug', look: [-8, 0] }, 560, .74, 1.03);
+    s.every(dv, (lt, st) => { st.o *= s.start + lt < T('camera') ? 1 : 0; }); s.every(j, (lt, st) => { const t = s.start + lt; st.o *= t < T('camera') ? 1 : 0; st.x += (1 - sm(T('julia'), T('julia') + .3, t)) * 500; });
+    const cam = s.el(`<div style="width:420px">${`<svg viewBox="0 0 210 140" width="420" height="280"><g stroke="${INK}" stroke-width="6" stroke-linejoin="round"><rect x="10" y="10" width="30" height="70" fill="#9aa"/><path d="M40 40 L70 50" stroke-width="12"/><rect x="66" y="26" width="120" height="56" rx="12" fill="#e8e8ee" transform="rotate(12 126 54)"/><circle cx="182" cy="74" r="16" fill="${INK}"/><circle class="led" cx="92" cy="40" r="7" fill="#e63946" stroke="none"/></g></svg>`}</div>`, { space: 'frame', x: .32, y: .4 });
+    const led = cam.querySelector('.led');
+    s.every(cam, (lt, st) => { const t = s.start + lt; st.o *= t >= T('camera') ? 1 : 0; st.s *= .7 + .3 * sm(T('camera'), T('camera') + .3, t); led.style.opacity = Math.floor(t * 2) % 2 ? 1 : .2; st.r += Math.sin(lt) * 3; });
+    const ze = bust(s, ZE, { expr: 'happy', look: [-6, 0] }, 620, .7, 1.04);
+    s.every(ze, (lt, st) => { const t = s.start + lt, a = T('camera') + 2.2; st.o *= t >= a ? 1 : 0; st.y += (1 - sm(a, a + .3, t)) * 500; });
+    const nm = s.el(`<div style="padding:12px 30px;background:#2b5fae;border:7px solid ${INK};border-radius:18px;font:400 60px/1 Anton;color:#fff">SEU ZÉ · PORTEIRO</div>`, { space: 'frame', x: .66, y: .48, layer: s.hud });
+    s.every(nm, (lt, st) => { const t = s.start + lt, a = T('camera') + 2.4; st.o *= t >= a ? 1 : 0; st.r += 4; });
+    C.cue(T('camera'), 'beep', { gain: .5 });
+    capL(s, 'julia', 'SE FOI ELE, A GENTE PROVA', { y: .3, size: 11, color: '#ffc93c' });
+    capL(s, 'camera', 'O CORREDOR TEM CÂMERA', { y: .25, size: 12, until: 2.2 });
+    capL(s, 'camera', 'E O SEU ZÉ ME DEVIA UMA', { y: .25, size: 12, color: '#ffc93c', off: 2.2 });
+    hud(s);
+    s.push(.06);
+  }, { energy: .6, purpose: 'the counter-plan' });
+
+  // ═════════ 05 A GRAVAÇÃO · CCTV + sending it to Bia
+  const S5 = T('visualizou');
+  C.scene('video', S4, S5 - S4, s => {
+    full(s, `<div style="width:100%;height:100%;background:#0b0f0b"></div>`, .4);
+    const scr = s.el(`<div style="width:960px;height:1200px;border:12px solid #2c2c36;border-radius:20px;overflow:hidden;position:relative;background:#1e2a1e">
+      <div style="position:absolute;inset:0">${frameSvg('')}</div>
+      <div style="position:absolute;left:30px;top:24px;font:400 54px/1 Anton;color:#ff3b3b">● REC</div><div style="position:absolute;right:30px;top:24px;font:600 40px/1 Fredoka;color:#cfe8cf">CAM 03 · 10:42</div>
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg, rgba(255,255,255,.05) 0 3px, transparent 3px 7px)"></div></div>`, { space: 'frame', x: .5, y: .5 });
+    const k = bust(s, KAI, { expr: 'smug', look: [6, 6] }, 700, .5, .82);
+    k.style.filter = 'grayscale(.7) sepia(.4) hue-rotate(60deg) brightness(.85)';
+    const ph = s.el(`<div style="width:130px;height:230px;border-radius:22px;background:#121218;border:7px solid #555;filter:grayscale(.5)"><div style="margin:12px;height:186px;border-radius:14px;background:#3a7bd5"></div></div>`, { space: 'frame', x: .66, y: .66 });
+    [k, ph, scr].forEach(n => s.every(n, (lt, st) => { st.o *= s.start + lt < T('mandou') ? 1 : 0; }));
+    s.every(k, (lt, st) => { st.x += Math.sin(lt * 1.2) * 8; });
+    const circle = s.el(`<div style="width:320px;height:380px;border:12px solid #ffc93c;border-radius:50%"></div>`, { space: 'frame', x: .66, y: .63 });
+    s.every(circle, (lt, st) => { const t = s.start + lt, a = T('video') + 2.2; st.o *= t >= a && t < T('mandou') ? 1 : 0; st.s *= .6 + .4 * sm(a, a + .25, t); });
+    C.cue(T('video') + 2.2, 'ding', { gain: .7 });
+    // send to Bia
+    const send = s.el(phoneShell(760, 1100, `<div style="height:170px;background:#f4f0fa;border-bottom:4px solid #ddd;display:flex;align-items:flex-end;gap:20px;padding:0 30px 20px">${avatar(90, BIA)}<div class="ui" style="font-size:48px">Bia</div></div>
+      <div style="position:absolute;right:30px;top:250px;width:440px;height:300px;border-radius:30px;background:#1e2a1e;border:6px solid #7b2ff7;display:flex;align-items:center;justify-content:center"><div style="width:0;height:0;border-left:70px solid #fff;border-top:44px solid transparent;border-bottom:44px solid transparent"></div></div>
+      <div class="ui" style="position:absolute;right:34px;top:570px;font-size:34px;color:#43a047">enviado ✓✓</div>`), { space: 'frame', x: .5, y: .5 });
+    s.every(send, (lt, st) => { const t = s.start + lt; st.o *= t >= T('mandou') ? 1 : 0; st.y += (1 - sm(T('mandou'), T('mandou') + .3, t)) * 700; });
+    C.cue(T('mandou') + .5, 'swoosh', { gain: .6 });
+    capL(s, 'video', 'O KAIQUE COM MEU CELULAR', { y: .2, size: 11, color: '#ffc93c' });
+    capL(s, 'mandou', 'MANDOU PRA BIA NA HORA', { y: .2, size: 12 });
+    hud(s);
+  }, { energy: .7, purpose: 'the proof' });
+
+  // ═════════ 06 VISUALIZOU · callback to Dia 1
+  const S6 = T('meianoite');
+  C.scene('visto', S5, S6 - S5, s => {
+    full(s, `<div style="width:100%;height:100%;background:radial-gradient(circle at 50% 40%, #7b2ff7, #3a0e6e 60%, #1a0533)"></div>`, .5);
+    const ph = s.el(phoneShell(760, 1100, `<div style="height:170px;background:#f4f0fa;border-bottom:4px solid #ddd;display:flex;align-items:flex-end;gap:20px;padding:0 30px 20px">${avatar(90, BIA)}<div class="ui" style="font-size:48px">Bia</div></div>
+      <div style="position:absolute;right:30px;top:250px;width:440px;height:300px;border-radius:30px;background:#1e2a1e;border:6px solid #7b2ff7"></div>
+      <div class="ui" style="position:absolute;right:34px;top:570px;font-size:36px;color:#7a7a8a">Visualizado</div>`), { space: 'frame', x: .5, y: .45 });
+    s.every(ph, (lt, st) => { st.s *= 1 + lt * .02; });
+    const d = bust(s, DAVI, { expr: 'sad', look: [-6, -8] }, 440, .8, 1.06);
+    s.every(d, (lt, st) => { st.r += -8; });
+    capL(s, 'visualizou', 'VISUALIZOU...', { y: .66, size: 14, until: 1.3 });
+    capL(s, 'visualizou', 'E NÃO RESPONDEU', { y: .66, size: 13, color: '#ff6fa5', off: 1.3 });
+    hud(s);
+  }, { energy: .3, purpose: 'silence again' });
+
+  // ═════════ 07 23:58 · unblocked + "quero dançar com você"
+  const S7 = T('problema');
+  C.scene('meianoite', S6, S7 - S6, s => {
+    full(s, `<div style="width:100%;height:100%;background:radial-gradient(circle at 50% 50%, #2a2f6b, #0b0d24 70%)"></div>`, .5);
+    const ph = s.el(phoneShell(700, 1180, `
+      <div style="position:absolute;inset:0;background:linear-gradient(#2b1055,#7b2ff7)"></div>
+      <div style="position:absolute;top:140px;width:100%;text-align:center;font:400 180px/1 Anton,sans-serif;color:#fff">23:58</div>
+      <div class="ui" style="position:absolute;top:330px;width:100%;text-align:center;font-size:36px;color:#e6d9ff">sexta-feira</div>
+      <div class="n1" style="position:absolute;left:22px;right:22px;top:430px;padding:24px;border-radius:36px;background:rgba(255,255,255,.95);display:flex;gap:20px;align-items:center">${avatar(90, BIA)}<div class="ui" style="font-size:38px">Bia <span style="color:#43a047">desbloqueou você</span></div></div>
+      <div class="n2" style="position:absolute;left:22px;right:22px;top:610px;padding:24px;border-radius:36px;background:rgba(255,255,255,.95);display:flex;gap:20px;align-items:flex-start">${avatar(90, BIA)}
+        <div class="ui"><div style="font-size:38px">Bia</div><div style="font-size:40px;font-weight:500;line-height:1.2;margin-top:6px">amanhã, chega cedo na festa. <b style="color:#e91e63">quero dançar com você</b></div></div></div>`, '#000'), { space: 'frame', x: .5, y: .43 });
+    const n1 = ph.querySelector('.n1'), n2 = ph.querySelector('.n2');
+    const a1 = T('meianoite') + 1.6, a2 = T('meianoite') + 3.0;
+    s.every(ph, (lt, st) => { const t = s.start + lt; [[n1, a1], [n2, a2]].forEach(([n, a]) => { const e = sm(a, a + .3, t); n.style.opacity = e; n.style.transform = `translateY(${(1 - e) * -200}px)`; }); st.s *= 1 + lt * .01; });
+    C.cue(a1, 'notify', { gain: .8 }); C.cue(a2, 'notify', { gain: .8 }); C.cue(T('meianoite') + 5, 'chime', { gain: .8 });
+    s.particles({ type: 'burst', at: T('meianoite') + 5 - s.start, x: .5, y: .5, count: 40, colors: ['#ff2e63', '#fff', '#ffd23f'], speed: 1 });
+    const d = bust(s, DAVI, { expr: 'smile', hearts: true, blush: true }, 420, .2, 1.05);
+    s.every(d, (lt, st) => { const t = s.start + lt; st.o *= t >= T('meianoite') + 5 ? 1 : 0; st.y += (1 - sm(T('meianoite') + 5, T('meianoite') + 5.3, t)) * 400; st.r += 6; });
+    capL(s, 'meianoite', 'QUASE MEIA-NOITE...', { y: .69, size: 13, until: 1.6 });
+    capL(s, 'meianoite', 'ELA ME DESBLOQUEOU', { y: .69, size: 13, color: '#7dff9a', off: 1.6, until: 4.9 });
+    capL(s, 'meianoite', 'QUER DANÇAR COMIGO', { y: .69, size: 14, color: '#ffd23f', off: 4.9 });
+    hud(s);
+  }, { energy: .9, purpose: 'the comeback' });
+
+  // ═════════ 08 O PROBLEMA · he can't dance
+  const S8 = T('problema') + 3.2;
+  C.scene('problema', S7, S8 - S7, s => {
+    full(s, `<div style="width:100%;height:100%;background:repeating-conic-gradient(from 0deg at 50% 50%, #ffc93c 0 10deg, #ff8a3d 10deg 20deg)"></div>`, .5);
+    const d = bust(s, DAVI, { expr: 'nervous', look: [0, -4] }, 860, .5, 1.05);
+    s.every(d, (lt, st) => { st.x += Math.sin(lt * 40) * 6; st.r += Math.sin(lt * 30) * 1.5; });
+    C.cue(T('problema') + 1.4, 'stinger', { gain: .8 });
+    capL(s, 'problema', 'SÓ TINHA UM PROBLEMA', { y: .25, size: 12, until: 1.4 });
+    capL(s, 'problema', 'EU NÃO SEI DANÇAR', { y: .25, size: 15, color: '#e63946', off: 1.4, until: 3.2 });
+    hud(s);
+  }, { energy: .9, purpose: 'cliffhanger' });
+
+  C.scene('fim', S8, 60.5 - S8, s => {
+    s.root.style.setProperty('--scene-bg', '#000');
+    full(s, `<div style="width:100%;height:100%;background:#000"></div>`, .5);
+    const t1 = s.text('CONTINUA AMANHÃ', { size: 15, space: 'frame', x: .5, y: .45, color: '#ffffff', css: 'font-family:Anton,sans-serif', layer: s.hud }); t1.classList.add('cap'); s.anim(t1, 'slam', .25);
+    const t2 = s.text('DIA 4 · FINAL', { size: 11, space: 'frame', x: .5, y: .54, color: '#ff6fa5', css: 'font-family:Anton,sans-serif', layer: s.hud }); t2.classList.add('cap'); s.anim(t2, 'pop', .8);
+    C.cue(S8 + .25, 'impact', { gain: .7 });
+  }, { energy: .2, purpose: 'end card' });
+
+  C.transition('grupo', 'quarenta', { type: 'cut' });
+  C.transition('quarenta', 'vestiario', { type: 'flash', color: '#ffffff' });
+  C.transition('vestiario', 'plano', { type: 'flash', color: '#ffffff' });
+  C.transition('plano', 'video', { type: 'zoom', intent: 'impact' });
+  C.transition('video', 'visto', { type: 'cut' });
+  C.transition('visto', 'meianoite', { type: 'fade' });
+  C.transition('meianoite', 'problema', { type: 'whip', dir: 'left' });
+  C.transition('problema', 'fim', { type: 'cut' });
+});
+</script>
+</body></html>
