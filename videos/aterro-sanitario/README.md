@@ -8,4 +8,4 @@ Mesmo estilo do "vídeo de exemplo": mundo 3D low-poly, narração em 2ª pessoa
 - `render.js` – `node render.js stills 1,5,9` (quadros soltos) ou `node render.js video 30` (MP4 sem som)
 - `mix.py` – trilha + efeitos (motion-studio) + narração -> `out/mix.wav`
 
-Final: `ffmpeg -i out/frames.mp4 -i out/mix_norm.wav -c:v copy -c:a aac -b:a 192k -shortest final.mp4`
+Final: junta `out/frames.mp4` + `out/mix_norm.wav` em `out/corpo.mp4`, depois concatena corpo + vinheta zuum. no FIM (`/mnt/project-files/branding/intro-zuum-1080x1920.mp4`), re-encode H.264/AAC 48 kHz.
