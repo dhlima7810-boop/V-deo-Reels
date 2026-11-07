@@ -180,9 +180,9 @@ for (const [x, z] of [[.15, .4], [.15, -.4], [-.95, .4], [-.95, -.4]]) {
 // powertrain
 const rails = [part(mk(BOX(4.0, .16, .14), '#3b3f46', 0, .38, .55, chassisG), V(0, -.3, .5)), part(mk(BOX(4.0, .16, .14), '#3b3f46', 0, .38, -.55, chassisG), V(0, -.3, -.5))];
 const axles = [1.45, -1.45].map(x => { const a = mk(CYL(.07, .07, 2.0, 8), '#5b5f66', x, .45, 0, chassisG); a.rotation.x = Math.PI / 2; return part(a, V(0, -.6, 0)); });
-const engine = G(chassisG); engine.position.set(1.55, .72, 0);
+const engine = G(chassisG); engine.position.set(1.55, .62, 0);
 mk(BOX(.8, .5, .8), '#9aa3ad', 0, 0, 0, engine); mk(BOX(.84, .14, .7), '#d64545', 0, .32, 0, engine);
-const pistons = []; for (let i = 0; i < 4; i++) pistons.push(mk(CYL(.07, .07, .3, 8), '#e6e8eb', 0, .45, -.27 + i * .18, engine));
+const pistons = []; for (let i = 0; i < 4; i++) pistons.push(mk(CYL(.07, .07, .2, 8), '#e6e8eb', 0, .38, -.27 + i * .18, engine));
 mk(CYL(.15, .15, .1, 10), '#2c2f33', -.42, 0, 0, engine).rotation.z = Math.PI / 2;
 part(engine, V(1.2, 1.6, 0));
 const gearbox = G(chassisG); gearbox.position.set(.8, .6, 0);
@@ -356,7 +356,7 @@ mk(triG, M('#ffc93c', { emissive: '#6a4a00' }), 0, 0, .485, cap, false);
 // char placement per line: [x, z] or null (off screen); gestures: wave | point | pat | thumbs | shrug | idle
 const CHAR = {
   s1: [[0, 4.2], 'wave'], s2: [[-2.9, 3.1], 'point'], s3: [[-9.6, .6], 'point'], s3b: [null], s4: [[-5.2, 3.6], 'point'],
-  s5: [[-3.4, 2.4], 'pat'], s6: [[-5.4, 4.2], 'point'], s6b: [null], s7: [[-3.6, 2.9], 'point'], s8: [[3.5, 2.6], 'point'], s8b: [[3.5, 2.6], 'shrug'],
+  s5: [[-5.4, 1.2], 'point'], s6: [[-5.4, 4.2], 'point'], s6b: [null], s7: [[-3.6, 2.9], 'point'], s8: [[3.5, 2.6], 'point'], s8b: [[3.5, 2.6], 'shrug'],
   s9: [[-3.8, 3.0], 'point'], s10: [[-4.6, 4.2], 'wave'], s10b: [null], s11: [null], s12: [[-1.5, 3.4], 'wave'],
 };
 
@@ -531,7 +531,7 @@ function setState(t) {
   const gD = eo(P(t, Wd('s7', 'câmbio') - .25, Wd('s7', 'câmbio') + .3));
   gearbox.userData.drop = (1 - gD) * 4; gearbox.visible = t > Wd('s7', 'câmbio') - .25;
   const running = (t > Wd('s7', 'motor') + .3 && t < S('s8b')) || t > Wd('s11', 'liga');
-  pistons.forEach((p, i) => { p.position.y = .45 + (running ? .07 * Math.sin(t * 28 + i * Math.PI / 2) : 0); });
+  pistons.forEach((p, i) => { p.position.y = .36 + (running ? .05 * Math.sin(t * 28 + i * Math.PI / 2) : 0); });
 
   // ---- s9: wheels, seats, glass, lights
   const w0 = Wd('s9', 'rodas') - .25;

@@ -20,9 +20,10 @@ const srv = http.createServer((q, r) => { const f = path.join(ROOT, decodeURICom
     }
   } else {
     const fps = +(process.argv[3] || 30), dur = await page.evaluate('window.DURATION'), n = Math.ceil(dur * fps);
-    const ff = spawn('ffmpeg', ['-y', '-v', 'error', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'mjpeg', '-i', '-', '-c:v', 'libx264', '-preset', 'medium', '-crf', '17', '-pix_fmt', 'yuv420p', path.join(OUT, 'frames.mp4')], { stdio: ['pipe', 'inherit', 'inherit'] });
+    const ff = spawn('ffmpeg', ['-y', '-v', 'error', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'mjpeg', '-i', '-', '-c:v', 'libx264', '-preset', 'medium', '-crf', '17', '-pix_fmt', 'yuv420p', path.join(OUT, process.argv[4] ? 'frames_tail.mp4' : 'frames.mp4')], { stdio: ['pipe', 'inherit', 'inherit'] });
     const t0 = Date.now();
-    for (let i = 0; i < n; i++) {
+    const i0 = Math.round(+(process.argv[4] || 0) * fps);
+    for (let i = i0; i < n; i++) {
       await page.evaluate(t => window.renderAt(t), i / fps);
       const buf = await page.screenshot({ type: 'jpeg', quality: 93 });
       if (!ff.stdin.write(buf)) await new Promise(r => ff.stdin.once('drain', r));
