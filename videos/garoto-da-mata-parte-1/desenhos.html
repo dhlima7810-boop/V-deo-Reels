@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Desenhos · O Garoto da Mata</title>
+<style>html,body{margin:0;background:#000}svg{display:block}</style></head>
+<body>
+<svg id="s" xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
+<script>
+// Ilustrações das 10 cenas, desenhadas em código no estilo quadrinho de terror:
+// contorno preto grosso, cores chapadas frias, olhos grandes, textura de papel sujo.
+// Determinístico: só rng com semente. render: desenhar(n) e o Playwright tira o print.
+const NS = 'http://www.w3.org/2000/svg';
+function rng(seed) { return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let x = Math.imul(seed ^ seed >>> 15, 1 | seed); x = x + Math.imul(x ^ x >>> 7, 61 | x) ^ x; return ((x ^ x >>> 14) >>> 0) / 4294967296; }; }
+const INK = '#0b0b0d';
+let S, R;
+function el(tag, at, parent = S) { const e = document.createElementNS(NS, tag); for (const k in at) e.setAttribute(k, at[k]); parent.appendChild(e); return e; }
+function grp(at = {}, parent = S) { return el('g', at, parent); }
+const P = (d, fill, sw = 7, parent = S, extra = {}) => el('path', { d, fill, stroke: INK, 'stroke-width': sw, 'stroke-linejoin': 'round', 'stroke-linecap': 'round', ...extra }, parent);
+const line = (d, sw = 4, col = INK, parent = S, op = 1) => el('path', { d, fill: 'none', stroke: col, 'stroke-width': sw, 'stroke-linecap': 'round', opacity: op }, parent);
+function defs() {
+  const d = el('defs', {});
+  d.innerHTML = `
+  <filter id="wob" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter>
+  <filter id="paper" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="9" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 -.2"/></filter>
+  <filter id="grime" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="21" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 .02  0 0 0 0 .03  0 0 0 0 .02  0 0 0 1.4 -.55"/></filter>
+  <filter id="blur8"><feGaussianBlur stdDeviation="8"/></filter>
+  <filter id="blur30"><feGaussianBlur stdDeviation="30"/></filter>
+  <radialGradient id="vig" cx="50%" cy="48%" r="70%"><stop offset="55%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".75"/></radialGradient>`;
+  return d;
+}
+// --------- peças ---------
+function sky(top, bot, stars = 0) {
+  el('defs', {}).innerHTML = `<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${top}"/><stop offset="1" stop-color="${bot}"/></linearGradient>`;
+  el('rect', { x: 0, y: 0, width: 1080, height: 1920, fill: 'url(#sky)' });
+  for (let i = 0; i < stars; i++) el('circle', { cx: R() * 1080, cy: R() * 700, r: .8 + R() * 1.8, fill: '#dfe6f0', opacity: .3 + R() * .6 });
+}
+function tree(x, base, w, h, col, g, lean = 0) {
+  const t = x + lean, wb = w * 1.25;
+  P(`M${x - wb / 2},${base} C${x - w / 2},${base - h * .3} ${t - w / 2 + 4},${base - h * .7} ${t - w * .42},${base - h} L${t + w * .42},${base - h} C${t + w / 2 - 4},${base - h * .7} ${x + w / 2},${base - h * .3} ${x + wb / 2},${base} Z`, col, 7, g);
+  for (let i = 0; i < 4 + w / 14; i++) { const yy = base - R() * h * .95, xx = x + (R() - .5) * w * .6 + lean * (base - yy) / h; line(`M${xx},${yy} q${(R() - .5) * 8},${18 + R() * 30} ${(R() - .5) * 6},${40 + R() * 50}`, 3, INK, g, .65); }
+  // galhos
+  for (let i = 0; i < 2; i++) { const yy = base - h * (.35 + R() * .4), s = R() > .5 ? 1 : -1, xx = x + lean * (base - yy) / h + s * w * .35;
+    P(`M${xx},${yy} q${s * 50},${-30} ${s * (90 + R() * 60)},${-70 - R() * 50} l${s * 6},${10} q${-s * 40},${40} ${-s * (80 + R() * 40)},${70} Z`, col, 5, g); }
+}
+function forest(seed, o = {}) {
+  R = rng(seed); const g = grp({ filter: 'url(#wob)' });
+  // fileiras ao fundo (silhuetas com neblina)
+  const rows = o.rows || [['#1c2a3a', 70, 1150, .5], ['#162231', 110, 1300, .75], ['#111a25', 150, 1450, 1]];
+  for (const [col, w, base, k] of rows) { for (let x = -60; x < 1140; x += w * (1.6 + R() * 1.4)) tree(x + R() * 40, base + R() * 60, w * (0.5 + R() * .4) * k, base + 200, col, g, (R() - .5) * 30);
+    el('rect', { x: 0, y: base - 500, width: 1080, height: 600, fill: o.fog || '#3b5466', opacity: .10 }, g); }
+  // chão
+  P(`M-20,${o.ground || 1480} Q300,${(o.ground || 1480) - 40} 540,${(o.ground || 1480) - 10} T1100,${(o.ground || 1480) - 30} L1100,1940 L-20,1940 Z`, o.groundCol || '#1d2620', 7, g);
+  for (let i = 0; i < 160; i++) { const x = R() * 1080, y = (o.ground || 1480) + R() * 460; line(`M${x},${y} l${(R() - .5) * 14},${-20 - R() * 30}`, 3, '#0e140f', g, .7); }
+  return g;
+}
+function grimeOverlay() { el('rect', { x: 0, y: 0, width: 1080, height: 1920, filter: 'url(#grime)', opacity: .9 }); el('rect', { x: 0, y: 0, width: 1080, height: 1920, filter: 'url(#paper)', opacity: .5 }); el('rect', { x: 0, y: 0, width: 1080, height: 1920, fill: 'url(#vig)' }); }
+// Lucas de frente (busto). eyes: 'red' | 'normal'
+function lucasFront(cx, cy, s, eyes = 'red', o = {}) {
+  const g = grp({ transform: `translate(${cx},${cy}) scale(${s})`, filter: 'url(#wob)' });
+  const skin = o.skin || '#8f8a7c', shirt = '#3b3e44', dirt = '#4a3a2c';
+  // tronco e camiseta
+  P('M-250,620 Q-240,330 -150,290 L-60,250 L60,250 L150,290 Q240,330 250,620 Z', shirt, 9, g);
+  P('M-150,290 Q-215,420 -205,560', 'none', 6, g); P('M150,290 Q215,420 205,560', 'none', 6, g);
+  P('M-62,252 Q0,300 62,252', 'none', 7, g); // gola
+  for (let i = 0; i < 9; i++) el('ellipse', { cx: -150 + R() * 300, cy: 330 + R() * 260, rx: 10 + R() * 26, ry: 6 + R() * 16, fill: dirt, opacity: .45 }, g);
+  // braços
+  P('M-205,330 Q-260,450 -250,620 L-196,620 Q-200,470 -170,390 Z', skin, 8, g); P('M205,330 Q260,450 250,620 L196,620 Q200,470 170,390 Z', skin, 8, g);
+  // pescoço
+  P('M-48,150 L-52,262 Q0,290 52,262 L48,150 Z', skin, 8, g); line('M-30,200 q10,30 4,60', 3, INK, g, .5); line('M30,200 q-10,30 -4,60', 3, INK, g, .5);
+  // cabeça
+  P('M-118,-40 Q-125,90 -70,150 Q-20,200 0,200 Q20,200 70,150 Q125,90 118,-40 Q110,-170 0,-175 Q-110,-170 -118,-40 Z', skin, 9, g);
+  P('M-120,-10 q-34,-10 -32,30 q2,40 34,40', skin, 7, g); P('M120,-10 q34,-10 32,30 q-2,40 -34,40', skin, 7, g); // orelhas
+  for (let i = 0; i < 14; i++) el('circle', { cx: -90 + R() * 180, cy: -60 + R() * 220, r: 3 + R() * 9, fill: dirt, opacity: .55 }, g);
+  // cabelo espetado
+  let d = 'M-128,-30 '; const tips = 11; for (let i = 0; i <= tips; i++) { const a = Math.PI * (1.02 - i / tips * 1.04); const r1 = 150 + (i % 2 ? 0 : 70 + R() * 50); const x = Math.cos(a) * r1 * .95, y = -40 - Math.sin(a) * r1 * .95; d += `L${x.toFixed(1)},${y.toFixed(1)} `; }
+  d += 'L128,-30 Q90,-110 40,-80 Q10,-120 -30,-85 Q-80,-120 -128,-30 Z'; P(d, '#121214', 9, g);
+  // sobrancelhas franzidas
+  P('M-95,-38 L-22,-18 L-24,-6 L-97,-24 Z', '#121214', 5, g); P('M95,-38 L22,-18 L24,-6 L97,-24 Z', '#121214', 5, g);
+  // olhos
+  for (const sx of [-1, 1]) { const ex = sx * 58, ey = 22;
+    el('ellipse', { cx: ex, cy: ey, rx: 40, ry: 30, fill: eyes === 'red' ? '#2a0c0a' : '#e9e6dc', stroke: INK, 'stroke-width': 7 }, g);
+    if (eyes === 'red') { el('circle', { cx: ex, cy: ey, r: 22, fill: '#ff3a28' }, g); el('circle', { cx: ex, cy: ey, r: 9, fill: '#ffe3cc' }, g); el('circle', { cx: ex, cy: ey, r: 34, fill: 'none', stroke: '#ff5a40', 'stroke-width': 4, opacity: .7 }, g); }
+    else { el('circle', { cx: ex + sx * 4, cy: ey + 2, r: 13, fill: INK }, g); el('circle', { cx: ex + sx * 4 - 4, cy: ey - 3, r: 4, fill: '#fff' }, g); }
+    line(`M${ex - 40},${ey + 36} q40,14 80,0`, 3, INK, g, .6); }
+  // nariz
+  line('M-4,40 q-16,46 2,60 q12,4 20,-4', 5, INK, g);
+  // boca: dentes cerrados (medo) ou fechada
+  if (o.teeth !== false) { P('M-62,128 Q0,108 62,128 Q60,165 0,168 Q-60,165 -62,128 Z', '#e4dcc6', 7, g); for (let i = -2; i <= 2; i++) line(`M${i * 22},${118} l0,${46}`, 4, INK, g); line('M-60,145 Q0,135 60,145', 4, INK, g); }
+  else line('M-40,140 q40,-10 80,4', 6, INK, g);
+  return g;
+}
+function lucasBack(cx, cy, s, o = {}) {
+  const g = grp({ transform: `translate(${cx},${cy}) scale(${s})`, filter: 'url(#wob)' });
+  const skin = '#8a8578', shirt = '#3b3e44';
+  // pernas (bermuda escura) + pés
+  P('M-70,330 L-80,640 L-30,640 L-10,380 Z', skin, 7, g); P('M70,330 L80,640 L30,640 L10,380 Z', skin, 7, g);
+  P('M-110,600 q30,-6 80,0 l2,40 q-40,12 -84,0 Z', o.feet || skin, 6, g); P('M110,600 q-30,-6 -80,0 l-2,40 q40,12 84,0 Z', o.feet || skin, 6, g);
+  P('M-100,220 L-110,400 L110,400 L100,220 Z', '#22242a', 8, g);
+  // tronco
+  P('M-130,-40 Q-150,100 -110,240 L110,240 Q150,100 130,-40 Q60,-80 0,-78 Q-60,-80 -130,-40 Z', shirt, 8, g);
+  P('M-130,-30 Q-190,90 -170,250 L-130,250 Q-140,120 -105,40 Z', skin, 7, g); P('M130,-30 Q190,90 170,250 L130,250 Q140,120 105,40 Z', skin, 7, g);
+  P('M-30,-110 L-34,-60 L34,-60 L30,-110 Z', skin, 7, g);
+  // cabeça de costas, cabelo espetado
+  P('M-80,-150 Q-90,-220 0,-240 Q90,-220 80,-150 Q60,-95 0,-90 Q-60,-95 -80,-150 Z', '#121214', 8, g);
+  let d = 'M-85,-160 '; for (let i = 0; i <= 9; i++) { const a = Math.PI * (1.05 - i / 9 * 1.1); const r1 = 105 + (i % 2 ? 0 : 40 + R() * 30); d += `L${(Math.cos(a) * r1).toFixed(1)},${(-170 - Math.sin(a) * r1).toFixed(1)} `; }
+  d += 'L85,-160 Z'; P(d, '#121214', 8, g);
+  for (let i = 0; i < 10; i++) el('ellipse', { cx: -100 + R() * 200, cy: -20 + R() * 240, rx: 8 + R() * 20, ry: 5 + R() * 12, fill: '#4a3a2c', opacity: .5 }, g);
+  return g;
+}
+function figure(cx, base, h, col, o = {}) { // silhueta de adulto (bombeiro / homem de terno)
+  const g = grp({ transform: `translate(${cx},${base}) scale(${h / 1000})`, filter: 'url(#wob)' });
+  P('M-150,-760 Q-175,-380 -130,-430 L-115,0 L-20,0 L0,-420 L20,0 L115,0 L130,-430 Q175,-380 150,-760 Q80,-810 0,-805 Q-80,-810 -150,-760 Z', col, 10, g);
+  P('M-150,-760 Q-215,-560 -190,-380 L-150,-380 Q-160,-540 -120,-640 Z', col, 9, g); P('M150,-760 Q215,-560 190,-380 L150,-380 Q160,-540 120,-640 Z', col, 9, g);
+  P('M-80,-900 Q-90,-1000 0,-1005 Q90,-1000 80,-900 Q70,-820 0,-815 Q-70,-820 -80,-900 Z', o.face || '#7d7a70', 9, g);
+  if (o.helmet) { P('M-110,-930 Q-100,-1060 0,-1065 Q100,-1060 110,-930 L140,-920 L-140,-920 Z', '#b8902a', 8, g); line('M-120,-940 l240,0', 10, '#e8d36a', g); }
+  if (o.hat) { P('M-150,-990 L150,-990 L150,-970 L-150,-970 Z', '#2a2c30', 7, g); P('M-85,-990 Q-80,-1090 0,-1095 Q80,-1090 85,-990 Z', '#2a2c30', 8, g); }
+  if (o.tie) { P('M0,-800 L-60,-720 L-20,-740 L-30,-520 L0,-480 L30,-520 L20,-740 L60,-720 Z', '#dcdad2', 6, g); P('M-14,-760 L14,-760 L22,-560 L0,-530 L-22,-560 Z', '#1b1b1d', 5, g); }
+  if (o.stripe) { line('M-160,-450 l320,0', 14, '#e8d36a', g); line('M-190,-500 l40,0 M150,-500 l40,0', 12, '#e8d36a', g); }
+  if (o.shadowFace) el('ellipse', { cx: 0, cy: -900, rx: 82, ry: 92, fill: '#060607', opacity: .95 }, g);
+  return g;
+}
+function caption(txt) { /* nada: legenda vai no vídeo */ }
+
+// --------- cenas ---------
+const SCENES = {
+  1() { sky('#0d1622', '#1e2e3e'); forest(11); lucasFront(540, 960, 2.0, 'red'); },
+  2() { sky('#3a1e1a', '#c4642c'); el('circle', { cx: 700, cy: 820, r: 120, fill: '#f2a14a', opacity: .55, filter: 'url(#blur30)' });
+        forest(12, { rows: [['#3a2a2a', 70, 1120, .5], ['#26201f', 110, 1280, .75], ['#17141a', 150, 1440, 1]], fog: '#e08850', groundCol: '#241c18' });
+        lucasBack(540, 1210, 1.05); const g = grp({ filter: 'url(#wob)' }); P('M200,1720 q20,-40 60,-36 q30,10 20,40 q-30,24 -80,-4 Z', '#d8c9a8', 5, g); },
+  3() { sky('#070b12', '#141f2c', 120); forest(13); el('rect', { x: 0, y: 1500, width: 1080, height: 420, fill: '#0b1016', opacity: .5 });
+        figure(220, 1780, 620, '#262a2e', { helmet: true, stripe: true }); figure(860, 1760, 560, '#262a2e', { helmet: true, stripe: true }); figure(560, 1600, 330, '#1f2327', { helmet: true, stripe: true });
+        const g = grp({ filter: 'url(#wob)' }); P('M680,240 l70,0 l-10,16 l-50,0 Z', '#2c2f33', 5, g); P('M640,232 l40,0 M750,232 l40,0', 'none', 6, g); },
+  4() { sky('#060a10', '#101824', 40); const g = grp({ filter: 'url(#wob)' });
+        P('M60,300 L1020,300 L1020,1500 L60,1500 Z', '#2b3442', 9, g); for (let y = 340; y < 1500; y += 46) line(`M60,${y} L1020,${y}`, 3, INK, g, .5);
+        P('M360,620 L720,620 L720,1500 L360,1500 Z', '#3d2c22', 10, g); P('M400,680 L680,680 L680,1000 L400,1000 Z', '#33251d', 6, g); P('M400,1060 L680,1060 L680,1440 L400,1440 Z', '#33251d', 6, g);
+        el('circle', { cx: 650, cy: 1080, r: 14, fill: '#b59a52', stroke: INK, 'stroke-width': 5 }, g);
+        P('M140,700 L300,700 L300,960 L140,960 Z', '#d9b45a', 8, g); line('M220,700 L220,960 M140,830 L300,830', 6, INK, g);
+        P('M520,430 L560,430 L555,480 L525,480 Z', '#3a3a3a', 6, g); el('circle', { cx: 540, cy: 510, r: 30, fill: '#ffe39a', stroke: INK, 'stroke-width': 6 }, g);
+        P('M0,1500 L1080,1500 L1080,1920 L0,1920 Z', '#1a1f26', 8, g); P('M280,1500 L800,1500 L840,1580 L240,1580 Z', '#2a2f37', 7, g); P('M240,1580 L840,1580 L880,1660 L200,1660 Z', '#252a31', 7, g);
+        for (let i = 0; i < 30; i++) el('ellipse', { cx: 300 + R() * 480, cy: 1560 + R() * 300, rx: 8 + R() * 20, ry: 4 + R() * 8, fill: '#3f3024', opacity: .7 }, g);
+        lucasBack(540, 1240, 1.0, { feet: '#5b4a3a' }); },
+  5() { el('rect', { x: 0, y: 0, width: 1080, height: 1920, fill: '#030304' }); const g = lucasFront(540, 860, 2.4, 'red', { skin: '#2a2a2a' }); g.setAttribute('opacity', '.55'); },
+  6() { sky('#0b111a', '#16202c'); const g = grp({ filter: 'url(#wob)' });
+        P('M0,0 L1080,0 L1080,1450 L0,1450 Z', '#26323f', 8, g); for (let i = 0; i < 16; i++) el('ellipse', { cx: R() * 1080, cy: R() * 1400, rx: 30 + R() * 80, ry: 40 + R() * 120, fill: '#1b2530', opacity: .6 }, g);
+        P('M0,1450 L1080,1450 L1080,1920 L0,1920 Z', '#1a1e24', 8, g);
+        P('M780,380 L1020,380 L1020,1460 L780,1460 Z', '#0d1116', 9, g); // porta aberta escura
+        // mãe na porta: cabelo comprido, olhos arregalados
+        const m = grp({ transform: 'translate(880,820) scale(1.15)' }, g);
+        P('M-110,-140 Q-130,140 -120,560 L120,560 Q130,140 110,-140 Q60,-240 0,-245 Q-60,-240 -110,-140 Z', '#101014', 8, m);
+        P('M-150,240 Q-150,170 -70,150 L70,150 Q150,170 150,240 L150,600 L-150,600 Z', '#6b2430', 8, m);
+        P('M-75,-60 Q-80,90 0,120 Q80,90 75,-60 Q70,-150 0,-155 Q-70,-150 -75,-60 Z', '#a69c8e', 8, m);
+        P('M-90,-40 Q-100,-170 0,-178 Q100,-170 90,-40 Q60,-120 0,-118 Q-60,-120 -90,-40 Z', '#101014', 7, m); // franja
+        for (const sx of [-1, 1]) { el('circle', { cx: sx * 32, cy: -10, r: 26, fill: '#f2efe6', stroke: INK, 'stroke-width': 6 }, m); el('circle', { cx: sx * 32, cy: -8, r: 7, fill: INK }, m); }
+        P('M-22,60 Q0,48 22,60 Q20,82 0,84 Q-20,82 -22,60 Z', '#3a1414', 5, m);
+        P('M-150,250 Q-200,200 -170,100 L-140,90 Q-150,180 -120,230 Z', '#a69c8e', 6, m);
+        // cama
+        P('M60,1180 L760,1180 L760,1380 L60,1380 Z', '#4b4e5a', 9, g); P('M40,1100 L120,1100 L120,1520 L40,1520 Z', '#2a2018', 8, g); P('M60,1380 L760,1380 L760,1440 L60,1440 Z', '#2a2018', 8, g);
+        lucasFront(400, 930, 0.95, 'red', { teeth: false }); },
+  7() { el('rect', { x: 0, y: 0, width: 1080, height: 1920, fill: '#2e2017' }); const g = grp({ filter: 'url(#wob)' });
+        for (let y = 0; y < 1920; y += 150) { line(`M0,${y} L1080,${y}`, 6, INK, g); for (let k = 0; k < 6; k++) line(`M${R() * 1080},${y + 20 + R() * 110} q200,${(R() - .5) * 20} 400,0`, 2, '#1a120c', g, .7); }
+        el('ellipse', { cx: 540, cy: 900, rx: 700, ry: 600, fill: '#f2c27a', opacity: .18, filter: 'url(#blur30)' }, g);
+        P('M140,420 L960,380 L990,1460 L110,1500 Z', '#cdbb8e', 9, g);
+        line('M180,600 L940,560 M160,1000 L960,980 M520,420 L540,1480', 3, '#7a6a48', g, .7);
+        el('text', { x: 200, y: 520, 'font-family': 'DejaVu Serif', 'font-size': 36, fill: '#4a3a24', 'font-weight': 'bold', transform: 'rotate(-2.5 200 520)' }, g).textContent = 'PREFEITURA MUNICIPAL - 1987';
+        // floresta desenhada no mapa (arvorezinhas)
+        for (let i = 0; i < 55; i++) { const x = 330 + R() * 420, y = 760 + R() * 330; line(`M${x},${y} l-14,24 l28,0 Z M${x},${y + 24} l0,10`, 3, '#3d4a2c', g); }
+        line('M150,1250 Q400,1150 600,1260 T980,1200', 8, '#8a7650', g); el('text', { x: 470, y: 960, 'font-family': 'DejaVu Serif', 'font-size': 40, fill: '#3d4a2c', 'font-style': 'italic' }, g).textContent = 'MATA';
+        // lupa
+        el('circle', { cx: 760, cy: 1400, r: 130, fill: '#bcd6dc', 'fill-opacity': .25, stroke: INK, 'stroke-width': 18 }, g); P('M850,1495 L1010,1680 L970,1720 L810,1530 Z', '#3a2a1c', 9, g); },
+  8() { sky('#05080c', '#0e1520', 30); const g = grp({ filter: 'url(#wob)' });
+        P('M0,0 L1080,0 L1080,1920 L0,1920 Z', '#151a20', 0, g);
+        P('M150,200 L930,200 L930,1700 L150,1700 Z', '#2d3a4c', 12, g); // vão da porta (luz fria lá fora)
+        el('rect', { x: 150, y: 200, width: 780, height: 1500, fill: '#5a6e86', opacity: .35 }, g);
+        P('M0,1700 L1080,1700 L1080,1920 L0,1920 Z', '#12161b', 8, g);
+        figure(380, 1720, 1350, '#5c6066', { hat: true, tie: true, shadowFace: true }); figure(720, 1700, 1300, '#55595f', { hat: true, tie: true, shadowFace: true });
+        el('path', { d: 'M150,1700 L-200,1920 L1280,1920 L930,1700 Z', fill: '#000', opacity: .35 }); },
+  9() { sky('#0b1220', '#1a2836'); forest(19, { ground: 1560 }); el('rect', { x: 0, y: 0, width: 1080, height: 1920, fill: '#8aa0aa', opacity: .08 });
+        const g = grp({ filter: 'url(#wob)' });
+        P('M430,1920 Q420,1620 440,1420 L660,1420 Q690,1620 690,1920 Z', '#3b3e44', 9, g);              // manga
+        P('M400,1440 Q360,1290 420,1230 Q540,1190 660,1230 Q720,1290 690,1440 Q560,1500 400,1440 Z', '#8a8578', 9, g); // palma
+        el('circle', { cx: 540, cy: 1150, r: 190, fill: '#6a5232', stroke: INK, 'stroke-width': 12 }, g); el('circle', { cx: 540, cy: 1150, r: 160, fill: '#d8cdb0', stroke: INK, 'stroke-width': 7 }, g);
+        for (let i = 0; i < 36; i++) { const a = i / 36 * Math.PI * 2, r1 = i % 9 === 0 ? 120 : 140; line(`M${540 + Math.cos(a) * r1},${1150 + Math.sin(a) * r1} L${540 + Math.cos(a) * 155},${1150 + Math.sin(a) * 155}`, i % 9 === 0 ? 6 : 3, INK, g); }
+        for (const [t, a] of [['N', -90], ['L', 0], ['S', 90], ['O', 180]]) el('text', { x: 540 + Math.cos(a * Math.PI / 180) * 92 - 14, y: 1150 + Math.sin(a * Math.PI / 180) * 92 + 16, 'font-family': 'DejaVu Sans', 'font-weight': 'bold', 'font-size': 42, fill: '#2a2018' }, g).textContent = t;
+        P('M352,1240 Q320,1130 360,1050 Q390,1020 412,1048 Q392,1120 410,1220 Z', '#8a8578', 8, g);   // polegar
+        for (let k = 0; k < 4; k++) { const y = 1080 + k * 62; P(`M700,${y} q50,-8 62,22 q4,26 -40,34 q-26,2 -30,-20 Z`, '#8a8578', 7, g); } },
+  10() { sky('#050a0c', '#0f1a1c'); el('ellipse', { cx: 540, cy: 860, rx: 520, ry: 380, fill: '#7fe0a0', opacity: .28, filter: 'url(#blur30)' });
+        forest(20, { rows: [['#0f1c18', 80, 1120, .6], ['#0b1512', 140, 1380, 1]], fog: '#7fe0a0', groundCol: '#141a16' });
+        const g = grp({ filter: 'url(#wob)' });
+        for (const x of [90, 380, 700, 990]) { P(`M${x - 18},1700 L${x - 12},880 L${x + 14},880 L${x + 18},1700 Z`, '#3d2f22', 8, g); for (let k = 0; k < 6; k++) line(`M${x - 10},${950 + k * 120} q10,10 20,0`, 3, INK, g); }
+        for (const y of [960, 1090, 1220, 1350, 1480]) { let d = `M0,${y}`; for (let x = 0; x <= 1080; x += 60) d += ` L${x},${y + Math.sin(x * .02 + y) * 10}`; line(d, 5, '#2a2a2a', g);
+          for (let x = 30; x < 1080; x += 60) line(`M${x - 12},${y - 12 + Math.sin(x * .02 + y) * 10} l24,24 M${x + 12},${y - 12 + Math.sin(x * .02 + y) * 10} l-24,24`, 4, '#2a2a2a', g); }
+        P('M600,1180 L860,1170 L862,1330 L604,1340 Z', '#8a2a20', 8, g); el('text', { x: 622, y: 1278, 'font-family': 'DejaVu Sans', 'font-weight': 'bold', 'font-size': 52, fill: '#e8dcc0', transform: 'rotate(-2 622 1278)' }, g).textContent = 'PROIBIDO'; },
+};
+window.desenhar = n => { S = document.getElementById('s'); S.innerHTML = ''; R = rng(n * 101); S.appendChild(defs()); SCENES[n](); grimeOverlay(); };
+window.READY = true;
+</script></body></html>

@@ -1,0 +1,279 @@
+{
+ "_doc": "Uma entrada por imagem. cam: de/para {x,y = centro normalizado 0..1, s = zoom}. fx: efeitos por cima. olhos: posições normalizadas dos olhos (das imagens desenhadas em desenhos.html).",
+ "palavras": [
+  "três dias",
+  "piscava",
+  "lucas",
+  "nada",
+  "três da manhã",
+  "olhos",
+  "escuro",
+  "cerca",
+  "terno cinza",
+  "terra",
+  "bússola",
+  "parte dois"
+ ],
+ "cenas": [
+  {
+   "n": 1,
+   "img": "imagens/01.png",
+   "cam": {
+    "de": {
+     "x": 0.5,
+     "y": 0.5,
+     "s": 1.0
+    },
+    "para": {
+     "x": 0.5,
+     "y": 0.5,
+     "s": 1.22
+    }
+   },
+   "fx": {
+    "olhos": [
+     [
+      0.393,
+      0.523
+     ],
+     [
+      0.607,
+      0.523
+     ]
+    ],
+    "neblina": 0.5
+   }
+  },
+  {
+   "n": 2,
+   "img": "imagens/02.png",
+   "cam": {
+    "de": {
+     "x": 0.5,
+     "y": 0.55,
+     "s": 1.0
+    },
+    "para": {
+     "x": 0.5,
+     "y": 0.5,
+     "s": 1.18
+    }
+   },
+   "fx": {
+    "neblina": 0.35
+   }
+  },
+  {
+   "n": 3,
+   "img": "imagens/03.png",
+   "cam": {
+    "de": {
+     "x": 0.45,
+     "y": 0.5,
+     "s": 1.12
+    },
+    "para": {
+     "x": 0.55,
+     "y": 0.48,
+     "s": 1.04
+    }
+   },
+   "fx": {
+    "lanternas": [
+     [
+      0.24,
+      0.72
+     ],
+     [
+      0.77,
+      0.72
+     ],
+     [
+      0.53,
+      0.8
+     ]
+    ],
+    "drone": [
+     0.66,
+     0.125
+    ],
+    "neblina": 0.4
+   }
+  },
+  {
+   "n": 4,
+   "img": "imagens/04.png",
+   "cam": {
+    "de": {
+     "x": 0.5,
+     "y": 0.5,
+     "s": 1.0
+    },
+    "para": {
+     "x": 0.5,
+     "y": 0.45,
+     "s": 1.25
+    }
+   },
+   "fx": {
+    "pisca": [
+     0.5,
+     0.27
+    ],
+    "neblina": 0.25
+   }
+  },
+  {
+   "n": 5,
+   "img": "imagens/05.png",
+   "cam": {
+    "de": {
+     "x": 0.5,
+     "y": 0.47,
+     "s": 1.05
+    },
+    "para": {
+     "x": 0.5,
+     "y": 0.47,
+     "s": 1.2
+    }
+   },
+   "fx": {
+    "olhos": [
+     [
+      0.371,
+      0.4755
+     ],
+     [
+      0.629,
+      0.4755
+     ]
+    ],
+    "acende": true,
+    "corteSeco": true
+   }
+  },
+  {
+   "n": 6,
+   "img": "imagens/06.png",
+   "cam": {
+    "de": {
+     "x": 0.5,
+     "y": 0.5,
+     "s": 1.04
+    },
+    "para": {
+     "x": 0.46,
+     "y": 0.46,
+     "s": 1.18
+    }
+   },
+   "fx": {
+    "treme": 0.6,
+    "neblina": 0.2,
+    "olhos": [
+     [
+      0.32,
+      0.495
+     ],
+     [
+      0.421,
+      0.495
+     ]
+    ]
+   }
+  },
+  {
+   "n": 7,
+   "img": "imagens/07.png",
+   "cam": {
+    "de": {
+     "x": 0.5,
+     "y": 0.5,
+     "s": 1.25
+    },
+    "para": {
+     "x": 0.5,
+     "y": 0.48,
+     "s": 1.05
+    }
+   },
+   "fx": {
+    "circulo": [
+     0.5,
+     0.48,
+     0.2
+    ]
+   }
+  },
+  {
+   "n": 8,
+   "img": "imagens/08.png",
+   "cam": {
+    "de": {
+     "x": 0.5,
+     "y": 0.5,
+     "s": 1.0
+    },
+    "para": {
+     "x": 0.5,
+     "y": 0.44,
+     "s": 1.2
+    }
+   },
+   "fx": {
+    "corteSeco": true,
+    "batidas": true,
+    "neblina": 0.3
+   }
+  },
+  {
+   "n": 9,
+   "img": "imagens/09.png",
+   "cam": {
+    "de": {
+     "x": 0.5,
+     "y": 0.55,
+     "s": 1.05
+    },
+    "para": {
+     "x": 0.5,
+     "y": 0.58,
+     "s": 1.3
+    }
+   },
+   "fx": {
+    "bussola": [
+     0.5,
+     0.599,
+     0.13
+    ],
+    "neblina": 0.45
+   }
+  },
+  {
+   "n": 10,
+   "img": "imagens/10.png",
+   "cam": {
+    "de": {
+     "x": 0.5,
+     "y": 0.5,
+     "s": 1.0
+    },
+    "para": {
+     "x": 0.5,
+     "y": 0.48,
+     "s": 1.35
+    }
+   },
+   "fx": {
+    "brilho": [
+     0.5,
+     0.45,
+     "#9fe8a8"
+    ],
+    "neblina": 0.6
+   }
+  }
+ ]
+}
