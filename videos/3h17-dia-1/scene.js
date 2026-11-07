@@ -31,7 +31,8 @@ const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('c'),
 renderer.setPixelRatio(1); renderer.setSize(W, H, false);
 renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.toneMapping = THREE.NoToneMapping;           // ACES + exposição no pós
-const rt = new THREE.WebGLRenderTarget(W, H, { type: THREE.HalfFloatType, samples: 4 });
+const RS = 2 / 3;                         // cena em 720x1280, pós (grão, vinheta) em 1080x1920
+const rt = new THREE.WebGLRenderTarget(W * RS, H * RS, { type: THREE.HalfFloatType, samples: 4 });
 const camera = new THREE.PerspectiveCamera(40, W / H, .02, 200);
 
 // ---------- texturas procedurais (canvas + semente) ----------
