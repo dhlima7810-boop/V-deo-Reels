@@ -1,0 +1,143 @@
+[
+ {
+  "id": "l1",
+  "scene": "A",
+  "text": "Toda noite, às três e dezessete, meu celular recebe um áudio.",
+  "gap": 0.5
+ },
+ {
+  "id": "l2",
+  "scene": "A",
+  "text": "Do meu próprio número.",
+  "gap": 0.8
+ },
+ {
+  "id": "l3",
+  "scene": "A",
+  "text": "E a voz no áudio...",
+  "gap": 0.7
+ },
+ {
+  "id": "l3b",
+  "scene": "A",
+  "text": "é a minha.",
+  "gap": 1.2
+ },
+ {
+  "id": "l4",
+  "scene": "B",
+  "text": "Primeira noite, achei que era trote.",
+  "gap": 0.5
+ },
+ {
+  "id": "l5",
+  "scene": "B",
+  "text": "Abri. Era eu, sussurrando:",
+  "gap": 0.6
+ },
+ {
+  "id": "l6",
+  "scene": "B",
+  "text": "amanhã... o copo cai da pia.",
+  "voice": "whisper",
+  "gap": 1.2
+ },
+ {
+  "id": "l7",
+  "scene": "C",
+  "text": "De manhã, minha mãe tava lavando a louça.",
+  "gap": 0.6
+ },
+ {
+  "id": "l8",
+  "scene": "C",
+  "text": "E o copo...",
+  "gap": 1.6
+ },
+ {
+  "id": "l9",
+  "scene": "C2",
+  "text": "caiu.",
+  "gap": 1.4
+ },
+ {
+  "id": "l10",
+  "scene": "D",
+  "text": "Segunda noite. Outro áudio.",
+  "gap": 0.6
+ },
+ {
+  "id": "l11",
+  "scene": "D",
+  "text": "amanhã, o cachorro do vizinho para de latir.",
+  "voice": "whisper",
+  "gap": 1.6
+ },
+ {
+  "id": "l12",
+  "scene": "D",
+  "text": "E ele parou.",
+  "gap": 0.6
+ },
+ {
+  "id": "l13",
+  "scene": "D",
+  "text": "Ele nunca para.",
+  "gap": 1.2
+ },
+ {
+  "id": "l14",
+  "scene": "E",
+  "text": "Ontem, fiquei acordado.",
+  "gap": 0.9
+ },
+ {
+  "id": "l15",
+  "scene": "E",
+  "text": "Três e dezesseis...",
+  "gap": 1.2
+ },
+ {
+  "id": "l16",
+  "scene": "E",
+  "text": "três e dezessete.",
+  "gap": 0.7
+ },
+ {
+  "id": "l17",
+  "scene": "E",
+  "text": "Chegou.",
+  "gap": 1.0
+ },
+ {
+  "id": "l18",
+  "scene": "F",
+  "text": "Só que dessa vez, a minha voz veio do celular...",
+  "gap": 0.5
+ },
+ {
+  "id": "l19",
+  "scene": "F",
+  "text": "e, baixinho, ao mesmo tempo... do corredor.",
+  "gap": 0.9
+ },
+ {
+  "id": "l20",
+  "scene": "F",
+  "text": "Caio. Não abre a porta do quarto.",
+  "voice": "corridor",
+  "gap": 3.2
+ },
+ {
+  "id": "l21",
+  "scene": "F",
+  "text": "Alguém bateu na porta.",
+  "gap": 1.6
+ },
+ {
+  "id": "l22",
+  "scene": "X",
+  "text": "Continua amanhã.",
+  "gap": 0.8
+ }
+]

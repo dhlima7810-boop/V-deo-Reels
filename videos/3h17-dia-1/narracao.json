@@ -1,0 +1,189 @@
+{
+ "duration": 58.0,
+ "lines": [
+  {
+   "id": "l1",
+   "scene": "A",
+   "text": "Toda noite, às três e dezessete, meu celular recebe um áudio.",
+   "voice": null,
+   "start": 0.25,
+   "end": 4.333
+  },
+  {
+   "id": "l2",
+   "scene": "A",
+   "text": "Do meu próprio número.",
+   "voice": null,
+   "start": 4.665,
+   "end": 6.198
+  },
+  {
+   "id": "l3",
+   "scene": "A",
+   "text": "E a voz no áudio...",
+   "voice": null,
+   "start": 6.73,
+   "end": 8.137
+  },
+  {
+   "id": "l3b",
+   "scene": "A",
+   "text": "é a minha.",
+   "voice": null,
+   "start": 8.603,
+   "end": 9.484
+  },
+  {
+   "id": "l4",
+   "scene": "B",
+   "text": "Primeira noite, achei que era trote.",
+   "voice": null,
+   "start": 10.281,
+   "end": 12.716
+  },
+  {
+   "id": "l5",
+   "scene": "B",
+   "text": "Abri. Era eu, sussurrando:",
+   "voice": null,
+   "start": 13.048,
+   "end": 14.621
+  },
+  {
+   "id": "l6",
+   "scene": "B",
+   "text": "amanhã... o copo cai da pia.",
+   "voice": "whisper",
+   "start": 15.02,
+   "end": 17.135
+  },
+  {
+   "id": "l7",
+   "scene": "C",
+   "text": "De manhã, minha mãe tava lavando a louça.",
+   "voice": null,
+   "start": 17.932,
+   "end": 20.517
+  },
+  {
+   "id": "l8",
+   "scene": "C",
+   "text": "E o copo...",
+   "voice": null,
+   "start": 20.916,
+   "end": 21.904
+  },
+  {
+   "id": "l9",
+   "scene": "C2",
+   "text": "caiu.",
+   "voice": null,
+   "start": 22.968,
+   "end": 23.624
+  },
+  {
+   "id": "l10",
+   "scene": "D",
+   "text": "Segunda noite. Outro áudio.",
+   "voice": null,
+   "start": 24.555,
+   "end": 26.488
+  },
+  {
+   "id": "l11",
+   "scene": "D",
+   "text": "amanhã, o cachorro do vizinho para de latir.",
+   "voice": "whisper",
+   "start": 26.887,
+   "end": 29.794
+  },
+  {
+   "id": "l12",
+   "scene": "D",
+   "text": "E ele parou.",
+   "voice": null,
+   "start": 30.857,
+   "end": 31.923
+  },
+  {
+   "id": "l13",
+   "scene": "D",
+   "text": "Ele nunca para.",
+   "voice": null,
+   "start": 32.322,
+   "end": 33.472
+  },
+  {
+   "id": "l14",
+   "scene": "E",
+   "text": "Ontem, fiquei acordado.",
+   "voice": null,
+   "start": 34.27,
+   "end": 35.964
+  },
+  {
+   "id": "l15",
+   "scene": "E",
+   "text": "Três e dezesseis...",
+   "voice": null,
+   "start": 36.563,
+   "end": 38.003
+  },
+  {
+   "id": "l16",
+   "scene": "E",
+   "text": "três e dezessete.",
+   "voice": null,
+   "start": 38.801,
+   "end": 40.302
+  },
+  {
+   "id": "l17",
+   "scene": "E",
+   "text": "Chegou.",
+   "voice": null,
+   "start": 40.767,
+   "end": 41.487
+  },
+  {
+   "id": "l18",
+   "scene": "F",
+   "text": "Só que dessa vez, a minha voz veio do celular...",
+   "voice": null,
+   "start": 42.152,
+   "end": 44.928
+  },
+  {
+   "id": "l19",
+   "scene": "F",
+   "text": "e, baixinho, ao mesmo tempo... do corredor.",
+   "voice": null,
+   "start": 45.26,
+   "end": 47.783
+  },
+  {
+   "id": "l20",
+   "scene": "F",
+   "text": "Caio. Não abre a porta do quarto.",
+   "voice": "corridor",
+   "start": 48.381,
+   "end": 50.82
+  },
+  {
+   "id": "l21",
+   "scene": "F",
+   "text": "Alguém bateu na porta.",
+   "voice": null,
+   "start": 52.947,
+   "end": 54.694
+  },
+  {
+   "id": "l22",
+   "scene": "X",
+   "text": "Continua amanhã.",
+   "voice": null,
+   "start": 55.758,
+   "end": 57.1
+  }
+ ]
+}
