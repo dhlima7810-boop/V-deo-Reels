@@ -1,0 +1,124 @@
+[
+ {
+  "id": "s1",
+  "text": "Eu vou te mostrar como nasce um carro. Do zero.",
+  "hl": [
+   "carro"
+  ]
+ },
+ {
+  "id": "s2",
+  "text": "Tudo começa no projeto: cada peça é desenhada no computador.",
+  "hl": [
+   "projeto"
+  ]
+ },
+ {
+  "id": "s3",
+  "text": "Aí uma prensa gigante amassa chapas de aço e faz as portas, o teto e o capô.",
+  "hl": [
+   "prensa",
+   "aço"
+  ]
+ },
+ {
+  "id": "s3b",
+  "text": "Cada batida tem a força de mais de mil toneladas.",
+  "hl": [
+   "mil",
+   "toneladas"
+  ]
+ },
+ {
+  "id": "s4",
+  "text": "Depois, robôs soldam tudo. São mais de quatro mil pontos de solda!",
+  "hl": [
+   "robôs",
+   "solda"
+  ]
+ },
+ {
+  "id": "s5",
+  "text": "Pronto, essa é a carroceria. O esqueleto do carro.",
+  "hl": [
+   "carroceria"
+  ]
+ },
+ {
+  "id": "s6",
+  "text": "Agora vem a pintura, em várias camadas, pra não enferrujar.",
+  "hl": [
+   "pintura"
+  ]
+ },
+ {
+  "id": "s6b",
+  "text": "E cada camada seca dentro de um forno bem quente.",
+  "hl": [
+   "forno"
+  ]
+ },
+ {
+  "id": "s7",
+  "text": "Enquanto isso, lá embaixo, montam o motor e o câmbio.",
+  "hl": [
+   "motor",
+   "câmbio"
+  ]
+ },
+ {
+  "id": "s8",
+  "text": "E aí vem o casamento: a carroceria desce e encaixa no motor.",
+  "hl": [
+   "casamento"
+  ]
+ },
+ {
+  "id": "s8b",
+  "text": "É sério, na fábrica eles chamam assim mesmo.",
+  "hl": [
+   "sério"
+  ]
+ },
+ {
+  "id": "s9",
+  "text": "Faltam as rodas, os bancos, os vidros e os faróis.",
+  "hl": [
+   "rodas",
+   "bancos",
+   "vidros",
+   "faróis"
+  ]
+ },
+ {
+  "id": "s10",
+  "text": "No total, são umas trinta mil peças!",
+  "hl": [
+   "trinta",
+   "mil"
+  ]
+ },
+ {
+  "id": "s10b",
+  "text": "E uma fábrica grande termina um carro novo a cada um ou dois minutos.",
+  "hl": [
+   "minutos"
+  ]
+ },
+ {
+  "id": "s11",
+  "text": "Por último, o teste. Liga o motor e...",
+  "hl": [
+   "teste"
+  ]
+ },
+ {
+  "id": "s12",
+  "text": "ele anda pela primeira vez. Do desenho até a estrada.",
+  "hl": [
+   "primeira",
+   "estrada"
+  ],
+  "pre": 0.8
+ }
+]
