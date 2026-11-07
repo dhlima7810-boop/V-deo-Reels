@@ -1,0 +1,165 @@
+{
+ "duration": 58.0,
+ "lines": [
+  {
+   "id": "s1",
+   "scene": 1,
+   "text": "Esse garoto sumiu por três dias numa mata.",
+   "voice": null,
+   "start": 0.25,
+   "end": 3.122
+  },
+  {
+   "id": "s1b",
+   "scene": 1,
+   "text": "Quando voltou... ele não piscava mais.",
+   "voice": null,
+   "start": 3.436,
+   "end": 5.816
+  },
+  {
+   "id": "s2",
+   "scene": 2,
+   "text": "O nome dele era Lucas. Catorze anos.",
+   "voice": null,
+   "start": 6.601,
+   "end": 9.07
+  },
+  {
+   "id": "s2b",
+   "scene": 2,
+   "text": "Entrou na mata atrás do cachorro... e não voltou.",
+   "voice": null,
+   "start": 9.462,
+   "end": 12.464
+  },
+  {
+   "id": "s3",
+   "scene": 3,
+   "text": "A cidade inteira procurou.",
+   "voice": null,
+   "start": 13.171,
+   "end": 15.101
+  },
+  {
+   "id": "s3b",
+   "scene": 3,
+   "text": "Nada.",
+   "voice": null,
+   "start": 15.415,
+   "end": 16.055
+  },
+  {
+   "id": "s4",
+   "scene": 4,
+   "text": "No terceiro dia, às três da manhã, ele apareceu na porta.",
+   "voice": null,
+   "start": 16.841,
+   "end": 20.33
+  },
+  {
+   "id": "s4b",
+   "scene": 4,
+   "text": "Descalço. Sujo de terra.",
+   "voice": null,
+   "start": 20.644,
+   "end": 22.351
+  },
+  {
+   "id": "s5",
+   "scene": 5,
+   "text": "Sem um arranhão. Mas os olhos...",
+   "voice": null,
+   "start": 23.058,
+   "end": 25.024
+  },
+  {
+   "id": "s5b",
+   "scene": 5,
+   "text": "brilhavam no escuro.",
+   "voice": null,
+   "start": 25.495,
+   "end": 26.773
+  },
+  {
+   "id": "s6",
+   "scene": 6,
+   "text": "Ele só repetia uma frase:",
+   "voice": null,
+   "start": 27.559,
+   "end": 29.466
+  },
+  {
+   "id": "s6b",
+   "scene": 6,
+   "text": "eles moram embaixo da cerca.",
+   "voice": "whisper",
+   "start": 29.858,
+   "end": 32.376
+  },
+  {
+   "id": "s7",
+   "scene": 7,
+   "text": "Que cerca? No mapa, aquela mata não tem nada.",
+   "voice": null,
+   "start": 33.161,
+   "end": 35.933
+  },
+  {
+   "id": "s8",
+   "scene": 8,
+   "text": "No dia seguinte, dois homens de terno cinza bateram na porta.",
+   "voice": null,
+   "start": 36.64,
+   "end": 40.515
+  },
+  {
+   "id": "s8b",
+   "scene": 8,
+   "text": "Sem nome.",
+   "voice": null,
+   "start": 40.829,
+   "end": 41.731
+  },
+  {
+   "id": "s8c",
+   "scene": 8,
+   "text": "Levaram a roupa dele... e a terra dos pés.",
+   "voice": null,
+   "start": 42.045,
+   "end": 44.562
+  },
+  {
+   "id": "s9",
+   "scene": 9,
+   "text": "Desde então, nenhum pássaro canta perto da mata.",
+   "voice": null,
+   "start": 45.268,
+   "end": 48.281
+  },
+  {
+   "id": "s9b",
+   "scene": 9,
+   "text": "E toda bússola lá dentro... gira sem parar.",
+   "voice": null,
+   "start": 48.595,
+   "end": 51.526
+  },
+  {
+   "id": "s10",
+   "scene": 10,
+   "text": "Na parte dois, eu mostro o que tem atrás da cerca.",
+   "voice": null,
+   "start": 52.311,
+   "end": 55.451
+  },
+  {
+   "id": "s10b",
+   "scene": 10,
+   "text": "Segue pra não perder.",
+   "voice": null,
+   "start": 55.687,
+   "end": 57.1
+  }
+ ]
+}

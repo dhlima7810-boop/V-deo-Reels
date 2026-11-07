@@ -1,0 +1,123 @@
+[
+ {
+  "id": "s1",
+  "scene": 1,
+  "text": "Esse garoto sumiu por três dias numa mata.",
+  "gap": 0.4
+ },
+ {
+  "id": "s1b",
+  "scene": 1,
+  "text": "Quando voltou... ele não piscava mais.",
+  "gap": 1.0
+ },
+ {
+  "id": "s2",
+  "scene": 2,
+  "text": "O nome dele era Lucas. Catorze anos.",
+  "gap": 0.5
+ },
+ {
+  "id": "s2b",
+  "scene": 2,
+  "text": "Entrou na mata atrás do cachorro... e não voltou.",
+  "gap": 0.9
+ },
+ {
+  "id": "s3",
+  "scene": 3,
+  "text": "A cidade inteira procurou.",
+  "gap": 0.4
+ },
+ {
+  "id": "s3b",
+  "scene": 3,
+  "text": "Nada.",
+  "gap": 1.0
+ },
+ {
+  "id": "s4",
+  "scene": 4,
+  "text": "No terceiro dia, às três da manhã, ele apareceu na porta.",
+  "gap": 0.4
+ },
+ {
+  "id": "s4b",
+  "scene": 4,
+  "text": "Descalço. Sujo de terra.",
+  "gap": 0.9
+ },
+ {
+  "id": "s5",
+  "scene": 5,
+  "text": "Sem um arranhão. Mas os olhos...",
+  "gap": 0.6
+ },
+ {
+  "id": "s5b",
+  "scene": 5,
+  "text": "brilhavam no escuro.",
+  "gap": 1.0
+ },
+ {
+  "id": "s6",
+  "scene": 6,
+  "text": "Ele só repetia uma frase:",
+  "gap": 0.5
+ },
+ {
+  "id": "s6b",
+  "scene": 6,
+  "text": "eles moram embaixo da cerca.",
+  "voice": "whisper",
+  "gap": 1.0
+ },
+ {
+  "id": "s7",
+  "scene": 7,
+  "text": "Que cerca? No mapa, aquela mata não tem nada.",
+  "gap": 0.9
+ },
+ {
+  "id": "s8",
+  "scene": 8,
+  "text": "No dia seguinte, dois homens de terno cinza bateram na porta.",
+  "gap": 0.4
+ },
+ {
+  "id": "s8b",
+  "scene": 8,
+  "text": "Sem nome.",
+  "gap": 0.4
+ },
+ {
+  "id": "s8c",
+  "scene": 8,
+  "text": "Levaram a roupa dele... e a terra dos pés.",
+  "gap": 0.9
+ },
+ {
+  "id": "s9",
+  "scene": 9,
+  "text": "Desde então, nenhum pássaro canta perto da mata.",
+  "gap": 0.4
+ },
+ {
+  "id": "s9b",
+  "scene": 9,
+  "text": "E toda bússola lá dentro... gira sem parar.",
+  "gap": 1.0
+ },
+ {
+  "id": "s10",
+  "scene": 10,
+  "text": "Na parte dois, eu mostro o que tem atrás da cerca.",
+  "gap": 0.3
+ },
+ {
+  "id": "s10b",
+  "scene": 10,
+  "text": "Segue pra não perder.",
+  "gap": 0
+ }
+]
