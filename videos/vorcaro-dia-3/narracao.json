@@ -1,0 +1,971 @@
+{
+ "duration": 55.18,
+ "lines": [
+  {
+   "id": "c1",
+   "text": "Quem compra uma empresa que vale um real por cem? Banco público! Que jogada maravilhosa.",
+   "start": 0.12,
+   "end": 5.214,
+   "words": [
+    {
+     "w": "Quem",
+     "start": 0.12,
+     "end": 0.276,
+     "hl": false
+    },
+    {
+     "w": "compra",
+     "start": 0.276,
+     "end": 0.589,
+     "hl": false
+    },
+    {
+     "w": "uma",
+     "start": 0.589,
+     "end": 0.901,
+     "hl": false
+    },
+    {
+     "w": "empresa",
+     "start": 0.901,
+     "end": 1.37,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 1.37,
+     "end": 1.526,
+     "hl": false
+    },
+    {
+     "w": "vale",
+     "start": 1.526,
+     "end": 1.839,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 1.839,
+     "end": 1.995,
+     "hl": false
+    },
+    {
+     "w": "real",
+     "start": 1.995,
+     "end": 2.152,
+     "hl": false
+    },
+    {
+     "w": "por",
+     "start": 2.152,
+     "end": 2.308,
+     "hl": false
+    },
+    {
+     "w": "cem?",
+     "start": 2.308,
+     "end": 2.652,
+     "hl": false
+    },
+    {
+     "w": "Banco",
+     "start": 2.652,
+     "end": 2.964,
+     "hl": false
+    },
+    {
+     "w": "público!",
+     "start": 2.964,
+     "end": 3.62,
+     "hl": true
+    },
+    {
+     "w": "Que",
+     "start": 3.62,
+     "end": 3.777,
+     "hl": false
+    },
+    {
+     "w": "jogada",
+     "start": 3.777,
+     "end": 4.246,
+     "hl": false
+    },
+    {
+     "w": "maravilhosa.",
+     "start": 4.246,
+     "end": 5.214,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "text": "O BRB, banco do governo do Distrito Federal, comprou do Master uns 12 bilhões em carteiras de crédito.",
+   "start": 5.594,
+   "end": 12.247,
+   "words": [
+    {
+     "w": "O",
+     "start": 5.594,
+     "end": 5.767,
+     "hl": false
+    },
+    {
+     "w": "BRB,",
+     "start": 5.767,
+     "end": 6.146,
+     "hl": true
+    },
+    {
+     "w": "banco",
+     "start": 6.146,
+     "end": 6.491,
+     "hl": false
+    },
+    {
+     "w": "do",
+     "start": 6.491,
+     "end": 6.663,
+     "hl": false
+    },
+    {
+     "w": "governo",
+     "start": 6.663,
+     "end": 7.18,
+     "hl": false
+    },
+    {
+     "w": "do",
+     "start": 7.18,
+     "end": 7.352,
+     "hl": false
+    },
+    {
+     "w": "Distrito",
+     "start": 7.352,
+     "end": 7.87,
+     "hl": false
+    },
+    {
+     "w": "Federal,",
+     "start": 7.87,
+     "end": 8.593,
+     "hl": false
+    },
+    {
+     "w": "comprou",
+     "start": 8.593,
+     "end": 8.938,
+     "hl": false
+    },
+    {
+     "w": "do",
+     "start": 8.938,
+     "end": 9.111,
+     "hl": false
+    },
+    {
+     "w": "Master",
+     "start": 9.111,
+     "end": 9.455,
+     "hl": false
+    },
+    {
+     "w": "uns",
+     "start": 9.455,
+     "end": 9.628,
+     "hl": false
+    },
+    {
+     "w": "12",
+     "start": 9.628,
+     "end": 10.317,
+     "hl": true
+    },
+    {
+     "w": "bilhões",
+     "start": 10.317,
+     "end": 10.662,
+     "hl": false
+    },
+    {
+     "w": "em",
+     "start": 10.662,
+     "end": 10.834,
+     "hl": false
+    },
+    {
+     "w": "carteiras",
+     "start": 10.834,
+     "end": 11.351,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 11.351,
+     "end": 11.524,
+     "hl": false
+    },
+    {
+     "w": "crédito.",
+     "start": 11.524,
+     "end": 12.247,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "text": "A Polícia Federal diz que boa parte era vento. O Vorcaro nega.",
+   "start": 12.627,
+   "end": 16.323,
+   "words": [
+    {
+     "w": "A",
+     "start": 12.627,
+     "end": 12.779,
+     "hl": false
+    },
+    {
+     "w": "Polícia",
+     "start": 12.779,
+     "end": 13.233,
+     "hl": false
+    },
+    {
+     "w": "Federal",
+     "start": 13.233,
+     "end": 13.688,
+     "hl": false
+    },
+    {
+     "w": "diz",
+     "start": 13.688,
+     "end": 13.839,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 13.839,
+     "end": 13.991,
+     "hl": false
+    },
+    {
+     "w": "boa",
+     "start": 13.991,
+     "end": 14.142,
+     "hl": false
+    },
+    {
+     "w": "parte",
+     "start": 14.142,
+     "end": 14.445,
+     "hl": false
+    },
+    {
+     "w": "era",
+     "start": 14.445,
+     "end": 14.748,
+     "hl": false
+    },
+    {
+     "w": "vento.",
+     "start": 14.748,
+     "end": 15.232,
+     "hl": true
+    },
+    {
+     "w": "O",
+     "start": 15.232,
+     "end": 15.384,
+     "hl": false
+    },
+    {
+     "w": "Vorcaro",
+     "start": 15.384,
+     "end": 15.838,
+     "hl": false
+    },
+    {
+     "w": "nega.",
+     "start": 15.838,
+     "end": 16.323,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "text": "E como se convence um banco público? Vamos supor.",
+   "start": 16.903,
+   "end": 19.831,
+   "words": [
+    {
+     "w": "E",
+     "start": 16.903,
+     "end": 17.054,
+     "hl": false
+    },
+    {
+     "w": "como",
+     "start": 17.054,
+     "end": 17.356,
+     "hl": false
+    },
+    {
+     "w": "se",
+     "start": 17.356,
+     "end": 17.507,
+     "hl": false
+    },
+    {
+     "w": "convence",
+     "start": 17.507,
+     "end": 17.96,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 17.96,
+     "end": 18.111,
+     "hl": false
+    },
+    {
+     "w": "banco",
+     "start": 18.111,
+     "end": 18.412,
+     "hl": false
+    },
+    {
+     "w": "público?",
+     "start": 18.412,
+     "end": 19.046,
+     "hl": false
+    },
+    {
+     "w": "Vamos",
+     "start": 19.046,
+     "end": 19.348,
+     "hl": false
+    },
+    {
+     "w": "supor.",
+     "start": 19.348,
+     "end": 19.831,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "text": "Chama a galera pra jantar. Um drink, um champanhe, os amigos do amigo.",
+   "start": 20.211,
+   "end": 24.034,
+   "words": [
+    {
+     "w": "Chama",
+     "start": 20.211,
+     "end": 20.486,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 20.486,
+     "end": 20.624,
+     "hl": false
+    },
+    {
+     "w": "galera",
+     "start": 20.624,
+     "end": 21.037,
+     "hl": false
+    },
+    {
+     "w": "pra",
+     "start": 21.037,
+     "end": 21.174,
+     "hl": false
+    },
+    {
+     "w": "jantar.",
+     "start": 21.174,
+     "end": 21.614,
+     "hl": true
+    },
+    {
+     "w": "Um",
+     "start": 21.614,
+     "end": 21.752,
+     "hl": false
+    },
+    {
+     "w": "drink,",
+     "start": 21.752,
+     "end": 22.054,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 22.054,
+     "end": 22.192,
+     "hl": false
+    },
+    {
+     "w": "champanhe,",
+     "start": 22.192,
+     "end": 22.769,
+     "hl": true
+    },
+    {
+     "w": "os",
+     "start": 22.769,
+     "end": 22.907,
+     "hl": false
+    },
+    {
+     "w": "amigos",
+     "start": 22.907,
+     "end": 23.319,
+     "hl": false
+    },
+    {
+     "w": "do",
+     "start": 23.319,
+     "end": 23.457,
+     "hl": false
+    },
+    {
+     "w": "amigo.",
+     "start": 23.457,
+     "end": 24.034,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "c6",
+   "text": "Vamos supor de novo. O fiscal ganha 20 mil.",
+   "start": 24.414,
+   "end": 27.155,
+   "words": [
+    {
+     "w": "Vamos",
+     "start": 24.414,
+     "end": 24.697,
+     "hl": false
+    },
+    {
+     "w": "supor",
+     "start": 24.697,
+     "end": 24.979,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 24.979,
+     "end": 25.121,
+     "hl": false
+    },
+    {
+     "w": "novo.",
+     "start": 25.121,
+     "end": 25.573,
+     "hl": false
+    },
+    {
+     "w": "O",
+     "start": 25.573,
+     "end": 25.714,
+     "hl": false
+    },
+    {
+     "w": "fiscal",
+     "start": 25.714,
+     "end": 25.996,
+     "hl": true
+    },
+    {
+     "w": "ganha",
+     "start": 25.996,
+     "end": 26.279,
+     "hl": false
+    },
+    {
+     "w": "20",
+     "start": 26.279,
+     "end": 26.844,
+     "hl": true
+    },
+    {
+     "w": "mil.",
+     "start": 26.844,
+     "end": 27.155,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "c7",
+   "text": "Você leva ele pra Fernando de Noronha e dá um cartão com a senha pra ele passear no shopping.",
+   "start": 27.535,
+   "end": 32.63,
+   "words": [
+    {
+     "w": "Você",
+     "start": 27.535,
+     "end": 27.851,
+     "hl": false
+    },
+    {
+     "w": "leva",
+     "start": 27.851,
+     "end": 28.168,
+     "hl": false
+    },
+    {
+     "w": "ele",
+     "start": 28.168,
+     "end": 28.484,
+     "hl": false
+    },
+    {
+     "w": "pra",
+     "start": 28.484,
+     "end": 28.643,
+     "hl": false
+    },
+    {
+     "w": "Fernando",
+     "start": 28.643,
+     "end": 29.117,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 29.117,
+     "end": 29.276,
+     "hl": false
+    },
+    {
+     "w": "Noronha",
+     "start": 29.276,
+     "end": 29.75,
+     "hl": true
+    },
+    {
+     "w": "e",
+     "start": 29.75,
+     "end": 29.908,
+     "hl": false
+    },
+    {
+     "w": "dá",
+     "start": 29.908,
+     "end": 30.067,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 30.067,
+     "end": 30.225,
+     "hl": false
+    },
+    {
+     "w": "cartão",
+     "start": 30.225,
+     "end": 30.541,
+     "hl": true
+    },
+    {
+     "w": "com",
+     "start": 30.541,
+     "end": 30.7,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 30.7,
+     "end": 30.858,
+     "hl": false
+    },
+    {
+     "w": "senha",
+     "start": 30.858,
+     "end": 31.174,
+     "hl": true
+    },
+    {
+     "w": "pra",
+     "start": 31.174,
+     "end": 31.333,
+     "hl": false
+    },
+    {
+     "w": "ele",
+     "start": 31.333,
+     "end": 31.649,
+     "hl": false
+    },
+    {
+     "w": "passear",
+     "start": 31.649,
+     "end": 31.966,
+     "hl": false
+    },
+    {
+     "w": "no",
+     "start": 31.966,
+     "end": 32.124,
+     "hl": false
+    },
+    {
+     "w": "shopping.",
+     "start": 32.124,
+     "end": 32.63,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "c8",
+   "text": "É crime? Imagina.",
+   "start": 33.01,
+   "end": 34.259,
+   "words": [
+    {
+     "w": "É",
+     "start": 33.01,
+     "end": 33.143,
+     "hl": false
+    },
+    {
+     "w": "crime?",
+     "start": 33.143,
+     "end": 33.568,
+     "hl": true
+    },
+    {
+     "w": "Imagina.",
+     "start": 33.568,
+     "end": 34.259,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "c9",
+   "text": "Dizem que tinha palestrinha paga em Portugal, festa, jantar... e até as meninas.",
+   "start": 34.839,
+   "end": 39.542,
+   "words": [
+    {
+     "w": "Dizem",
+     "start": 34.839,
+     "end": 35.144,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 35.144,
+     "end": 35.297,
+     "hl": false
+    },
+    {
+     "w": "tinha",
+     "start": 35.297,
+     "end": 35.602,
+     "hl": false
+    },
+    {
+     "w": "palestrinha",
+     "start": 35.602,
+     "end": 36.213,
+     "hl": true
+    },
+    {
+     "w": "paga",
+     "start": 36.213,
+     "end": 36.518,
+     "hl": false
+    },
+    {
+     "w": "em",
+     "start": 36.518,
+     "end": 36.671,
+     "hl": false
+    },
+    {
+     "w": "Portugal,",
+     "start": 36.671,
+     "end": 37.312,
+     "hl": false
+    },
+    {
+     "w": "festa,",
+     "start": 37.312,
+     "end": 37.801,
+     "hl": false
+    },
+    {
+     "w": "jantar...",
+     "start": 37.801,
+     "end": 38.29,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 38.29,
+     "end": 38.442,
+     "hl": false
+    },
+    {
+     "w": "até",
+     "start": 38.442,
+     "end": 38.748,
+     "hl": false
+    },
+    {
+     "w": "as",
+     "start": 38.748,
+     "end": 38.9,
+     "hl": false
+    },
+    {
+     "w": "meninas.",
+     "start": 38.9,
+     "end": 39.542,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "c10",
+   "text": "No fim, a lista tinha de tudo. Deputado, senador, prefeito, pastor, comediante, influencer.",
+   "start": 39.922,
+   "end": 45.625,
+   "words": [
+    {
+     "w": "No",
+     "start": 39.922,
+     "end": 40.069,
+     "hl": false
+    },
+    {
+     "w": "fim,",
+     "start": 40.069,
+     "end": 40.394,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 40.394,
+     "end": 40.542,
+     "hl": false
+    },
+    {
+     "w": "lista",
+     "start": 40.542,
+     "end": 40.838,
+     "hl": false
+    },
+    {
+     "w": "tinha",
+     "start": 40.838,
+     "end": 41.133,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 41.133,
+     "end": 41.281,
+     "hl": false
+    },
+    {
+     "w": "tudo.",
+     "start": 41.281,
+     "end": 41.754,
+     "hl": false
+    },
+    {
+     "w": "Deputado,",
+     "start": 41.754,
+     "end": 42.522,
+     "hl": true
+    },
+    {
+     "w": "senador,",
+     "start": 42.522,
+     "end": 43.143,
+     "hl": true
+    },
+    {
+     "w": "prefeito,",
+     "start": 43.143,
+     "end": 43.763,
+     "hl": true
+    },
+    {
+     "w": "pastor,",
+     "start": 43.763,
+     "end": 44.236,
+     "hl": true
+    },
+    {
+     "w": "comediante,",
+     "start": 44.236,
+     "end": 45.004,
+     "hl": true
+    },
+    {
+     "w": "influencer.",
+     "start": 45.004,
+     "end": 45.625,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "c11",
+   "text": "A Polícia Federal ainda investiga quem levou o quê.",
+   "start": 46.005,
+   "end": 48.956,
+   "words": [
+    {
+     "w": "A",
+     "start": 46.005,
+     "end": 46.159,
+     "hl": false
+    },
+    {
+     "w": "Polícia",
+     "start": 46.159,
+     "end": 46.62,
+     "hl": false
+    },
+    {
+     "w": "Federal",
+     "start": 46.62,
+     "end": 47.081,
+     "hl": false
+    },
+    {
+     "w": "ainda",
+     "start": 47.081,
+     "end": 47.388,
+     "hl": false
+    },
+    {
+     "w": "investiga",
+     "start": 47.388,
+     "end": 48.003,
+     "hl": true
+    },
+    {
+     "w": "quem",
+     "start": 48.003,
+     "end": 48.157,
+     "hl": false
+    },
+    {
+     "w": "levou",
+     "start": 48.157,
+     "end": 48.464,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 48.464,
+     "end": 48.618,
+     "hl": false
+    },
+    {
+     "w": "quê.",
+     "start": 48.618,
+     "end": 48.956,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "c12",
+   "text": "Mas quem derrubou o Vorcaro não foi político. Foram os outros banqueiros.",
+   "start": 49.586,
+   "end": 53.9,
+   "words": [
+    {
+     "w": "Mas",
+     "start": 49.586,
+     "end": 49.756,
+     "hl": false
+    },
+    {
+     "w": "quem",
+     "start": 49.756,
+     "end": 49.926,
+     "hl": false
+    },
+    {
+     "w": "derrubou",
+     "start": 49.926,
+     "end": 50.435,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 50.435,
+     "end": 50.605,
+     "hl": false
+    },
+    {
+     "w": "Vorcaro",
+     "start": 50.605,
+     "end": 51.114,
+     "hl": false
+    },
+    {
+     "w": "não",
+     "start": 51.114,
+     "end": 51.284,
+     "hl": false
+    },
+    {
+     "w": "foi",
+     "start": 51.284,
+     "end": 51.454,
+     "hl": false
+    },
+    {
+     "w": "político.",
+     "start": 51.454,
+     "end": 52.337,
+     "hl": false
+    },
+    {
+     "w": "Foram",
+     "start": 52.337,
+     "end": 52.677,
+     "hl": false
+    },
+    {
+     "w": "os",
+     "start": 52.677,
+     "end": 52.847,
+     "hl": false
+    },
+    {
+     "w": "outros",
+     "start": 52.847,
+     "end": 53.186,
+     "hl": false
+    },
+    {
+     "w": "banqueiros.",
+     "start": 53.186,
+     "end": 53.9,
+     "hl": true
+    }
+   ]
+  }
+ ]
+}

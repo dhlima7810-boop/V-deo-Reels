@@ -1,0 +1,15 @@
+[
+ {"id":"a1","text":"Todo mundo sabe que o Vorcaro era bandido.","hl":["bandido"]},
+ {"id":"a2","text":"Mas tem gente dizendo que ele era um gênio. O maior criminoso da face da Terra.","hl":["gênio","criminoso"]},
+ {"id":"a3","text":"Então bora entender o esquema. E no final você me diz se era gênio mesmo.","hl":["esquema"]},
+ {"id":"a4","text":"Primeiro: banco vive de emprestar dinheiro que não tem. É isso mesmo.","hl":["não","tem"],"pre":0.2},
+ {"id":"a5","text":"Se o banco tem mil reais no caixa, ele pode emprestar uns dez mil.","hl":["mil","dez"]},
+ {"id":"a6","text":"Só precisa entrar mais dinheiro do que sai.","hl":["entrar","sai"]},
+ {"id":"a7","text":"E a lei obriga a guardar uma reserva. O tal índice de Basileia.","hl":["reserva","Basileia"]},
+ {"id":"a8","text":"Uma parte fica em título público, que vira dinheiro rápido.","hl":["título","público"]},
+ {"id":"a9","text":"Guarda isso: quanto maior o patrimônio, mais o banco pode emprestar.","hl":["patrimônio","emprestar"]},
+ {"id":"a10","text":"Aí o Vorcaro pegou um banco que tava meio quebrando. O Banco Máxima.","hl":["quebrando","Máxima"],"pre":0.2},
+ {"id":"a11","text":"E trocou o nome pra Banco Master. Bem mais chique, né?","hl":["Master","chique"]},
+ {"id":"a12","text":"E começou a pagar juros que nenhum banco sério pagava.","hl":["juros","nenhum"]},
+ {"id":"a13","text":"Amanhã eu te mostro onde tá a malandragem.","hl":["malandragem"],"pre":0.2}
+]

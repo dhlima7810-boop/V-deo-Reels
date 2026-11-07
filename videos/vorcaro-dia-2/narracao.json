@@ -1,0 +1,1073 @@
+{
+ "duration": 62.475,
+ "lines": [
+  {
+   "id": "b1",
+   "text": "O Banco Master pagava juros absurdos. CDB a 140% do CDI. Teve até 20% ao ano.",
+   "start": 0.12,
+   "end": 7.84,
+   "words": [
+    {
+     "w": "O",
+     "start": 0.12,
+     "end": 0.306,
+     "hl": false
+    },
+    {
+     "w": "Banco",
+     "start": 0.306,
+     "end": 0.677,
+     "hl": false
+    },
+    {
+     "w": "Master",
+     "start": 0.677,
+     "end": 1.048,
+     "hl": false
+    },
+    {
+     "w": "pagava",
+     "start": 1.048,
+     "end": 1.605,
+     "hl": false
+    },
+    {
+     "w": "juros",
+     "start": 1.605,
+     "end": 1.976,
+     "hl": false
+    },
+    {
+     "w": "absurdos.",
+     "start": 1.976,
+     "end": 2.755,
+     "hl": true
+    },
+    {
+     "w": "CDB",
+     "start": 2.755,
+     "end": 2.941,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 2.941,
+     "end": 3.126,
+     "hl": false
+    },
+    {
+     "w": "140%",
+     "start": 3.126,
+     "end": 4.611,
+     "hl": true
+    },
+    {
+     "w": "do",
+     "start": 4.611,
+     "end": 4.797,
+     "hl": false
+    },
+    {
+     "w": "CDI.",
+     "start": 4.797,
+     "end": 5.205,
+     "hl": false
+    },
+    {
+     "w": "Teve",
+     "start": 5.205,
+     "end": 5.576,
+     "hl": false
+    },
+    {
+     "w": "até",
+     "start": 5.576,
+     "end": 5.947,
+     "hl": false
+    },
+    {
+     "w": "20%",
+     "start": 5.947,
+     "end": 7.061,
+     "hl": true
+    },
+    {
+     "w": "ao",
+     "start": 7.061,
+     "end": 7.246,
+     "hl": false
+    },
+    {
+     "w": "ano.",
+     "start": 7.246,
+     "end": 7.84,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "b3",
+   "text": "CDB é você emprestando dinheiro pro banco, com juros.",
+   "start": 8.37,
+   "end": 11.973,
+   "words": [
+    {
+     "w": "CDB",
+     "start": 8.37,
+     "end": 8.556,
+     "hl": false
+    },
+    {
+     "w": "é",
+     "start": 8.556,
+     "end": 8.741,
+     "hl": false
+    },
+    {
+     "w": "você",
+     "start": 8.741,
+     "end": 9.113,
+     "hl": false
+    },
+    {
+     "w": "emprestando",
+     "start": 9.113,
+     "end": 9.856,
+     "hl": false
+    },
+    {
+     "w": "dinheiro",
+     "start": 9.856,
+     "end": 10.413,
+     "hl": false
+    },
+    {
+     "w": "pro",
+     "start": 10.413,
+     "end": 10.599,
+     "hl": false
+    },
+    {
+     "w": "banco,",
+     "start": 10.599,
+     "end": 11.193,
+     "hl": false
+    },
+    {
+     "w": "com",
+     "start": 11.193,
+     "end": 11.379,
+     "hl": false
+    },
+    {
+     "w": "juros.",
+     "start": 11.379,
+     "end": 11.973,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "b4",
+   "text": "E por que todo mundo topava? Por causa do FGC.",
+   "start": 12.353,
+   "end": 15.599,
+   "words": [
+    {
+     "w": "E",
+     "start": 12.353,
+     "end": 12.539,
+     "hl": false
+    },
+    {
+     "w": "por",
+     "start": 12.539,
+     "end": 12.726,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 12.726,
+     "end": 12.913,
+     "hl": false
+    },
+    {
+     "w": "todo",
+     "start": 12.913,
+     "end": 13.286,
+     "hl": false
+    },
+    {
+     "w": "mundo",
+     "start": 13.286,
+     "end": 13.659,
+     "hl": false
+    },
+    {
+     "w": "topava?",
+     "start": 13.659,
+     "end": 14.442,
+     "hl": false
+    },
+    {
+     "w": "Por",
+     "start": 14.442,
+     "end": 14.629,
+     "hl": false
+    },
+    {
+     "w": "causa",
+     "start": 14.629,
+     "end": 15.002,
+     "hl": false
+    },
+    {
+     "w": "do",
+     "start": 15.002,
+     "end": 15.189,
+     "hl": false
+    },
+    {
+     "w": "FGC.",
+     "start": 15.189,
+     "end": 15.599,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "b5",
+   "text": "Um seguro que devolve até 250 mil por pessoa se o banco quebrar.",
+   "start": 15.979,
+   "end": 20.371,
+   "words": [
+    {
+     "w": "Um",
+     "start": 15.979,
+     "end": 16.141,
+     "hl": false
+    },
+    {
+     "w": "seguro",
+     "start": 16.141,
+     "end": 16.625,
+     "hl": true
+    },
+    {
+     "w": "que",
+     "start": 16.625,
+     "end": 16.786,
+     "hl": false
+    },
+    {
+     "w": "devolve",
+     "start": 16.786,
+     "end": 17.271,
+     "hl": false
+    },
+    {
+     "w": "até",
+     "start": 17.271,
+     "end": 17.594,
+     "hl": false
+    },
+    {
+     "w": "250",
+     "start": 17.594,
+     "end": 18.562,
+     "hl": true
+    },
+    {
+     "w": "mil",
+     "start": 18.562,
+     "end": 18.724,
+     "hl": false
+    },
+    {
+     "w": "por",
+     "start": 18.724,
+     "end": 18.885,
+     "hl": false
+    },
+    {
+     "w": "pessoa",
+     "start": 18.885,
+     "end": 19.208,
+     "hl": false
+    },
+    {
+     "w": "se",
+     "start": 19.208,
+     "end": 19.37,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 19.37,
+     "end": 19.531,
+     "hl": false
+    },
+    {
+     "w": "banco",
+     "start": 19.531,
+     "end": 19.854,
+     "hl": false
+    },
+    {
+     "w": "quebrar.",
+     "start": 19.854,
+     "end": 20.371,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "b6",
+   "text": "Ou seja: se der merda, alguém paga.",
+   "start": 20.751,
+   "end": 23.082,
+   "words": [
+    {
+     "w": "Ou",
+     "start": 20.751,
+     "end": 20.91,
+     "hl": false
+    },
+    {
+     "w": "seja:",
+     "start": 20.91,
+     "end": 21.421,
+     "hl": false
+    },
+    {
+     "w": "se",
+     "start": 21.421,
+     "end": 21.581,
+     "hl": false
+    },
+    {
+     "w": "der",
+     "start": 21.581,
+     "end": 21.741,
+     "hl": false
+    },
+    {
+     "w": "merda,",
+     "start": 21.741,
+     "end": 22.252,
+     "hl": true
+    },
+    {
+     "w": "alguém",
+     "start": 22.252,
+     "end": 22.571,
+     "hl": false
+    },
+    {
+     "w": "paga.",
+     "start": 22.571,
+     "end": 23.082,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "b7",
+   "text": "Agora a malandragem. Com esse dinheiro, montava fundo e comprava ação da famosa E.M.",
+   "start": 23.712,
+   "end": 28.782,
+   "words": [
+    {
+     "w": "Agora",
+     "start": 23.712,
+     "end": 24.165,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 24.165,
+     "end": 24.316,
+     "hl": false
+    },
+    {
+     "w": "malandragem.",
+     "start": 24.316,
+     "end": 25.1,
+     "hl": true
+    },
+    {
+     "w": "Com",
+     "start": 25.1,
+     "end": 25.251,
+     "hl": false
+    },
+    {
+     "w": "esse",
+     "start": 25.251,
+     "end": 25.553,
+     "hl": false
+    },
+    {
+     "w": "dinheiro,",
+     "start": 25.553,
+     "end": 26.187,
+     "hl": false
+    },
+    {
+     "w": "montava",
+     "start": 26.187,
+     "end": 26.64,
+     "hl": false
+    },
+    {
+     "w": "fundo",
+     "start": 26.64,
+     "end": 26.941,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 26.941,
+     "end": 27.092,
+     "hl": false
+    },
+    {
+     "w": "comprava",
+     "start": 27.092,
+     "end": 27.545,
+     "hl": false
+    },
+    {
+     "w": "ação",
+     "start": 27.545,
+     "end": 27.847,
+     "hl": false
+    },
+    {
+     "w": "da",
+     "start": 27.847,
+     "end": 27.998,
+     "hl": false
+    },
+    {
+     "w": "famosa",
+     "start": 27.998,
+     "end": 28.451,
+     "hl": false
+    },
+    {
+     "w": "E.M.",
+     "start": 28.451,
+     "end": 28.782,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "b8",
+   "text": "Empresa Merda. Coitada, ela só existe.",
+   "start": 29.162,
+   "end": 31.7,
+   "words": [
+    {
+     "w": "Empresa",
+     "start": 29.162,
+     "end": 29.595,
+     "hl": true
+    },
+    {
+     "w": "Merda.",
+     "start": 29.595,
+     "end": 30.057,
+     "hl": true
+    },
+    {
+     "w": "Coitada,",
+     "start": 30.057,
+     "end": 30.662,
+     "hl": false
+    },
+    {
+     "w": "ela",
+     "start": 30.662,
+     "end": 30.951,
+     "hl": false
+    },
+    {
+     "w": "só",
+     "start": 30.951,
+     "end": 31.095,
+     "hl": false
+    },
+    {
+     "w": "existe.",
+     "start": 31.095,
+     "end": 31.7,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "b9",
+   "text": "A ação vale um real. Um fundo compra dois milhões de ações.",
+   "start": 32.08,
+   "end": 35.781,
+   "words": [
+    {
+     "w": "A",
+     "start": 32.08,
+     "end": 32.262,
+     "hl": false
+    },
+    {
+     "w": "ação",
+     "start": 32.262,
+     "end": 32.625,
+     "hl": false
+    },
+    {
+     "w": "vale",
+     "start": 32.625,
+     "end": 32.987,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 32.987,
+     "end": 33.169,
+     "hl": false
+    },
+    {
+     "w": "real.",
+     "start": 33.169,
+     "end": 33.568,
+     "hl": true
+    },
+    {
+     "w": "Um",
+     "start": 33.568,
+     "end": 33.749,
+     "hl": false
+    },
+    {
+     "w": "fundo",
+     "start": 33.749,
+     "end": 34.112,
+     "hl": false
+    },
+    {
+     "w": "compra",
+     "start": 34.112,
+     "end": 34.475,
+     "hl": false
+    },
+    {
+     "w": "dois",
+     "start": 34.475,
+     "end": 34.656,
+     "hl": false
+    },
+    {
+     "w": "milhões",
+     "start": 34.656,
+     "end": 35.019,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 35.019,
+     "end": 35.2,
+     "hl": false
+    },
+    {
+     "w": "ações.",
+     "start": 35.2,
+     "end": 35.781,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "b10",
+   "text": "Aí outro fundo, do mesmo grupo, compra a mesma ação por dez.",
+   "start": 36.161,
+   "end": 39.687,
+   "words": [
+    {
+     "w": "Aí",
+     "start": 36.161,
+     "end": 36.317,
+     "hl": false
+    },
+    {
+     "w": "outro",
+     "start": 36.317,
+     "end": 36.629,
+     "hl": false
+    },
+    {
+     "w": "fundo,",
+     "start": 36.629,
+     "end": 37.128,
+     "hl": false
+    },
+    {
+     "w": "do",
+     "start": 37.128,
+     "end": 37.284,
+     "hl": false
+    },
+    {
+     "w": "mesmo",
+     "start": 37.284,
+     "end": 37.596,
+     "hl": false
+    },
+    {
+     "w": "grupo,",
+     "start": 37.596,
+     "end": 38.096,
+     "hl": false
+    },
+    {
+     "w": "compra",
+     "start": 38.096,
+     "end": 38.408,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 38.408,
+     "end": 38.564,
+     "hl": false
+    },
+    {
+     "w": "mesma",
+     "start": 38.564,
+     "end": 38.876,
+     "hl": false
+    },
+    {
+     "w": "ação",
+     "start": 38.876,
+     "end": 39.188,
+     "hl": false
+    },
+    {
+     "w": "por",
+     "start": 39.188,
+     "end": 39.344,
+     "hl": false
+    },
+    {
+     "w": "dez.",
+     "start": 39.344,
+     "end": 39.687,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "b11",
+   "text": "Às vezes por cem. Porque o cara empolgava e perdia a mão.",
+   "start": 40.067,
+   "end": 43.562,
+   "words": [
+    {
+     "w": "Às",
+     "start": 40.067,
+     "end": 40.231,
+     "hl": false
+    },
+    {
+     "w": "vezes",
+     "start": 40.231,
+     "end": 40.557,
+     "hl": false
+    },
+    {
+     "w": "por",
+     "start": 40.557,
+     "end": 40.721,
+     "hl": false
+    },
+    {
+     "w": "cem.",
+     "start": 40.721,
+     "end": 41.08,
+     "hl": true
+    },
+    {
+     "w": "Porque",
+     "start": 41.08,
+     "end": 41.406,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 41.406,
+     "end": 41.57,
+     "hl": false
+    },
+    {
+     "w": "cara",
+     "start": 41.57,
+     "end": 41.896,
+     "hl": false
+    },
+    {
+     "w": "empolgava",
+     "start": 41.896,
+     "end": 42.55,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 42.55,
+     "end": 42.713,
+     "hl": false
+    },
+    {
+     "w": "perdia",
+     "start": 42.713,
+     "end": 43.04,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 43.04,
+     "end": 43.203,
+     "hl": false
+    },
+    {
+     "w": "mão.",
+     "start": 43.203,
+     "end": 43.562,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "b12",
+   "text": "Pronto: dois milhões viram duzentos milhões no balanço.",
+   "start": 43.942,
+   "end": 47.258,
+   "words": [
+    {
+     "w": "Pronto:",
+     "start": 43.942,
+     "end": 44.519,
+     "hl": false
+    },
+    {
+     "w": "dois",
+     "start": 44.519,
+     "end": 44.699,
+     "hl": false
+    },
+    {
+     "w": "milhões",
+     "start": 44.699,
+     "end": 45.059,
+     "hl": false
+    },
+    {
+     "w": "viram",
+     "start": 45.059,
+     "end": 45.42,
+     "hl": false
+    },
+    {
+     "w": "duzentos",
+     "start": 45.42,
+     "end": 45.96,
+     "hl": true
+    },
+    {
+     "w": "milhões",
+     "start": 45.96,
+     "end": 46.321,
+     "hl": false
+    },
+    {
+     "w": "no",
+     "start": 46.321,
+     "end": 46.501,
+     "hl": false
+    },
+    {
+     "w": "balanço.",
+     "start": 46.501,
+     "end": 47.258,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "b13",
+   "text": "E com mais patrimônio no papel, ele vende muito mais CDB.",
+   "start": 47.638,
+   "end": 51.376,
+   "words": [
+    {
+     "w": "E",
+     "start": 47.638,
+     "end": 47.821,
+     "hl": false
+    },
+    {
+     "w": "com",
+     "start": 47.821,
+     "end": 48.004,
+     "hl": false
+    },
+    {
+     "w": "mais",
+     "start": 48.004,
+     "end": 48.187,
+     "hl": false
+    },
+    {
+     "w": "patrimônio",
+     "start": 48.187,
+     "end": 48.92,
+     "hl": false
+    },
+    {
+     "w": "no",
+     "start": 48.92,
+     "end": 49.104,
+     "hl": false
+    },
+    {
+     "w": "papel,",
+     "start": 49.104,
+     "end": 49.69,
+     "hl": true
+    },
+    {
+     "w": "ele",
+     "start": 49.69,
+     "end": 50.057,
+     "hl": false
+    },
+    {
+     "w": "vende",
+     "start": 50.057,
+     "end": 50.423,
+     "hl": false
+    },
+    {
+     "w": "muito",
+     "start": 50.423,
+     "end": 50.79,
+     "hl": false
+    },
+    {
+     "w": "mais",
+     "start": 50.79,
+     "end": 50.973,
+     "hl": false
+    },
+    {
+     "w": "CDB.",
+     "start": 50.973,
+     "end": 51.376,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "b14",
+   "text": "Fundo em cima de fundo em cima de fundo.",
+   "start": 51.756,
+   "end": 54.255,
+   "words": [
+    {
+     "w": "Fundo",
+     "start": 51.756,
+     "end": 52.085,
+     "hl": true
+    },
+    {
+     "w": "em",
+     "start": 52.085,
+     "end": 52.249,
+     "hl": false
+    },
+    {
+     "w": "cima",
+     "start": 52.249,
+     "end": 52.578,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 52.578,
+     "end": 52.742,
+     "hl": false
+    },
+    {
+     "w": "fundo",
+     "start": 52.742,
+     "end": 53.071,
+     "hl": true
+    },
+    {
+     "w": "em",
+     "start": 53.071,
+     "end": 53.236,
+     "hl": false
+    },
+    {
+     "w": "cima",
+     "start": 53.236,
+     "end": 53.565,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 53.565,
+     "end": 53.729,
+     "hl": false
+    },
+    {
+     "w": "fundo.",
+     "start": 53.729,
+     "end": 54.255,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "b15",
+   "text": "Só que uma hora alguém tinha que comprar essa empresa merda por cem reais.",
+   "start": 54.835,
+   "end": 59.206,
+   "words": [
+    {
+     "w": "Só",
+     "start": 54.835,
+     "end": 55.016,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 55.016,
+     "end": 55.196,
+     "hl": false
+    },
+    {
+     "w": "uma",
+     "start": 55.196,
+     "end": 55.558,
+     "hl": false
+    },
+    {
+     "w": "hora",
+     "start": 55.558,
+     "end": 55.919,
+     "hl": false
+    },
+    {
+     "w": "alguém",
+     "start": 55.919,
+     "end": 56.28,
+     "hl": false
+    },
+    {
+     "w": "tinha",
+     "start": 56.28,
+     "end": 56.641,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 56.641,
+     "end": 56.822,
+     "hl": false
+    },
+    {
+     "w": "comprar",
+     "start": 56.822,
+     "end": 57.183,
+     "hl": false
+    },
+    {
+     "w": "essa",
+     "start": 57.183,
+     "end": 57.544,
+     "hl": false
+    },
+    {
+     "w": "empresa",
+     "start": 57.544,
+     "end": 58.086,
+     "hl": false
+    },
+    {
+     "w": "merda",
+     "start": 58.086,
+     "end": 58.447,
+     "hl": false
+    },
+    {
+     "w": "por",
+     "start": 58.447,
+     "end": 58.628,
+     "hl": false
+    },
+    {
+     "w": "cem",
+     "start": 58.628,
+     "end": 58.809,
+     "hl": true
+    },
+    {
+     "w": "reais.",
+     "start": 58.809,
+     "end": 59.206,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "b16",
+   "text": "E aí entram os amigos.",
+   "start": 59.586,
+   "end": 61.195,
+   "words": [
+    {
+     "w": "E",
+     "start": 59.586,
+     "end": 59.761,
+     "hl": false
+    },
+    {
+     "w": "aí",
+     "start": 59.761,
+     "end": 59.936,
+     "hl": false
+    },
+    {
+     "w": "entram",
+     "start": 59.936,
+     "end": 60.285,
+     "hl": false
+    },
+    {
+     "w": "os",
+     "start": 60.285,
+     "end": 60.46,
+     "hl": false
+    },
+    {
+     "w": "amigos.",
+     "start": 60.46,
+     "end": 61.195,
+     "hl": true
+    }
+   ]
+  }
+ ]
+}

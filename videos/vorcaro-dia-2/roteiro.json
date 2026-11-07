@@ -1,0 +1,124 @@
+[
+ {
+  "id": "b1",
+  "text": "O Banco Master pagava juros absurdos. CDB a 140% do CDI. Teve até 20% ao ano.",
+  "say": "O Banco Master pagava juros absurdos. Cê dê bê a cento e quarenta por cento do cê dê í. Teve até vinte por cento ao ano.",
+  "hl": [
+   "absurdos",
+   "140%",
+   "20%"
+  ]
+ },
+ {
+  "id": "b3",
+  "text": "CDB é você emprestando dinheiro pro banco, com juros.",
+  "say": "Cê dê bê é você emprestando dinheiro pro banco, com juros.",
+  "hl": [
+   "juros"
+  ],
+  "pre": 0.15
+ },
+ {
+  "id": "b4",
+  "text": "E por que todo mundo topava? Por causa do FGC.",
+  "say": "E por que todo mundo topava? Por causa do éfe gê cê.",
+  "hl": [
+   "FGC"
+  ]
+ },
+ {
+  "id": "b5",
+  "text": "Um seguro que devolve até 250 mil por pessoa se o banco quebrar.",
+  "say": "Um seguro que devolve até duzentos e cinquenta mil por pessoa, se o banco quebrar.",
+  "hl": [
+   "250",
+   "seguro"
+  ]
+ },
+ {
+  "id": "b6",
+  "text": "Ou seja: se der merda, alguém paga.",
+  "hl": [
+   "merda",
+   "paga"
+  ]
+ },
+ {
+  "id": "b7",
+  "text": "Agora a malandragem. Com esse dinheiro, montava fundo e comprava ação da famosa E.M.",
+  "say": "Agora a malandragem. Com esse dinheiro, montava fundo e comprava ação da famosa é ême.",
+  "hl": [
+   "malandragem",
+   "em"
+  ],
+  "pre": 0.25
+ },
+ {
+  "id": "b8",
+  "text": "Empresa Merda. Coitada, ela só existe.",
+  "hl": [
+   "empresa",
+   "merda"
+  ]
+ },
+ {
+  "id": "b9",
+  "text": "A ação vale um real. Um fundo compra dois milhões de ações.",
+  "hl": [
+   "real"
+  ]
+ },
+ {
+  "id": "b10",
+  "text": "Aí outro fundo, do mesmo grupo, compra a mesma ação por dez.",
+  "hl": [
+   "dez"
+  ]
+ },
+ {
+  "id": "b11",
+  "text": "Às vezes por cem. Porque o cara empolgava e perdia a mão.",
+  "hl": [
+   "cem",
+   "mão"
+  ]
+ },
+ {
+  "id": "b12",
+  "text": "Pronto: dois milhões viram duzentos milhões no balanço.",
+  "hl": [
+   "duzentos"
+  ]
+ },
+ {
+  "id": "b13",
+  "text": "E com mais patrimônio no papel, ele vende muito mais CDB.",
+  "say": "E com mais patrimônio no papel, ele vende muito mais cê dê bê.",
+  "hl": [
+   "papel",
+   "cdb"
+  ]
+ },
+ {
+  "id": "b14",
+  "text": "Fundo em cima de fundo em cima de fundo.",
+  "hl": [
+   "fundo"
+  ]
+ },
+ {
+  "id": "b15",
+  "text": "Só que uma hora alguém tinha que comprar essa empresa merda por cem reais.",
+  "hl": [
+   "cem"
+  ],
+  "pre": 0.2
+ },
+ {
+  "id": "b16",
+  "text": "E aí entram os amigos.",
+  "hl": [
+   "amigos"
+  ]
+ }
+]

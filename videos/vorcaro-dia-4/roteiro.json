@@ -1,0 +1,13 @@
+[
+ {"id":"d1","text":"O FGC, aquele seguro, é do governo? Não. É privado. Quem banca são os próprios bancos.","say":"O éfe gê cê, aquele seguro, é do governo? Não. É privado. Quem banca são os próprios bancos.","hl":["privado","bancos"]},
+ {"id":"d2","text":"Enquanto o Vorcaro tava na farra do boi, tudo bem.","hl":["farra","boi"]},
+ {"id":"d3","text":"Mas o rombo foi crescendo, e os banqueiros fizeram a conta: essa porra vai sobrar pra mim.","hl":["rombo","porra"]},
+ {"id":"d4","text":"Aí apareceu a pedrinha no sapato. Gabriel Galípolo, no Banco Central.","hl":["pedrinha","galípolo"],"pre":0.2},
+ {"id":"d5","text":"O Banco Central barrou a venda pro BRB e apertou o cerco.","say":"O Banco Central barrou a venda pro bê érre bê, e apertou o cerco.","hl":["barrou","cerco"]},
+ {"id":"d6","text":"Dizem que ofereceram pra ele vender o banco por um real e sair andando.","hl":["real"]},
+ {"id":"d7","text":"E que ele ainda ligou pro Lula, achando que tinha costas quentes. Deu merda.","hl":["lula","merda"]},
+ {"id":"d8","text":"Em 17 de novembro de 2025, a PF prendeu o Vorcaro no aeroporto, indo pro exterior.","say":"Em dezessete de novembro de dois mil e vinte e cinco, a pê éfe prendeu o Vorcaro no aeroporto, indo pro exterior.","hl":["prendeu","aeroporto"],"pre":0.25},
+ {"id":"d9","text":"No dia seguinte, o Banco Central fechou o Master. E o FGC teve que cobrir uns 41 bilhões.","say":"No dia seguinte, o Banco Central fechou o Master. E o éfe gê cê teve que cobrir uns quarenta e um bilhões.","hl":["fechou","41"]},
+ {"id":"d10","text":"Gênio? Que nada. Um golpezinho chocho, de quem não prestou atenção na escola.","hl":["golpezinho","chocho"],"pre":0.25},
+ {"id":"d11","text":"E o que fica? Que comprar influência no Brasil saiu barato demais.","hl":["barato"]}
+]

@@ -1,0 +1,1011 @@
+{
+ "duration": 56.492,
+ "lines": [
+  {
+   "id": "d1",
+   "text": "O FGC, aquele seguro, é do governo? Não. É privado. Quem banca são os próprios bancos.",
+   "start": 0.12,
+   "end": 5.421,
+   "words": [
+    {
+     "w": "O",
+     "start": 0.12,
+     "end": 0.275,
+     "hl": false
+    },
+    {
+     "w": "FGC,",
+     "start": 0.275,
+     "end": 0.616,
+     "hl": false
+    },
+    {
+     "w": "aquele",
+     "start": 0.616,
+     "end": 1.081,
+     "hl": false
+    },
+    {
+     "w": "seguro,",
+     "start": 1.081,
+     "end": 1.732,
+     "hl": false
+    },
+    {
+     "w": "é",
+     "start": 1.732,
+     "end": 1.887,
+     "hl": false
+    },
+    {
+     "w": "do",
+     "start": 1.887,
+     "end": 2.042,
+     "hl": false
+    },
+    {
+     "w": "governo?",
+     "start": 2.042,
+     "end": 2.693,
+     "hl": false
+    },
+    {
+     "w": "Não.",
+     "start": 2.693,
+     "end": 3.034,
+     "hl": false
+    },
+    {
+     "w": "É",
+     "start": 3.034,
+     "end": 3.189,
+     "hl": false
+    },
+    {
+     "w": "privado.",
+     "start": 3.189,
+     "end": 3.84,
+     "hl": true
+    },
+    {
+     "w": "Quem",
+     "start": 3.84,
+     "end": 3.995,
+     "hl": false
+    },
+    {
+     "w": "banca",
+     "start": 3.995,
+     "end": 4.305,
+     "hl": false
+    },
+    {
+     "w": "são",
+     "start": 4.305,
+     "end": 4.46,
+     "hl": false
+    },
+    {
+     "w": "os",
+     "start": 4.46,
+     "end": 4.615,
+     "hl": false
+    },
+    {
+     "w": "próprios",
+     "start": 4.615,
+     "end": 4.925,
+     "hl": false
+    },
+    {
+     "w": "bancos.",
+     "start": 4.925,
+     "end": 5.421,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "text": "Enquanto o Vorcaro tava na farra do boi, tudo bem.",
+   "start": 5.801,
+   "end": 8.538,
+   "words": [
+    {
+     "w": "Enquanto",
+     "start": 5.801,
+     "end": 6.224,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 6.224,
+     "end": 6.365,
+     "hl": false
+    },
+    {
+     "w": "Vorcaro",
+     "start": 6.365,
+     "end": 6.789,
+     "hl": false
+    },
+    {
+     "w": "tava",
+     "start": 6.789,
+     "end": 7.071,
+     "hl": false
+    },
+    {
+     "w": "na",
+     "start": 7.071,
+     "end": 7.212,
+     "hl": false
+    },
+    {
+     "w": "farra",
+     "start": 7.212,
+     "end": 7.494,
+     "hl": true
+    },
+    {
+     "w": "do",
+     "start": 7.494,
+     "end": 7.635,
+     "hl": false
+    },
+    {
+     "w": "boi,",
+     "start": 7.635,
+     "end": 7.946,
+     "hl": true
+    },
+    {
+     "w": "tudo",
+     "start": 7.946,
+     "end": 8.228,
+     "hl": false
+    },
+    {
+     "w": "bem.",
+     "start": 8.228,
+     "end": 8.538,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "d3",
+   "text": "Mas o rombo foi crescendo, e os banqueiros fizeram a conta: essa porra vai sobrar pra mim.",
+   "start": 8.918,
+   "end": 14.129,
+   "words": [
+    {
+     "w": "Mas",
+     "start": 8.918,
+     "end": 9.083,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 9.083,
+     "end": 9.248,
+     "hl": false
+    },
+    {
+     "w": "rombo",
+     "start": 9.248,
+     "end": 9.578,
+     "hl": true
+    },
+    {
+     "w": "foi",
+     "start": 9.578,
+     "end": 9.743,
+     "hl": false
+    },
+    {
+     "w": "crescendo,",
+     "start": 9.743,
+     "end": 10.435,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 10.435,
+     "end": 10.6,
+     "hl": false
+    },
+    {
+     "w": "os",
+     "start": 10.6,
+     "end": 10.765,
+     "hl": false
+    },
+    {
+     "w": "banqueiros",
+     "start": 10.765,
+     "end": 11.26,
+     "hl": false
+    },
+    {
+     "w": "fizeram",
+     "start": 11.26,
+     "end": 11.754,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 11.754,
+     "end": 11.919,
+     "hl": false
+    },
+    {
+     "w": "conta:",
+     "start": 11.919,
+     "end": 12.447,
+     "hl": false
+    },
+    {
+     "w": "essa",
+     "start": 12.447,
+     "end": 12.777,
+     "hl": false
+    },
+    {
+     "w": "porra",
+     "start": 12.777,
+     "end": 13.107,
+     "hl": true
+    },
+    {
+     "w": "vai",
+     "start": 13.107,
+     "end": 13.271,
+     "hl": false
+    },
+    {
+     "w": "sobrar",
+     "start": 13.271,
+     "end": 13.601,
+     "hl": false
+    },
+    {
+     "w": "pra",
+     "start": 13.601,
+     "end": 13.766,
+     "hl": false
+    },
+    {
+     "w": "mim.",
+     "start": 13.766,
+     "end": 14.129,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "d4",
+   "text": "Aí apareceu a pedrinha no sapato. Gabriel Galípolo, no Banco Central.",
+   "start": 14.709,
+   "end": 18.828,
+   "words": [
+    {
+     "w": "Aí",
+     "start": 14.709,
+     "end": 14.858,
+     "hl": false
+    },
+    {
+     "w": "apareceu",
+     "start": 14.858,
+     "end": 15.455,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 15.455,
+     "end": 15.604,
+     "hl": false
+    },
+    {
+     "w": "pedrinha",
+     "start": 15.604,
+     "end": 16.052,
+     "hl": true
+    },
+    {
+     "w": "no",
+     "start": 16.052,
+     "end": 16.201,
+     "hl": false
+    },
+    {
+     "w": "sapato.",
+     "start": 16.201,
+     "end": 16.828,
+     "hl": false
+    },
+    {
+     "w": "Gabriel",
+     "start": 16.828,
+     "end": 17.127,
+     "hl": false
+    },
+    {
+     "w": "Galípolo,",
+     "start": 17.127,
+     "end": 17.903,
+     "hl": true
+    },
+    {
+     "w": "no",
+     "start": 17.903,
+     "end": 18.052,
+     "hl": false
+    },
+    {
+     "w": "Banco",
+     "start": 18.052,
+     "end": 18.35,
+     "hl": false
+    },
+    {
+     "w": "Central.",
+     "start": 18.35,
+     "end": 18.828,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "d5",
+   "text": "O Banco Central barrou a venda pro BRB e apertou o cerco.",
+   "start": 19.208,
+   "end": 22.906,
+   "words": [
+    {
+     "w": "O",
+     "start": 19.208,
+     "end": 19.391,
+     "hl": false
+    },
+    {
+     "w": "Banco",
+     "start": 19.391,
+     "end": 19.757,
+     "hl": false
+    },
+    {
+     "w": "Central",
+     "start": 19.757,
+     "end": 20.123,
+     "hl": false
+    },
+    {
+     "w": "barrou",
+     "start": 20.123,
+     "end": 20.489,
+     "hl": true
+    },
+    {
+     "w": "a",
+     "start": 20.489,
+     "end": 20.672,
+     "hl": false
+    },
+    {
+     "w": "venda",
+     "start": 20.672,
+     "end": 21.039,
+     "hl": false
+    },
+    {
+     "w": "pro",
+     "start": 21.039,
+     "end": 21.222,
+     "hl": false
+    },
+    {
+     "w": "BRB",
+     "start": 21.222,
+     "end": 21.405,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 21.405,
+     "end": 21.588,
+     "hl": false
+    },
+    {
+     "w": "apertou",
+     "start": 21.588,
+     "end": 22.137,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 22.137,
+     "end": 22.32,
+     "hl": false
+    },
+    {
+     "w": "cerco.",
+     "start": 22.32,
+     "end": 22.906,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "d6",
+   "text": "Dizem que ofereceram pra ele vender o banco por um real e sair andando.",
+   "start": 23.286,
+   "end": 27.294,
+   "words": [
+    {
+     "w": "Dizem",
+     "start": 23.286,
+     "end": 23.604,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 23.604,
+     "end": 23.763,
+     "hl": false
+    },
+    {
+     "w": "ofereceram",
+     "start": 23.763,
+     "end": 24.558,
+     "hl": false
+    },
+    {
+     "w": "pra",
+     "start": 24.558,
+     "end": 24.717,
+     "hl": false
+    },
+    {
+     "w": "ele",
+     "start": 24.717,
+     "end": 25.035,
+     "hl": false
+    },
+    {
+     "w": "vender",
+     "start": 25.035,
+     "end": 25.353,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 25.353,
+     "end": 25.512,
+     "hl": false
+    },
+    {
+     "w": "banco",
+     "start": 25.512,
+     "end": 25.831,
+     "hl": false
+    },
+    {
+     "w": "por",
+     "start": 25.831,
+     "end": 25.99,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 25.99,
+     "end": 26.149,
+     "hl": false
+    },
+    {
+     "w": "real",
+     "start": 26.149,
+     "end": 26.308,
+     "hl": true
+    },
+    {
+     "w": "e",
+     "start": 26.308,
+     "end": 26.467,
+     "hl": false
+    },
+    {
+     "w": "sair",
+     "start": 26.467,
+     "end": 26.626,
+     "hl": false
+    },
+    {
+     "w": "andando.",
+     "start": 26.626,
+     "end": 27.294,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "d7",
+   "text": "E que ele ainda ligou pro Lula, achando que tinha costas quentes. Deu merda.",
+   "start": 27.674,
+   "end": 32.099,
+   "words": [
+    {
+     "w": "E",
+     "start": 27.674,
+     "end": 27.834,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 27.834,
+     "end": 27.995,
+     "hl": false
+    },
+    {
+     "w": "ele",
+     "start": 27.995,
+     "end": 28.315,
+     "hl": false
+    },
+    {
+     "w": "ainda",
+     "start": 28.315,
+     "end": 28.636,
+     "hl": false
+    },
+    {
+     "w": "ligou",
+     "start": 28.636,
+     "end": 28.957,
+     "hl": false
+    },
+    {
+     "w": "pro",
+     "start": 28.957,
+     "end": 29.117,
+     "hl": false
+    },
+    {
+     "w": "Lula,",
+     "start": 29.117,
+     "end": 29.63,
+     "hl": true
+    },
+    {
+     "w": "achando",
+     "start": 29.63,
+     "end": 30.111,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 30.111,
+     "end": 30.272,
+     "hl": false
+    },
+    {
+     "w": "tinha",
+     "start": 30.272,
+     "end": 30.592,
+     "hl": false
+    },
+    {
+     "w": "costas",
+     "start": 30.592,
+     "end": 30.913,
+     "hl": false
+    },
+    {
+     "w": "quentes.",
+     "start": 30.913,
+     "end": 31.426,
+     "hl": false
+    },
+    {
+     "w": "Deu",
+     "start": 31.426,
+     "end": 31.586,
+     "hl": false
+    },
+    {
+     "w": "merda.",
+     "start": 31.586,
+     "end": 32.099,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "d8",
+   "text": "Em 17 de novembro de 2025, a PF prendeu o Vorcaro no aeroporto, indo pro exterior.",
+   "start": 32.729,
+   "end": 39.276,
+   "words": [
+    {
+     "w": "Em",
+     "start": 32.729,
+     "end": 32.891,
+     "hl": false
+    },
+    {
+     "w": "17",
+     "start": 32.891,
+     "end": 33.536,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 33.536,
+     "end": 33.697,
+     "hl": false
+    },
+    {
+     "w": "novembro",
+     "start": 33.697,
+     "end": 34.181,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 34.181,
+     "end": 34.342,
+     "hl": false
+    },
+    {
+     "w": "2025,",
+     "start": 34.342,
+     "end": 35.825,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 35.825,
+     "end": 35.987,
+     "hl": false
+    },
+    {
+     "w": "PF",
+     "start": 35.987,
+     "end": 36.148,
+     "hl": false
+    },
+    {
+     "w": "prendeu",
+     "start": 36.148,
+     "end": 36.47,
+     "hl": true
+    },
+    {
+     "w": "o",
+     "start": 36.47,
+     "end": 36.631,
+     "hl": false
+    },
+    {
+     "w": "Vorcaro",
+     "start": 36.631,
+     "end": 37.115,
+     "hl": false
+    },
+    {
+     "w": "no",
+     "start": 37.115,
+     "end": 37.276,
+     "hl": false
+    },
+    {
+     "w": "aeroporto,",
+     "start": 37.276,
+     "end": 38.115,
+     "hl": true
+    },
+    {
+     "w": "indo",
+     "start": 38.115,
+     "end": 38.437,
+     "hl": false
+    },
+    {
+     "w": "pro",
+     "start": 38.437,
+     "end": 38.599,
+     "hl": false
+    },
+    {
+     "w": "exterior.",
+     "start": 38.599,
+     "end": 39.276,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "d9",
+   "text": "No dia seguinte, o Banco Central fechou o Master. E o FGC teve que cobrir uns 41 bilhões.",
+   "start": 39.656,
+   "end": 46.018,
+   "words": [
+    {
+     "w": "No",
+     "start": 39.656,
+     "end": 39.845,
+     "hl": false
+    },
+    {
+     "w": "dia",
+     "start": 39.845,
+     "end": 40.035,
+     "hl": false
+    },
+    {
+     "w": "seguinte,",
+     "start": 40.035,
+     "end": 40.83,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 40.83,
+     "end": 41.019,
+     "hl": false
+    },
+    {
+     "w": "Banco",
+     "start": 41.019,
+     "end": 41.398,
+     "hl": false
+    },
+    {
+     "w": "Central",
+     "start": 41.398,
+     "end": 41.777,
+     "hl": false
+    },
+    {
+     "w": "fechou",
+     "start": 41.777,
+     "end": 42.155,
+     "hl": true
+    },
+    {
+     "w": "o",
+     "start": 42.155,
+     "end": 42.345,
+     "hl": false
+    },
+    {
+     "w": "Master.",
+     "start": 42.345,
+     "end": 42.951,
+     "hl": false
+    },
+    {
+     "w": "E",
+     "start": 42.951,
+     "end": 43.14,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 43.14,
+     "end": 43.329,
+     "hl": false
+    },
+    {
+     "w": "FGC",
+     "start": 43.329,
+     "end": 43.519,
+     "hl": false
+    },
+    {
+     "w": "teve",
+     "start": 43.519,
+     "end": 43.898,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 43.898,
+     "end": 44.087,
+     "hl": false
+    },
+    {
+     "w": "cobrir",
+     "start": 44.087,
+     "end": 44.466,
+     "hl": false
+    },
+    {
+     "w": "uns",
+     "start": 44.466,
+     "end": 44.655,
+     "hl": false
+    },
+    {
+     "w": "41",
+     "start": 44.655,
+     "end": 45.412,
+     "hl": true
+    },
+    {
+     "w": "bilhões.",
+     "start": 45.412,
+     "end": 46.018,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "d10",
+   "text": "Gênio? Que nada. Um golpezinho chocho, de quem não prestou atenção na escola.",
+   "start": 46.648,
+   "end": 50.955,
+   "words": [
+    {
+     "w": "Gênio?",
+     "start": 46.648,
+     "end": 47.127,
+     "hl": false
+    },
+    {
+     "w": "Que",
+     "start": 47.127,
+     "end": 47.276,
+     "hl": false
+    },
+    {
+     "w": "nada.",
+     "start": 47.276,
+     "end": 47.755,
+     "hl": false
+    },
+    {
+     "w": "Um",
+     "start": 47.755,
+     "end": 47.905,
+     "hl": false
+    },
+    {
+     "w": "golpezinho",
+     "start": 47.905,
+     "end": 48.503,
+     "hl": true
+    },
+    {
+     "w": "chocho,",
+     "start": 48.503,
+     "end": 48.981,
+     "hl": true
+    },
+    {
+     "w": "de",
+     "start": 48.981,
+     "end": 49.131,
+     "hl": false
+    },
+    {
+     "w": "quem",
+     "start": 49.131,
+     "end": 49.28,
+     "hl": false
+    },
+    {
+     "w": "não",
+     "start": 49.28,
+     "end": 49.43,
+     "hl": false
+    },
+    {
+     "w": "prestou",
+     "start": 49.43,
+     "end": 49.729,
+     "hl": false
+    },
+    {
+     "w": "atenção",
+     "start": 49.729,
+     "end": 50.178,
+     "hl": false
+    },
+    {
+     "w": "na",
+     "start": 50.178,
+     "end": 50.327,
+     "hl": false
+    },
+    {
+     "w": "escola.",
+     "start": 50.327,
+     "end": 50.955,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "d11",
+   "text": "E o que fica? Que comprar influência no Brasil saiu barato demais.",
+   "start": 51.335,
+   "end": 55.212,
+   "words": [
+    {
+     "w": "E",
+     "start": 51.335,
+     "end": 51.508,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 51.508,
+     "end": 51.681,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 51.681,
+     "end": 51.854,
+     "hl": false
+    },
+    {
+     "w": "fica?",
+     "start": 51.854,
+     "end": 52.408,
+     "hl": false
+    },
+    {
+     "w": "Que",
+     "start": 52.408,
+     "end": 52.581,
+     "hl": false
+    },
+    {
+     "w": "comprar",
+     "start": 52.581,
+     "end": 52.927,
+     "hl": false
+    },
+    {
+     "w": "influência",
+     "start": 52.927,
+     "end": 53.447,
+     "hl": false
+    },
+    {
+     "w": "no",
+     "start": 53.447,
+     "end": 53.62,
+     "hl": false
+    },
+    {
+     "w": "Brasil",
+     "start": 53.62,
+     "end": 53.966,
+     "hl": false
+    },
+    {
+     "w": "saiu",
+     "start": 53.966,
+     "end": 54.139,
+     "hl": false
+    },
+    {
+     "w": "barato",
+     "start": 54.139,
+     "end": 54.658,
+     "hl": true
+    },
+    {
+     "w": "demais.",
+     "start": 54.658,
+     "end": 55.212,
+     "hl": false
+    }
+   ]
+  }
+ ]
+}

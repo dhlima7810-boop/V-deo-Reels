@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Playfair Display";src:url(fonts/Playfair.ttf);font-weight:400 900}
+@font-face{font-family:"Oswald";src:url(fonts/Oswald.ttf);font-weight:200 700}
+html,body{margin:0;background:#000;overflow:hidden}canvas{display:block}
+</style></head><body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="lib.js"></script><script src="scene.js"></script>
+<script>
+(async()=>{
+  const N = await (await fetch('narracao.json')).json();
+  await Promise.all(['900 100px "Playfair Display"','italic 700 100px "Playfair Display"','600 100px Oswald','700 100px Oswald','500 40px "JetBrains Mono"','800 40px "JetBrains Mono"'].map(f=>document.fonts.load(f)));
+  LIB.init(N, SCENES);
+  window.DURATION = N.duration;
+  window.renderAt = t => LIB.frame(document.getElementById('c').getContext('2d'), t);
+  window.READY = true;
+})();
+</script></body></html>

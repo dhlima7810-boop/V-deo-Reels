@@ -1,0 +1,1003 @@
+{
+ "duration": 52.858,
+ "lines": [
+  {
+   "id": "a1",
+   "text": "Todo mundo sabe que o Vorcaro era bandido.",
+   "start": 0.12,
+   "end": 2.509,
+   "words": [
+    {
+     "w": "Todo",
+     "start": 0.12,
+     "end": 0.398,
+     "hl": false
+    },
+    {
+     "w": "mundo",
+     "start": 0.398,
+     "end": 0.676,
+     "hl": false
+    },
+    {
+     "w": "sabe",
+     "start": 0.676,
+     "end": 0.954,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 0.954,
+     "end": 1.092,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 1.092,
+     "end": 1.231,
+     "hl": false
+    },
+    {
+     "w": "Vorcaro",
+     "start": 1.231,
+     "end": 1.648,
+     "hl": false
+    },
+    {
+     "w": "era",
+     "start": 1.648,
+     "end": 1.926,
+     "hl": false
+    },
+    {
+     "w": "bandido.",
+     "start": 1.926,
+     "end": 2.509,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "a2",
+   "text": "Mas tem gente dizendo que ele era um gênio. O maior criminoso da face da Terra.",
+   "start": 2.889,
+   "end": 7.674,
+   "words": [
+    {
+     "w": "Mas",
+     "start": 2.889,
+     "end": 3.052,
+     "hl": false
+    },
+    {
+     "w": "tem",
+     "start": 3.052,
+     "end": 3.215,
+     "hl": false
+    },
+    {
+     "w": "gente",
+     "start": 3.215,
+     "end": 3.54,
+     "hl": false
+    },
+    {
+     "w": "dizendo",
+     "start": 3.54,
+     "end": 4.029,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 4.029,
+     "end": 4.191,
+     "hl": false
+    },
+    {
+     "w": "ele",
+     "start": 4.191,
+     "end": 4.517,
+     "hl": false
+    },
+    {
+     "w": "era",
+     "start": 4.517,
+     "end": 4.842,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 4.842,
+     "end": 5.005,
+     "hl": false
+    },
+    {
+     "w": "gênio.",
+     "start": 5.005,
+     "end": 5.526,
+     "hl": true
+    },
+    {
+     "w": "O",
+     "start": 5.526,
+     "end": 5.688,
+     "hl": false
+    },
+    {
+     "w": "maior",
+     "start": 5.688,
+     "end": 5.851,
+     "hl": false
+    },
+    {
+     "w": "criminoso",
+     "start": 5.851,
+     "end": 6.502,
+     "hl": true
+    },
+    {
+     "w": "da",
+     "start": 6.502,
+     "end": 6.665,
+     "hl": false
+    },
+    {
+     "w": "face",
+     "start": 6.665,
+     "end": 6.99,
+     "hl": false
+    },
+    {
+     "w": "da",
+     "start": 6.99,
+     "end": 7.153,
+     "hl": false
+    },
+    {
+     "w": "Terra.",
+     "start": 7.153,
+     "end": 7.674,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "a3",
+   "text": "Então bora entender o esquema. E no final você me diz se era gênio mesmo.",
+   "start": 8.054,
+   "end": 12.444,
+   "words": [
+    {
+     "w": "Então",
+     "start": 8.054,
+     "end": 8.363,
+     "hl": false
+    },
+    {
+     "w": "bora",
+     "start": 8.363,
+     "end": 8.672,
+     "hl": false
+    },
+    {
+     "w": "entender",
+     "start": 8.672,
+     "end": 9.136,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 9.136,
+     "end": 9.29,
+     "hl": false
+    },
+    {
+     "w": "esquema.",
+     "start": 9.29,
+     "end": 9.94,
+     "hl": true
+    },
+    {
+     "w": "E",
+     "start": 9.94,
+     "end": 10.094,
+     "hl": false
+    },
+    {
+     "w": "no",
+     "start": 10.094,
+     "end": 10.249,
+     "hl": false
+    },
+    {
+     "w": "final",
+     "start": 10.249,
+     "end": 10.558,
+     "hl": false
+    },
+    {
+     "w": "você",
+     "start": 10.558,
+     "end": 10.867,
+     "hl": false
+    },
+    {
+     "w": "me",
+     "start": 10.867,
+     "end": 11.022,
+     "hl": false
+    },
+    {
+     "w": "diz",
+     "start": 11.022,
+     "end": 11.176,
+     "hl": false
+    },
+    {
+     "w": "se",
+     "start": 11.176,
+     "end": 11.331,
+     "hl": false
+    },
+    {
+     "w": "era",
+     "start": 11.331,
+     "end": 11.64,
+     "hl": false
+    },
+    {
+     "w": "gênio",
+     "start": 11.64,
+     "end": 11.949,
+     "hl": false
+    },
+    {
+     "w": "mesmo.",
+     "start": 11.949,
+     "end": 12.444,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "a4",
+   "text": "Primeiro: banco vive de emprestar dinheiro que não tem. É isso mesmo.",
+   "start": 13.024,
+   "end": 16.887,
+   "words": [
+    {
+     "w": "Primeiro:",
+     "start": 13.024,
+     "end": 13.658,
+     "hl": false
+    },
+    {
+     "w": "banco",
+     "start": 13.658,
+     "end": 13.959,
+     "hl": false
+    },
+    {
+     "w": "vive",
+     "start": 13.959,
+     "end": 14.261,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 14.261,
+     "end": 14.412,
+     "hl": false
+    },
+    {
+     "w": "emprestar",
+     "start": 14.412,
+     "end": 14.865,
+     "hl": false
+    },
+    {
+     "w": "dinheiro",
+     "start": 14.865,
+     "end": 15.318,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 15.318,
+     "end": 15.469,
+     "hl": false
+    },
+    {
+     "w": "não",
+     "start": 15.469,
+     "end": 15.62,
+     "hl": true
+    },
+    {
+     "w": "tem.",
+     "start": 15.62,
+     "end": 15.952,
+     "hl": true
+    },
+    {
+     "w": "É",
+     "start": 15.952,
+     "end": 16.102,
+     "hl": false
+    },
+    {
+     "w": "isso",
+     "start": 16.102,
+     "end": 16.404,
+     "hl": false
+    },
+    {
+     "w": "mesmo.",
+     "start": 16.404,
+     "end": 16.887,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "a5",
+   "text": "Se o banco tem mil reais no caixa, ele pode emprestar uns dez mil.",
+   "start": 17.267,
+   "end": 21.237,
+   "words": [
+    {
+     "w": "Se",
+     "start": 17.267,
+     "end": 17.444,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 17.444,
+     "end": 17.622,
+     "hl": false
+    },
+    {
+     "w": "banco",
+     "start": 17.622,
+     "end": 17.976,
+     "hl": false
+    },
+    {
+     "w": "tem",
+     "start": 17.976,
+     "end": 18.153,
+     "hl": false
+    },
+    {
+     "w": "mil",
+     "start": 18.153,
+     "end": 18.331,
+     "hl": true
+    },
+    {
+     "w": "reais",
+     "start": 18.331,
+     "end": 18.508,
+     "hl": false
+    },
+    {
+     "w": "no",
+     "start": 18.508,
+     "end": 18.685,
+     "hl": false
+    },
+    {
+     "w": "caixa,",
+     "start": 18.685,
+     "end": 19.252,
+     "hl": false
+    },
+    {
+     "w": "ele",
+     "start": 19.252,
+     "end": 19.607,
+     "hl": false
+    },
+    {
+     "w": "pode",
+     "start": 19.607,
+     "end": 19.961,
+     "hl": false
+    },
+    {
+     "w": "emprestar",
+     "start": 19.961,
+     "end": 20.493,
+     "hl": false
+    },
+    {
+     "w": "uns",
+     "start": 20.493,
+     "end": 20.67,
+     "hl": false
+    },
+    {
+     "w": "dez",
+     "start": 20.67,
+     "end": 20.847,
+     "hl": true
+    },
+    {
+     "w": "mil.",
+     "start": 20.847,
+     "end": 21.237,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "a6",
+   "text": "Só precisa entrar mais dinheiro do que sai.",
+   "start": 21.617,
+   "end": 24.308,
+   "words": [
+    {
+     "w": "Só",
+     "start": 21.617,
+     "end": 21.807,
+     "hl": false
+    },
+    {
+     "w": "precisa",
+     "start": 21.807,
+     "end": 22.375,
+     "hl": false
+    },
+    {
+     "w": "entrar",
+     "start": 22.375,
+     "end": 22.754,
+     "hl": true
+    },
+    {
+     "w": "mais",
+     "start": 22.754,
+     "end": 22.944,
+     "hl": false
+    },
+    {
+     "w": "dinheiro",
+     "start": 22.944,
+     "end": 23.512,
+     "hl": false
+    },
+    {
+     "w": "do",
+     "start": 23.512,
+     "end": 23.702,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 23.702,
+     "end": 23.891,
+     "hl": false
+    },
+    {
+     "w": "sai.",
+     "start": 23.891,
+     "end": 24.308,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "a7",
+   "text": "E a lei obriga a guardar uma reserva. O tal índice de Basileia.",
+   "start": 24.688,
+   "end": 28.554,
+   "words": [
+    {
+     "w": "E",
+     "start": 24.688,
+     "end": 24.84,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 24.84,
+     "end": 24.993,
+     "hl": false
+    },
+    {
+     "w": "lei",
+     "start": 24.993,
+     "end": 25.145,
+     "hl": false
+    },
+    {
+     "w": "obriga",
+     "start": 25.145,
+     "end": 25.601,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 25.601,
+     "end": 25.754,
+     "hl": false
+    },
+    {
+     "w": "guardar",
+     "start": 25.754,
+     "end": 26.058,
+     "hl": false
+    },
+    {
+     "w": "uma",
+     "start": 26.058,
+     "end": 26.362,
+     "hl": false
+    },
+    {
+     "w": "reserva.",
+     "start": 26.362,
+     "end": 27.002,
+     "hl": true
+    },
+    {
+     "w": "O",
+     "start": 27.002,
+     "end": 27.154,
+     "hl": false
+    },
+    {
+     "w": "tal",
+     "start": 27.154,
+     "end": 27.306,
+     "hl": false
+    },
+    {
+     "w": "índice",
+     "start": 27.306,
+     "end": 27.763,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 27.763,
+     "end": 27.915,
+     "hl": false
+    },
+    {
+     "w": "Basileia.",
+     "start": 27.915,
+     "end": 28.554,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "a8",
+   "text": "Uma parte fica em título público, que vira dinheiro rápido.",
+   "start": 28.934,
+   "end": 32.486,
+   "words": [
+    {
+     "w": "Uma",
+     "start": 28.934,
+     "end": 29.225,
+     "hl": false
+    },
+    {
+     "w": "parte",
+     "start": 29.225,
+     "end": 29.516,
+     "hl": false
+    },
+    {
+     "w": "fica",
+     "start": 29.516,
+     "end": 29.808,
+     "hl": false
+    },
+    {
+     "w": "em",
+     "start": 29.808,
+     "end": 29.953,
+     "hl": false
+    },
+    {
+     "w": "título",
+     "start": 29.953,
+     "end": 30.39,
+     "hl": true
+    },
+    {
+     "w": "público,",
+     "start": 30.39,
+     "end": 31.001,
+     "hl": true
+    },
+    {
+     "w": "que",
+     "start": 31.001,
+     "end": 31.147,
+     "hl": false
+    },
+    {
+     "w": "vira",
+     "start": 31.147,
+     "end": 31.438,
+     "hl": false
+    },
+    {
+     "w": "dinheiro",
+     "start": 31.438,
+     "end": 31.875,
+     "hl": false
+    },
+    {
+     "w": "rápido.",
+     "start": 31.875,
+     "end": 32.486,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "a9",
+   "text": "Guarda isso: quanto maior o patrimônio, mais o banco pode emprestar.",
+   "start": 32.866,
+   "end": 36.814,
+   "words": [
+    {
+     "w": "Guarda",
+     "start": 32.866,
+     "end": 33.187,
+     "hl": false
+    },
+    {
+     "w": "isso:",
+     "start": 33.187,
+     "end": 33.701,
+     "hl": false
+    },
+    {
+     "w": "quanto",
+     "start": 33.701,
+     "end": 34.022,
+     "hl": false
+    },
+    {
+     "w": "maior",
+     "start": 34.022,
+     "end": 34.182,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 34.182,
+     "end": 34.343,
+     "hl": false
+    },
+    {
+     "w": "patrimônio,",
+     "start": 34.343,
+     "end": 35.177,
+     "hl": true
+    },
+    {
+     "w": "mais",
+     "start": 35.177,
+     "end": 35.338,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 35.338,
+     "end": 35.498,
+     "hl": false
+    },
+    {
+     "w": "banco",
+     "start": 35.498,
+     "end": 35.819,
+     "hl": false
+    },
+    {
+     "w": "pode",
+     "start": 35.819,
+     "end": 36.14,
+     "hl": false
+    },
+    {
+     "w": "emprestar.",
+     "start": 36.14,
+     "end": 36.814,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "a10",
+   "text": "Aí o Vorcaro pegou um banco que tava meio quebrando. O Banco Máxima.",
+   "start": 37.394,
+   "end": 41.395,
+   "words": [
+    {
+     "w": "Aí",
+     "start": 37.394,
+     "end": 37.552,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 37.552,
+     "end": 37.709,
+     "hl": false
+    },
+    {
+     "w": "Vorcaro",
+     "start": 37.709,
+     "end": 38.182,
+     "hl": false
+    },
+    {
+     "w": "pegou",
+     "start": 38.182,
+     "end": 38.497,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 38.497,
+     "end": 38.654,
+     "hl": false
+    },
+    {
+     "w": "banco",
+     "start": 38.654,
+     "end": 38.969,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 38.969,
+     "end": 39.127,
+     "hl": false
+    },
+    {
+     "w": "tava",
+     "start": 39.127,
+     "end": 39.442,
+     "hl": false
+    },
+    {
+     "w": "meio",
+     "start": 39.442,
+     "end": 39.599,
+     "hl": false
+    },
+    {
+     "w": "quebrando.",
+     "start": 39.599,
+     "end": 40.261,
+     "hl": true
+    },
+    {
+     "w": "O",
+     "start": 40.261,
+     "end": 40.418,
+     "hl": false
+    },
+    {
+     "w": "Banco",
+     "start": 40.418,
+     "end": 40.733,
+     "hl": false
+    },
+    {
+     "w": "Máxima.",
+     "start": 40.733,
+     "end": 41.395,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "a11",
+   "text": "E trocou o nome pra Banco Master. Bem mais chique, né?",
+   "start": 41.775,
+   "end": 44.951,
+   "words": [
+    {
+     "w": "E",
+     "start": 41.775,
+     "end": 41.937,
+     "hl": false
+    },
+    {
+     "w": "trocou",
+     "start": 41.937,
+     "end": 42.261,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 42.261,
+     "end": 42.423,
+     "hl": false
+    },
+    {
+     "w": "nome",
+     "start": 42.423,
+     "end": 42.747,
+     "hl": false
+    },
+    {
+     "w": "pra",
+     "start": 42.747,
+     "end": 42.909,
+     "hl": false
+    },
+    {
+     "w": "Banco",
+     "start": 42.909,
+     "end": 43.233,
+     "hl": false
+    },
+    {
+     "w": "Master.",
+     "start": 43.233,
+     "end": 43.752,
+     "hl": true
+    },
+    {
+     "w": "Bem",
+     "start": 43.752,
+     "end": 43.914,
+     "hl": false
+    },
+    {
+     "w": "mais",
+     "start": 43.914,
+     "end": 44.076,
+     "hl": false
+    },
+    {
+     "w": "chique,",
+     "start": 44.076,
+     "end": 44.595,
+     "hl": true
+    },
+    {
+     "w": "né?",
+     "start": 44.595,
+     "end": 44.951,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "a12",
+   "text": "E começou a pagar juros que nenhum banco sério pagava.",
+   "start": 45.331,
+   "end": 48.43,
+   "words": [
+    {
+     "w": "E",
+     "start": 45.331,
+     "end": 45.485,
+     "hl": false
+    },
+    {
+     "w": "começou",
+     "start": 45.485,
+     "end": 45.945,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 45.945,
+     "end": 46.098,
+     "hl": false
+    },
+    {
+     "w": "pagar",
+     "start": 46.098,
+     "end": 46.405,
+     "hl": false
+    },
+    {
+     "w": "juros",
+     "start": 46.405,
+     "end": 46.712,
+     "hl": true
+    },
+    {
+     "w": "que",
+     "start": 46.712,
+     "end": 46.865,
+     "hl": false
+    },
+    {
+     "w": "nenhum",
+     "start": 46.865,
+     "end": 47.172,
+     "hl": true
+    },
+    {
+     "w": "banco",
+     "start": 47.172,
+     "end": 47.479,
+     "hl": false
+    },
+    {
+     "w": "sério",
+     "start": 47.479,
+     "end": 47.785,
+     "hl": false
+    },
+    {
+     "w": "pagava.",
+     "start": 47.785,
+     "end": 48.43,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "a13",
+   "text": "Amanhã eu te mostro onde tá a malandragem.",
+   "start": 49.01,
+   "end": 51.578,
+   "words": [
+    {
+     "w": "Amanhã",
+     "start": 49.01,
+     "end": 49.485,
+     "hl": false
+    },
+    {
+     "w": "eu",
+     "start": 49.485,
+     "end": 49.644,
+     "hl": false
+    },
+    {
+     "w": "te",
+     "start": 49.644,
+     "end": 49.802,
+     "hl": false
+    },
+    {
+     "w": "mostro",
+     "start": 49.802,
+     "end": 50.119,
+     "hl": false
+    },
+    {
+     "w": "onde",
+     "start": 50.119,
+     "end": 50.436,
+     "hl": false
+    },
+    {
+     "w": "tá",
+     "start": 50.436,
+     "end": 50.595,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 50.595,
+     "end": 50.754,
+     "hl": false
+    },
+    {
+     "w": "malandragem.",
+     "start": 50.754,
+     "end": 51.578,
+     "hl": true
+    }
+   ]
+  }
+ ]
+}

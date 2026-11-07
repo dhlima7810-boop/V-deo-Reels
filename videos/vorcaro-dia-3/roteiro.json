@@ -1,0 +1,14 @@
+[
+ {"id":"c1","text":"Quem compra uma empresa que vale um real por cem? Banco público! Que jogada maravilhosa.","hl":["público","maravilhosa"]},
+ {"id":"c2","text":"O BRB, banco do governo do Distrito Federal, comprou do Master uns 12 bilhões em carteiras de crédito.","say":"O bê érre bê, banco do governo do Distrito Federal, comprou do Master uns doze bilhões em carteiras de crédito.","hl":["brb","12"]},
+ {"id":"c3","text":"A Polícia Federal diz que boa parte era vento. O Vorcaro nega.","hl":["vento","nega"]},
+ {"id":"c4","text":"E como se convence um banco público? Vamos supor.","hl":["supor"],"pre":0.2},
+ {"id":"c5","text":"Chama a galera pra jantar. Um drink, um champanhe, os amigos do amigo.","hl":["jantar","champanhe"]},
+ {"id":"c6","text":"Vamos supor de novo. O fiscal ganha 20 mil.","say":"Vamos supor de novo. O fiscal ganha vinte mil.","hl":["fiscal","20"]},
+ {"id":"c7","text":"Você leva ele pra Fernando de Noronha e dá um cartão com a senha pra ele passear no shopping.","hl":["noronha","cartão","senha"]},
+ {"id":"c8","text":"É crime? Imagina.","hl":["crime","imagina"]},
+ {"id":"c9","text":"Dizem que tinha palestrinha paga em Portugal, festa, jantar... e até as meninas.","hl":["palestrinha","meninas"],"pre":0.2},
+ {"id":"c10","text":"No fim, a lista tinha de tudo. Deputado, senador, prefeito, pastor, comediante, influencer.","say":"No fim, a lista tinha de tudo. Deputado, senador, prefeito, pastor, comediante, influêncer.","hl":["deputado","senador","prefeito","pastor","comediante","influencer"]},
+ {"id":"c11","text":"A Polícia Federal ainda investiga quem levou o quê.","hl":["investiga"]},
+ {"id":"c12","text":"Mas quem derrubou o Vorcaro não foi político. Foram os outros banqueiros.","hl":["banqueiros"],"pre":0.25}
+]
