@@ -1,0 +1,15 @@
+[
+ {"id":"s1","text":"Você cortou o dedo numa folha de papel, e agora tá saindo sangue.","hl":["cortou","sangue"]},
+ {"id":"s2","text":"Na hora, o vaso sanguíneo aperta, pra passar menos sangue pelo buraco.","hl":["aperta"]},
+ {"id":"s3","text":"Aí chegam as plaquetas, uns pedacinhos de célula que viajam no sangue.","hl":["plaquetas"]},
+ {"id":"s4","text":"Quando encostam no corte, elas ficam grudentas e se empilham feito um tampão.","hl":["grudentas","tampão"]},
+ {"id":"s5","text":"Mas o tampão é fraco. Então o sangue fabrica fibrina, uns fios bem compridos.","hl":["fibrina"]},
+ {"id":"s6","text":"A fibrina vira uma rede que prende o sangue. Isso é o coágulo.","hl":["rede","coágulo"]},
+ {"id":"s7","text":"Só que, pelo corte, também entraram bactérias.","hl":["bactérias"]},
+ {"id":"s8","text":"Então chegam os glóbulos brancos, que engolem as bactérias inteirinhas.","hl":["brancos","engolem"]},
+ {"id":"s9","text":"Por fora, o coágulo seca e endurece. É a casquinha.","hl":["casquinha"]},
+ {"id":"s10","text":"Embaixo dela, as células da pele se multiplicam e vão fechando o buraco.","hl":["multiplicam"]},
+ {"id":"s11","text":"Vasos novos crescem, e o colágeno costura tudo por dentro.","hl":["colágeno"]},
+ {"id":"s12","text":"Uns dias depois, a casquinha cai, e a pele tá inteira de novo.","hl":["inteira"]},
+ {"id":"s13","text":"E o seu corpo fez tudo isso sozinho, sem você nem perceber.","hl":["sozinho"]}
+]

@@ -1,0 +1,1021 @@
+{
+ "duration": 58.0,
+ "lines": [
+  {
+   "id": "s1",
+   "text": "Você cortou o dedo numa folha de papel, e agora tá saindo sangue.",
+   "start": 0.15,
+   "end": 4.064,
+   "words": [
+    {
+     "w": "Você",
+     "start": 0.15,
+     "end": 0.458,
+     "hl": false
+    },
+    {
+     "w": "cortou",
+     "start": 0.458,
+     "end": 0.766,
+     "hl": true
+    },
+    {
+     "w": "o",
+     "start": 0.766,
+     "end": 0.92,
+     "hl": false
+    },
+    {
+     "w": "dedo",
+     "start": 0.92,
+     "end": 1.229,
+     "hl": false
+    },
+    {
+     "w": "numa",
+     "start": 1.229,
+     "end": 1.537,
+     "hl": false
+    },
+    {
+     "w": "folha",
+     "start": 1.537,
+     "end": 1.845,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 1.845,
+     "end": 1.999,
+     "hl": false
+    },
+    {
+     "w": "papel",
+     "start": 1.999,
+     "end": 2.492,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 2.492,
+     "end": 2.646,
+     "hl": false
+    },
+    {
+     "w": "agora",
+     "start": 2.646,
+     "end": 3.108,
+     "hl": false
+    },
+    {
+     "w": "tá",
+     "start": 3.108,
+     "end": 3.262,
+     "hl": false
+    },
+    {
+     "w": "saindo",
+     "start": 3.262,
+     "end": 3.571,
+     "hl": false
+    },
+    {
+     "w": "sangue",
+     "start": 3.571,
+     "end": 4.064,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "text": "Na hora, o vaso sanguíneo aperta, pra passar menos sangue pelo buraco.",
+   "start": 4.444,
+   "end": 8.488,
+   "words": [
+    {
+     "w": "Na",
+     "start": 4.444,
+     "end": 4.59,
+     "hl": false
+    },
+    {
+     "w": "hora",
+     "start": 4.59,
+     "end": 5.059,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 5.059,
+     "end": 5.206,
+     "hl": false
+    },
+    {
+     "w": "vaso",
+     "start": 5.206,
+     "end": 5.499,
+     "hl": false
+    },
+    {
+     "w": "sanguíneo",
+     "start": 5.499,
+     "end": 5.938,
+     "hl": false
+    },
+    {
+     "w": "aperta",
+     "start": 5.938,
+     "end": 6.554,
+     "hl": true
+    },
+    {
+     "w": "pra",
+     "start": 6.554,
+     "end": 6.7,
+     "hl": false
+    },
+    {
+     "w": "passar",
+     "start": 6.7,
+     "end": 6.994,
+     "hl": false
+    },
+    {
+     "w": "menos",
+     "start": 6.994,
+     "end": 7.287,
+     "hl": false
+    },
+    {
+     "w": "sangue",
+     "start": 7.287,
+     "end": 7.58,
+     "hl": false
+    },
+    {
+     "w": "pelo",
+     "start": 7.58,
+     "end": 7.873,
+     "hl": false
+    },
+    {
+     "w": "buraco",
+     "start": 7.873,
+     "end": 8.488,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "text": "Aí chegam as plaquetas, uns pedacinhos de célula que viajam no sangue.",
+   "start": 8.868,
+   "end": 13.031,
+   "words": [
+    {
+     "w": "Aí",
+     "start": 8.868,
+     "end": 9.039,
+     "hl": false
+    },
+    {
+     "w": "chegam",
+     "start": 9.039,
+     "end": 9.38,
+     "hl": false
+    },
+    {
+     "w": "as",
+     "start": 9.38,
+     "end": 9.551,
+     "hl": false
+    },
+    {
+     "w": "plaquetas",
+     "start": 9.551,
+     "end": 10.267,
+     "hl": true
+    },
+    {
+     "w": "uns",
+     "start": 10.267,
+     "end": 10.438,
+     "hl": false
+    },
+    {
+     "w": "pedacinhos",
+     "start": 10.438,
+     "end": 11.12,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 11.12,
+     "end": 11.291,
+     "hl": false
+    },
+    {
+     "w": "célula",
+     "start": 11.291,
+     "end": 11.803,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 11.803,
+     "end": 11.973,
+     "hl": false
+    },
+    {
+     "w": "viajam",
+     "start": 11.973,
+     "end": 12.315,
+     "hl": false
+    },
+    {
+     "w": "no",
+     "start": 12.315,
+     "end": 12.485,
+     "hl": false
+    },
+    {
+     "w": "sangue",
+     "start": 12.485,
+     "end": 13.031,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "text": "Quando encostam no corte, elas ficam grudentas e se empilham feito um tampão.",
+   "start": 13.411,
+   "end": 17.915,
+   "words": [
+    {
+     "w": "Quando",
+     "start": 13.411,
+     "end": 13.74,
+     "hl": false
+    },
+    {
+     "w": "encostam",
+     "start": 13.74,
+     "end": 14.233,
+     "hl": false
+    },
+    {
+     "w": "no",
+     "start": 14.233,
+     "end": 14.397,
+     "hl": false
+    },
+    {
+     "w": "corte",
+     "start": 14.397,
+     "end": 14.923,
+     "hl": false
+    },
+    {
+     "w": "elas",
+     "start": 14.923,
+     "end": 15.252,
+     "hl": false
+    },
+    {
+     "w": "ficam",
+     "start": 15.252,
+     "end": 15.581,
+     "hl": false
+    },
+    {
+     "w": "grudentas",
+     "start": 15.581,
+     "end": 16.074,
+     "hl": true
+    },
+    {
+     "w": "e",
+     "start": 16.074,
+     "end": 16.238,
+     "hl": false
+    },
+    {
+     "w": "se",
+     "start": 16.238,
+     "end": 16.403,
+     "hl": false
+    },
+    {
+     "w": "empilham",
+     "start": 16.403,
+     "end": 16.896,
+     "hl": false
+    },
+    {
+     "w": "feito",
+     "start": 16.896,
+     "end": 17.224,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 17.224,
+     "end": 17.389,
+     "hl": false
+    },
+    {
+     "w": "tampão",
+     "start": 17.389,
+     "end": 17.915,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "text": "Mas o tampão é fraco. Então o sangue fabrica fibrina, uns fios bem compridos.",
+   "start": 18.295,
+   "end": 23.295,
+   "words": [
+    {
+     "w": "Mas",
+     "start": 18.295,
+     "end": 18.476,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 18.476,
+     "end": 18.657,
+     "hl": false
+    },
+    {
+     "w": "tampão",
+     "start": 18.657,
+     "end": 19.02,
+     "hl": false
+    },
+    {
+     "w": "é",
+     "start": 19.02,
+     "end": 19.201,
+     "hl": false
+    },
+    {
+     "w": "fraco",
+     "start": 19.201,
+     "end": 19.78,
+     "hl": false
+    },
+    {
+     "w": "Então",
+     "start": 19.78,
+     "end": 20.143,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 20.143,
+     "end": 20.324,
+     "hl": false
+    },
+    {
+     "w": "sangue",
+     "start": 20.324,
+     "end": 20.686,
+     "hl": false
+    },
+    {
+     "w": "fabrica",
+     "start": 20.686,
+     "end": 21.23,
+     "hl": false
+    },
+    {
+     "w": "fibrina",
+     "start": 21.23,
+     "end": 21.991,
+     "hl": true
+    },
+    {
+     "w": "uns",
+     "start": 21.991,
+     "end": 22.172,
+     "hl": false
+    },
+    {
+     "w": "fios",
+     "start": 22.172,
+     "end": 22.353,
+     "hl": false
+    },
+    {
+     "w": "bem",
+     "start": 22.353,
+     "end": 22.534,
+     "hl": false
+    },
+    {
+     "w": "compridos",
+     "start": 22.534,
+     "end": 23.295,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "text": "A fibrina vira uma rede que prende o sangue. Isso é o coágulo.",
+   "start": 23.675,
+   "end": 27.47,
+   "words": [
+    {
+     "w": "A",
+     "start": 23.675,
+     "end": 23.825,
+     "hl": false
+    },
+    {
+     "w": "fibrina",
+     "start": 23.825,
+     "end": 24.273,
+     "hl": false
+    },
+    {
+     "w": "vira",
+     "start": 24.273,
+     "end": 24.572,
+     "hl": false
+    },
+    {
+     "w": "uma",
+     "start": 24.572,
+     "end": 24.87,
+     "hl": false
+    },
+    {
+     "w": "rede",
+     "start": 24.87,
+     "end": 25.169,
+     "hl": true
+    },
+    {
+     "w": "que",
+     "start": 25.169,
+     "end": 25.319,
+     "hl": false
+    },
+    {
+     "w": "prende",
+     "start": 25.319,
+     "end": 25.618,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 25.618,
+     "end": 25.767,
+     "hl": false
+    },
+    {
+     "w": "sangue",
+     "start": 25.767,
+     "end": 26.245,
+     "hl": false
+    },
+    {
+     "w": "Isso",
+     "start": 26.245,
+     "end": 26.544,
+     "hl": false
+    },
+    {
+     "w": "é",
+     "start": 26.544,
+     "end": 26.693,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 26.693,
+     "end": 26.843,
+     "hl": false
+    },
+    {
+     "w": "coágulo",
+     "start": 26.843,
+     "end": 27.47,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "text": "Só que, pelo corte, também entraram bactérias.",
+   "start": 27.85,
+   "end": 30.826,
+   "words": [
+    {
+     "w": "Só",
+     "start": 27.85,
+     "end": 28.019,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 28.019,
+     "end": 28.391,
+     "hl": false
+    },
+    {
+     "w": "pelo",
+     "start": 28.391,
+     "end": 28.73,
+     "hl": false
+    },
+    {
+     "w": "corte",
+     "start": 28.73,
+     "end": 29.271,
+     "hl": false
+    },
+    {
+     "w": "também",
+     "start": 29.271,
+     "end": 29.609,
+     "hl": false
+    },
+    {
+     "w": "entraram",
+     "start": 29.609,
+     "end": 30.116,
+     "hl": false
+    },
+    {
+     "w": "bactérias",
+     "start": 30.116,
+     "end": 30.826,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "text": "Então chegam os glóbulos brancos, que engolem as bactérias inteirinhas.",
+   "start": 31.206,
+   "end": 35.607,
+   "words": [
+    {
+     "w": "Então",
+     "start": 31.206,
+     "end": 31.567,
+     "hl": false
+    },
+    {
+     "w": "chegam",
+     "start": 31.567,
+     "end": 31.928,
+     "hl": false
+    },
+    {
+     "w": "os",
+     "start": 31.928,
+     "end": 32.108,
+     "hl": false
+    },
+    {
+     "w": "glóbulos",
+     "start": 32.108,
+     "end": 32.649,
+     "hl": false
+    },
+    {
+     "w": "brancos",
+     "start": 32.649,
+     "end": 33.226,
+     "hl": true
+    },
+    {
+     "w": "que",
+     "start": 33.226,
+     "end": 33.407,
+     "hl": false
+    },
+    {
+     "w": "engolem",
+     "start": 33.407,
+     "end": 33.948,
+     "hl": true
+    },
+    {
+     "w": "as",
+     "start": 33.948,
+     "end": 34.128,
+     "hl": false
+    },
+    {
+     "w": "bactérias",
+     "start": 34.128,
+     "end": 34.669,
+     "hl": false
+    },
+    {
+     "w": "inteirinhas",
+     "start": 34.669,
+     "end": 35.607,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "text": "Por fora, o coágulo seca e endurece. É a casquinha.",
+   "start": 35.987,
+   "end": 39.084,
+   "words": [
+    {
+     "w": "Por",
+     "start": 35.987,
+     "end": 36.124,
+     "hl": false
+    },
+    {
+     "w": "fora",
+     "start": 36.124,
+     "end": 36.563,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 36.563,
+     "end": 36.7,
+     "hl": false
+    },
+    {
+     "w": "coágulo",
+     "start": 36.7,
+     "end": 37.111,
+     "hl": false
+    },
+    {
+     "w": "seca",
+     "start": 37.111,
+     "end": 37.385,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 37.385,
+     "end": 37.522,
+     "hl": false
+    },
+    {
+     "w": "endurece",
+     "start": 37.522,
+     "end": 38.234,
+     "hl": false
+    },
+    {
+     "w": "É",
+     "start": 38.234,
+     "end": 38.371,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 38.371,
+     "end": 38.508,
+     "hl": false
+    },
+    {
+     "w": "casquinha",
+     "start": 38.508,
+     "end": 39.084,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "text": "Embaixo dela, as células da pele se multiplicam e vão fechando o buraco.",
+   "start": 39.464,
+   "end": 43.808,
+   "words": [
+    {
+     "w": "Embaixo",
+     "start": 39.464,
+     "end": 39.923,
+     "hl": false
+    },
+    {
+     "w": "dela",
+     "start": 39.923,
+     "end": 40.412,
+     "hl": false
+    },
+    {
+     "w": "as",
+     "start": 40.412,
+     "end": 40.565,
+     "hl": false
+    },
+    {
+     "w": "células",
+     "start": 40.565,
+     "end": 41.024,
+     "hl": false
+    },
+    {
+     "w": "da",
+     "start": 41.024,
+     "end": 41.177,
+     "hl": false
+    },
+    {
+     "w": "pele",
+     "start": 41.177,
+     "end": 41.483,
+     "hl": false
+    },
+    {
+     "w": "se",
+     "start": 41.483,
+     "end": 41.636,
+     "hl": false
+    },
+    {
+     "w": "multiplicam",
+     "start": 41.636,
+     "end": 42.248,
+     "hl": true
+    },
+    {
+     "w": "e",
+     "start": 42.248,
+     "end": 42.401,
+     "hl": false
+    },
+    {
+     "w": "vão",
+     "start": 42.401,
+     "end": 42.554,
+     "hl": false
+    },
+    {
+     "w": "fechando",
+     "start": 42.554,
+     "end": 43.013,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 43.013,
+     "end": 43.166,
+     "hl": false
+    },
+    {
+     "w": "buraco",
+     "start": 43.166,
+     "end": 43.808,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "text": "Vasos novos crescem, e o colágeno costura tudo por dentro.",
+   "start": 44.188,
+   "end": 47.913,
+   "words": [
+    {
+     "w": "Vasos",
+     "start": 44.188,
+     "end": 44.521,
+     "hl": false
+    },
+    {
+     "w": "novos",
+     "start": 44.521,
+     "end": 44.853,
+     "hl": false
+    },
+    {
+     "w": "crescem",
+     "start": 44.853,
+     "end": 45.385,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 45.385,
+     "end": 45.552,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 45.552,
+     "end": 45.718,
+     "hl": false
+    },
+    {
+     "w": "colágeno",
+     "start": 45.718,
+     "end": 46.383,
+     "hl": true
+    },
+    {
+     "w": "costura",
+     "start": 46.383,
+     "end": 46.882,
+     "hl": false
+    },
+    {
+     "w": "tudo",
+     "start": 46.882,
+     "end": 47.214,
+     "hl": false
+    },
+    {
+     "w": "por",
+     "start": 47.214,
+     "end": 47.381,
+     "hl": false
+    },
+    {
+     "w": "dentro",
+     "start": 47.381,
+     "end": 47.913,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "text": "Uns dias depois, a casquinha cai, e a pele tá inteira de novo.",
+   "start": 48.293,
+   "end": 52.087,
+   "words": [
+    {
+     "w": "Uns",
+     "start": 48.293,
+     "end": 48.453,
+     "hl": false
+    },
+    {
+     "w": "dias",
+     "start": 48.453,
+     "end": 48.614,
+     "hl": false
+    },
+    {
+     "w": "depois",
+     "start": 48.614,
+     "end": 49.129,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 49.129,
+     "end": 49.289,
+     "hl": false
+    },
+    {
+     "w": "casquinha",
+     "start": 49.289,
+     "end": 49.772,
+     "hl": false
+    },
+    {
+     "w": "cai",
+     "start": 49.772,
+     "end": 50.126,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 50.126,
+     "end": 50.286,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 50.286,
+     "end": 50.447,
+     "hl": false
+    },
+    {
+     "w": "pele",
+     "start": 50.447,
+     "end": 50.769,
+     "hl": false
+    },
+    {
+     "w": "tá",
+     "start": 50.769,
+     "end": 50.929,
+     "hl": false
+    },
+    {
+     "w": "inteira",
+     "start": 50.929,
+     "end": 51.412,
+     "hl": true
+    },
+    {
+     "w": "de",
+     "start": 51.412,
+     "end": 51.573,
+     "hl": false
+    },
+    {
+     "w": "novo",
+     "start": 51.573,
+     "end": 52.087,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "text": "E o seu corpo fez tudo isso sozinho, sem você nem perceber.",
+   "start": 52.467,
+   "end": 56.408,
+   "words": [
+    {
+     "w": "E",
+     "start": 52.467,
+     "end": 52.643,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 52.643,
+     "end": 52.819,
+     "hl": false
+    },
+    {
+     "w": "seu",
+     "start": 52.819,
+     "end": 52.995,
+     "hl": false
+    },
+    {
+     "w": "corpo",
+     "start": 52.995,
+     "end": 53.347,
+     "hl": false
+    },
+    {
+     "w": "fez",
+     "start": 53.347,
+     "end": 53.523,
+     "hl": false
+    },
+    {
+     "w": "tudo",
+     "start": 53.523,
+     "end": 53.875,
+     "hl": false
+    },
+    {
+     "w": "isso",
+     "start": 53.875,
+     "end": 54.227,
+     "hl": false
+    },
+    {
+     "w": "sozinho",
+     "start": 54.227,
+     "end": 54.965,
+     "hl": true
+    },
+    {
+     "w": "sem",
+     "start": 54.965,
+     "end": 55.141,
+     "hl": false
+    },
+    {
+     "w": "você",
+     "start": 55.141,
+     "end": 55.493,
+     "hl": false
+    },
+    {
+     "w": "nem",
+     "start": 55.493,
+     "end": 55.669,
+     "hl": false
+    },
+    {
+     "w": "perceber",
+     "start": 55.669,
+     "end": 56.408,
+     "hl": false
+    }
+   ]
+  }
+ ]
+}
