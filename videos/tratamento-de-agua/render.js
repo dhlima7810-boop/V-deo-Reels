@@ -20,8 +20,9 @@ const srv = http.createServer((q, r) => { const f = path.join(ROOT, decodeURICom
     }
   } else {
     const fps = +(process.argv[3] || 30), dur = await page.evaluate('window.DURATION'), N = Math.round(dur * fps);
-    const k = +(process.argv[4] || 0), parts = +(process.argv[5] || 1), a = Math.floor(N * k / parts), b = Math.floor(N * (k + 1) / parts), n = b - a;
-    const outFile = parts > 1 ? `part_${k}.mp4` : 'frames.mp4';
+    const k = +(process.argv[4] || 0), parts = +(process.argv[5] || 1); let a = Math.floor(N * k / parts), b = Math.floor(N * (k + 1) / parts), n = b - a;
+    if (process.env.FRAMES) { const [fa, fb] = process.env.FRAMES.split(':').map(Number); a = fa; b = fb; n = b - a; }
+    const outFile = process.env.FRAMES ? 'patch.mp4' : parts > 1 ? `part_${k}.mp4` : 'frames.mp4';
     const ff = spawn('ffmpeg', ['-y', '-v', 'error', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'mjpeg', '-i', '-', '-c:v', 'libx264', '-preset', 'medium', '-crf', '17', '-pix_fmt', 'yuv420p', path.join(OUT, outFile)], { stdio: ['pipe', 'inherit', 'inherit'] });
     const t0 = Date.now();
     for (let i = 0; i < n; i++) {
