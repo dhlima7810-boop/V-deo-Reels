@@ -1,0 +1,1045 @@
+{
+ "duration": 58.0,
+ "lines": [
+  {
+   "id": "s1",
+   "text": "Você precisa dar água limpa pra uma cidade inteira.",
+   "start": 0.15,
+   "end": 3.497,
+   "words": [
+    {
+     "w": "Você",
+     "start": 0.15,
+     "end": 0.481,
+     "hl": false
+    },
+    {
+     "w": "precisa",
+     "start": 0.481,
+     "end": 0.978,
+     "hl": false
+    },
+    {
+     "w": "dar",
+     "start": 0.978,
+     "end": 1.144,
+     "hl": false
+    },
+    {
+     "w": "água",
+     "start": 1.144,
+     "end": 1.475,
+     "hl": true
+    },
+    {
+     "w": "limpa",
+     "start": 1.475,
+     "end": 1.807,
+     "hl": true
+    },
+    {
+     "w": "pra",
+     "start": 1.807,
+     "end": 1.973,
+     "hl": false
+    },
+    {
+     "w": "uma",
+     "start": 1.973,
+     "end": 2.304,
+     "hl": false
+    },
+    {
+     "w": "cidade",
+     "start": 2.304,
+     "end": 2.801,
+     "hl": false
+    },
+    {
+     "w": "inteira",
+     "start": 2.801,
+     "end": 3.497,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "text": "Mas a única água que tem é a do rio. Marrom de terra, e cheia de micróbios.",
+   "start": 3.897,
+   "end": 8.61,
+   "words": [
+    {
+     "w": "Mas",
+     "start": 3.897,
+     "end": 4.068,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 4.068,
+     "end": 4.238,
+     "hl": false
+    },
+    {
+     "w": "única",
+     "start": 4.238,
+     "end": 4.751,
+     "hl": false
+    },
+    {
+     "w": "água",
+     "start": 4.751,
+     "end": 5.092,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 5.092,
+     "end": 5.263,
+     "hl": false
+    },
+    {
+     "w": "tem",
+     "start": 5.263,
+     "end": 5.434,
+     "hl": false
+    },
+    {
+     "w": "é",
+     "start": 5.434,
+     "end": 5.605,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 5.605,
+     "end": 5.775,
+     "hl": false
+    },
+    {
+     "w": "do",
+     "start": 5.775,
+     "end": 5.946,
+     "hl": false
+    },
+    {
+     "w": "rio",
+     "start": 5.946,
+     "end": 6.322,
+     "hl": false
+    },
+    {
+     "w": "Marrom",
+     "start": 6.322,
+     "end": 6.663,
+     "hl": true
+    },
+    {
+     "w": "de",
+     "start": 6.663,
+     "end": 6.834,
+     "hl": false
+    },
+    {
+     "w": "terra",
+     "start": 6.834,
+     "end": 7.381,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 7.381,
+     "end": 7.552,
+     "hl": false
+    },
+    {
+     "w": "cheia",
+     "start": 7.552,
+     "end": 7.722,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 7.722,
+     "end": 7.893,
+     "hl": false
+    },
+    {
+     "w": "micróbios",
+     "start": 7.893,
+     "end": 8.61,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "text": "Então você bombeia essa água até uma estação de tratamento.",
+   "start": 9.01,
+   "end": 13.101,
+   "words": [
+    {
+     "w": "Então",
+     "start": 9.01,
+     "end": 9.363,
+     "hl": false
+    },
+    {
+     "w": "você",
+     "start": 9.363,
+     "end": 9.716,
+     "hl": false
+    },
+    {
+     "w": "bombeia",
+     "start": 9.716,
+     "end": 10.068,
+     "hl": false
+    },
+    {
+     "w": "essa",
+     "start": 10.068,
+     "end": 10.421,
+     "hl": false
+    },
+    {
+     "w": "água",
+     "start": 10.421,
+     "end": 10.773,
+     "hl": false
+    },
+    {
+     "w": "até",
+     "start": 10.773,
+     "end": 11.126,
+     "hl": false
+    },
+    {
+     "w": "uma",
+     "start": 11.126,
+     "end": 11.479,
+     "hl": false
+    },
+    {
+     "w": "estação",
+     "start": 11.479,
+     "end": 12.008,
+     "hl": true
+    },
+    {
+     "w": "de",
+     "start": 12.008,
+     "end": 12.184,
+     "hl": false
+    },
+    {
+     "w": "tratamento",
+     "start": 12.184,
+     "end": 13.101,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "text": "Primeiro, joga um pó chamado sulfato de alumínio.",
+   "start": 13.501,
+   "end": 16.453,
+   "words": [
+    {
+     "w": "Primeiro",
+     "start": 13.501,
+     "end": 14.109,
+     "hl": false
+    },
+    {
+     "w": "joga",
+     "start": 14.109,
+     "end": 14.398,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 14.398,
+     "end": 14.543,
+     "hl": false
+    },
+    {
+     "w": "pó",
+     "start": 14.543,
+     "end": 14.687,
+     "hl": false
+    },
+    {
+     "w": "chamado",
+     "start": 14.687,
+     "end": 15.122,
+     "hl": false
+    },
+    {
+     "w": "sulfato",
+     "start": 15.122,
+     "end": 15.556,
+     "hl": true
+    },
+    {
+     "w": "de",
+     "start": 15.556,
+     "end": 15.7,
+     "hl": false
+    },
+    {
+     "w": "alumínio",
+     "start": 15.7,
+     "end": 16.453,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "text": "Ele faz a sujeira grudar uma na outra, formando bolinhas. Os flocos.",
+   "start": 16.853,
+   "end": 21.005,
+   "words": [
+    {
+     "w": "Ele",
+     "start": 16.853,
+     "end": 17.165,
+     "hl": false
+    },
+    {
+     "w": "faz",
+     "start": 17.165,
+     "end": 17.321,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 17.321,
+     "end": 17.477,
+     "hl": false
+    },
+    {
+     "w": "sujeira",
+     "start": 17.477,
+     "end": 17.946,
+     "hl": false
+    },
+    {
+     "w": "grudar",
+     "start": 17.946,
+     "end": 18.258,
+     "hl": true
+    },
+    {
+     "w": "uma",
+     "start": 18.258,
+     "end": 18.57,
+     "hl": false
+    },
+    {
+     "w": "na",
+     "start": 18.57,
+     "end": 18.726,
+     "hl": false
+    },
+    {
+     "w": "outra",
+     "start": 18.726,
+     "end": 19.225,
+     "hl": false
+    },
+    {
+     "w": "formando",
+     "start": 19.225,
+     "end": 19.694,
+     "hl": false
+    },
+    {
+     "w": "bolinhas",
+     "start": 19.694,
+     "end": 20.349,
+     "hl": false
+    },
+    {
+     "w": "Os",
+     "start": 20.349,
+     "end": 20.505,
+     "hl": false
+    },
+    {
+     "w": "flocos",
+     "start": 20.505,
+     "end": 21.005,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "text": "Os flocos ficam pesados e afundam num tanque parado. Isso é a decantação.",
+   "start": 21.405,
+   "end": 26.104,
+   "words": [
+    {
+     "w": "Os",
+     "start": 21.405,
+     "end": 21.57,
+     "hl": false
+    },
+    {
+     "w": "flocos",
+     "start": 21.57,
+     "end": 21.901,
+     "hl": false
+    },
+    {
+     "w": "ficam",
+     "start": 21.901,
+     "end": 22.232,
+     "hl": false
+    },
+    {
+     "w": "pesados",
+     "start": 22.232,
+     "end": 22.729,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 22.729,
+     "end": 22.894,
+     "hl": false
+    },
+    {
+     "w": "afundam",
+     "start": 22.894,
+     "end": 23.39,
+     "hl": true
+    },
+    {
+     "w": "num",
+     "start": 23.39,
+     "end": 23.556,
+     "hl": false
+    },
+    {
+     "w": "tanque",
+     "start": 23.556,
+     "end": 23.887,
+     "hl": false
+    },
+    {
+     "w": "parado",
+     "start": 23.887,
+     "end": 24.582,
+     "hl": false
+    },
+    {
+     "w": "Isso",
+     "start": 24.582,
+     "end": 24.913,
+     "hl": false
+    },
+    {
+     "w": "é",
+     "start": 24.913,
+     "end": 25.078,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 25.078,
+     "end": 25.243,
+     "hl": false
+    },
+    {
+     "w": "decantação",
+     "start": 25.243,
+     "end": 26.104,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "text": "Mas ainda sobra sujeira fininha. Então a água passa por pedra, areia e carvão.",
+   "start": 26.504,
+   "end": 31.524,
+   "words": [
+    {
+     "w": "Mas",
+     "start": 26.504,
+     "end": 26.673,
+     "hl": false
+    },
+    {
+     "w": "ainda",
+     "start": 26.673,
+     "end": 27.013,
+     "hl": false
+    },
+    {
+     "w": "sobra",
+     "start": 27.013,
+     "end": 27.352,
+     "hl": false
+    },
+    {
+     "w": "sujeira",
+     "start": 27.352,
+     "end": 27.861,
+     "hl": false
+    },
+    {
+     "w": "fininha",
+     "start": 27.861,
+     "end": 28.573,
+     "hl": false
+    },
+    {
+     "w": "Então",
+     "start": 28.573,
+     "end": 28.912,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 28.912,
+     "end": 29.082,
+     "hl": false
+    },
+    {
+     "w": "água",
+     "start": 29.082,
+     "end": 29.421,
+     "hl": false
+    },
+    {
+     "w": "passa",
+     "start": 29.421,
+     "end": 29.76,
+     "hl": false
+    },
+    {
+     "w": "por",
+     "start": 29.76,
+     "end": 29.93,
+     "hl": false
+    },
+    {
+     "w": "pedra",
+     "start": 29.93,
+     "end": 30.472,
+     "hl": false
+    },
+    {
+     "w": "areia",
+     "start": 30.472,
+     "end": 30.812,
+     "hl": true
+    },
+    {
+     "w": "e",
+     "start": 30.812,
+     "end": 30.981,
+     "hl": false
+    },
+    {
+     "w": "carvão",
+     "start": 30.981,
+     "end": 31.524,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "text": "E os micróbios? Você coloca cloro, que mata quase todos eles.",
+   "start": 31.924,
+   "end": 35.779,
+   "words": [
+    {
+     "w": "E",
+     "start": 31.924,
+     "end": 32.089,
+     "hl": false
+    },
+    {
+     "w": "os",
+     "start": 32.089,
+     "end": 32.253,
+     "hl": false
+    },
+    {
+     "w": "micróbios?",
+     "start": 32.253,
+     "end": 32.748,
+     "hl": false
+    },
+    {
+     "w": "Você",
+     "start": 32.748,
+     "end": 33.077,
+     "hl": false
+    },
+    {
+     "w": "coloca",
+     "start": 33.077,
+     "end": 33.571,
+     "hl": false
+    },
+    {
+     "w": "cloro",
+     "start": 33.571,
+     "end": 34.099,
+     "hl": true
+    },
+    {
+     "w": "que",
+     "start": 34.099,
+     "end": 34.263,
+     "hl": false
+    },
+    {
+     "w": "mata",
+     "start": 34.263,
+     "end": 34.593,
+     "hl": false
+    },
+    {
+     "w": "quase",
+     "start": 34.593,
+     "end": 34.922,
+     "hl": false
+    },
+    {
+     "w": "todos",
+     "start": 34.922,
+     "end": 35.252,
+     "hl": false
+    },
+    {
+     "w": "eles",
+     "start": 35.252,
+     "end": 35.779,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "text": "E um pouquinho de flúor, pra proteger os dentes de quem bebe.",
+   "start": 36.179,
+   "end": 39.874,
+   "words": [
+    {
+     "w": "E",
+     "start": 36.179,
+     "end": 36.36,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 36.36,
+     "end": 36.541,
+     "hl": false
+    },
+    {
+     "w": "pouquinho",
+     "start": 36.541,
+     "end": 37.085,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 37.085,
+     "end": 37.266,
+     "hl": false
+    },
+    {
+     "w": "flúor",
+     "start": 37.266,
+     "end": 37.664,
+     "hl": true
+    },
+    {
+     "w": "pra",
+     "start": 37.664,
+     "end": 37.845,
+     "hl": false
+    },
+    {
+     "w": "proteger",
+     "start": 37.845,
+     "end": 38.389,
+     "hl": false
+    },
+    {
+     "w": "os",
+     "start": 38.389,
+     "end": 38.57,
+     "hl": false
+    },
+    {
+     "w": "dentes",
+     "start": 38.57,
+     "end": 38.932,
+     "hl": true
+    },
+    {
+     "w": "de",
+     "start": 38.932,
+     "end": 39.113,
+     "hl": false
+    },
+    {
+     "w": "quem",
+     "start": 39.113,
+     "end": 39.295,
+     "hl": false
+    },
+    {
+     "w": "bebe",
+     "start": 39.295,
+     "end": 39.874,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "text": "Agora a água sobe pra uma caixa d'água gigante, lá no alto.",
+   "start": 40.274,
+   "end": 43.844,
+   "words": [
+    {
+     "w": "Agora",
+     "start": 40.274,
+     "end": 40.713,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 40.713,
+     "end": 40.859,
+     "hl": false
+    },
+    {
+     "w": "água",
+     "start": 40.859,
+     "end": 41.152,
+     "hl": false
+    },
+    {
+     "w": "sobe",
+     "start": 41.152,
+     "end": 41.445,
+     "hl": false
+    },
+    {
+     "w": "pra",
+     "start": 41.445,
+     "end": 41.591,
+     "hl": false
+    },
+    {
+     "w": "uma",
+     "start": 41.591,
+     "end": 41.884,
+     "hl": false
+    },
+    {
+     "w": "caixa",
+     "start": 41.884,
+     "end": 42.176,
+     "hl": false
+    },
+    {
+     "w": "d'água",
+     "start": 42.176,
+     "end": 42.469,
+     "hl": false
+    },
+    {
+     "w": "gigante",
+     "start": 42.469,
+     "end": 43.083,
+     "hl": false
+    },
+    {
+     "w": "lá",
+     "start": 43.083,
+     "end": 43.23,
+     "hl": false
+    },
+    {
+     "w": "no",
+     "start": 43.23,
+     "end": 43.376,
+     "hl": false
+    },
+    {
+     "w": "alto",
+     "start": 43.376,
+     "end": 43.844,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "text": "E a gravidade empurra ela por canos, debaixo da rua, até cada casa.",
+   "start": 44.244,
+   "end": 48.539,
+   "words": [
+    {
+     "w": "E",
+     "start": 44.244,
+     "end": 44.394,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 44.394,
+     "end": 44.544,
+     "hl": false
+    },
+    {
+     "w": "gravidade",
+     "start": 44.544,
+     "end": 45.145,
+     "hl": true
+    },
+    {
+     "w": "empurra",
+     "start": 45.145,
+     "end": 45.596,
+     "hl": false
+    },
+    {
+     "w": "ela",
+     "start": 45.596,
+     "end": 45.896,
+     "hl": false
+    },
+    {
+     "w": "por",
+     "start": 45.896,
+     "end": 46.046,
+     "hl": false
+    },
+    {
+     "w": "canos",
+     "start": 46.046,
+     "end": 46.527,
+     "hl": false
+    },
+    {
+     "w": "debaixo",
+     "start": 46.527,
+     "end": 46.977,
+     "hl": false
+    },
+    {
+     "w": "da",
+     "start": 46.977,
+     "end": 47.128,
+     "hl": false
+    },
+    {
+     "w": "rua",
+     "start": 47.128,
+     "end": 47.458,
+     "hl": false
+    },
+    {
+     "w": "até",
+     "start": 47.458,
+     "end": 47.758,
+     "hl": false
+    },
+    {
+     "w": "cada",
+     "start": 47.758,
+     "end": 48.059,
+     "hl": false
+    },
+    {
+     "w": "casa",
+     "start": 48.059,
+     "end": 48.539,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "text": "Resultado: a água marrom do rio sai limpinha na sua torneira.",
+   "start": 48.939,
+   "end": 52.494,
+   "words": [
+    {
+     "w": "Resultado",
+     "start": 48.939,
+     "end": 49.765,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 49.765,
+     "end": 49.923,
+     "hl": false
+    },
+    {
+     "w": "água",
+     "start": 49.923,
+     "end": 50.241,
+     "hl": false
+    },
+    {
+     "w": "marrom",
+     "start": 50.241,
+     "end": 50.558,
+     "hl": false
+    },
+    {
+     "w": "do",
+     "start": 50.558,
+     "end": 50.717,
+     "hl": false
+    },
+    {
+     "w": "rio",
+     "start": 50.717,
+     "end": 50.875,
+     "hl": false
+    },
+    {
+     "w": "sai",
+     "start": 50.875,
+     "end": 51.034,
+     "hl": false
+    },
+    {
+     "w": "limpinha",
+     "start": 51.034,
+     "end": 51.51,
+     "hl": true
+    },
+    {
+     "w": "na",
+     "start": 51.51,
+     "end": 51.669,
+     "hl": false
+    },
+    {
+     "w": "sua",
+     "start": 51.669,
+     "end": 51.828,
+     "hl": false
+    },
+    {
+     "w": "torneira",
+     "start": 51.828,
+     "end": 52.494,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "text": "Da próxima vez que beber um copo d'água, lembra: ela passou por tudo isso.",
+   "start": 52.894,
+   "end": 57.239,
+   "words": [
+    {
+     "w": "Da",
+     "start": 52.894,
+     "end": 53.051,
+     "hl": false
+    },
+    {
+     "w": "próxima",
+     "start": 53.051,
+     "end": 53.524,
+     "hl": false
+    },
+    {
+     "w": "vez",
+     "start": 53.524,
+     "end": 53.681,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 53.681,
+     "end": 53.839,
+     "hl": false
+    },
+    {
+     "w": "beber",
+     "start": 53.839,
+     "end": 54.153,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 54.153,
+     "end": 54.311,
+     "hl": false
+    },
+    {
+     "w": "copo",
+     "start": 54.311,
+     "end": 54.626,
+     "hl": false
+    },
+    {
+     "w": "d'água",
+     "start": 54.626,
+     "end": 55.129,
+     "hl": false
+    },
+    {
+     "w": "lembra",
+     "start": 55.129,
+     "end": 55.633,
+     "hl": false
+    },
+    {
+     "w": "ela",
+     "start": 55.633,
+     "end": 55.948,
+     "hl": false
+    },
+    {
+     "w": "passou",
+     "start": 55.948,
+     "end": 56.263,
+     "hl": false
+    },
+    {
+     "w": "por",
+     "start": 56.263,
+     "end": 56.42,
+     "hl": false
+    },
+    {
+     "w": "tudo",
+     "start": 56.42,
+     "end": 56.735,
+     "hl": true
+    },
+    {
+     "w": "isso",
+     "start": 56.735,
+     "end": 57.239,
+     "hl": false
+    }
+   ]
+  }
+ ]
+}

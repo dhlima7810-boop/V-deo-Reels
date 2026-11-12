@@ -1,0 +1,101 @@
+[
+ {
+  "id": "s1",
+  "text": "Você precisa dar água limpa pra uma cidade inteira.",
+  "hl": [
+   "água",
+   "limpa"
+  ]
+ },
+ {
+  "id": "s2",
+  "text": "Mas a única água que tem é a do rio. Marrom de terra, e cheia de micróbios.",
+  "hl": [
+   "marrom",
+   "micróbios"
+  ]
+ },
+ {
+  "id": "s3",
+  "text": "Então você bombeia essa água até uma estação de tratamento.",
+  "hl": [
+   "estação"
+  ]
+ },
+ {
+  "id": "s4",
+  "text": "Primeiro, joga um pó chamado sulfato de alumínio.",
+  "hl": [
+   "sulfato",
+   "alumínio"
+  ]
+ },
+ {
+  "id": "s5",
+  "text": "Ele faz a sujeira grudar uma na outra, formando bolinhas. Os flocos.",
+  "hl": [
+   "grudar",
+   "flocos"
+  ]
+ },
+ {
+  "id": "s6",
+  "text": "Os flocos ficam pesados e afundam num tanque parado. Isso é a decantação.",
+  "hl": [
+   "afundam",
+   "decantação"
+  ]
+ },
+ {
+  "id": "s7",
+  "text": "Mas ainda sobra sujeira fininha. Então a água passa por pedra, areia e carvão.",
+  "hl": [
+   "areia",
+   "carvão"
+  ]
+ },
+ {
+  "id": "s8",
+  "text": "E os micróbios? Você coloca cloro, que mata quase todos eles.",
+  "hl": [
+   "cloro"
+  ]
+ },
+ {
+  "id": "s9",
+  "text": "E um pouquinho de flúor, pra proteger os dentes de quem bebe.",
+  "hl": [
+   "flúor",
+   "dentes"
+  ]
+ },
+ {
+  "id": "s10",
+  "text": "Agora a água sobe pra uma caixa d'água gigante, lá no alto.",
+  "hl": [
+   "alto"
+  ]
+ },
+ {
+  "id": "s11",
+  "text": "E a gravidade empurra ela por canos, debaixo da rua, até cada casa.",
+  "hl": [
+   "gravidade"
+  ]
+ },
+ {
+  "id": "s12",
+  "text": "Resultado: a água marrom do rio sai limpinha na sua torneira.",
+  "hl": [
+   "limpinha",
+   "torneira"
+  ]
+ },
+ {
+  "id": "s13",
+  "text": "Da próxima vez que beber um copo d'água, lembra: ela passou por tudo isso.",
+  "hl": [
+   "tudo"
+  ]
+ }
+]
