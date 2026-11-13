@@ -1,0 +1,97 @@
+[
+ {
+  "id": "s1",
+  "text": "Você abre o mapa no celular, e uma bolinha mostra onde você está.",
+  "hl": [
+   "mapa",
+   "bolinha"
+  ]
+ },
+ {
+  "id": "s2",
+  "text": "Mas o celular não faz ideia. Quem sabe é o céu: os satélites de GPS.",
+  "hl": [
+   "satélites"
+  ]
+ },
+ {
+  "id": "s3",
+  "text": "Cada um tem um relógio atômico e fica gritando a hora certa.",
+  "hl": [
+   "relógio",
+   "gritando"
+  ]
+ },
+ {
+  "id": "s4",
+  "text": "Esse sinal viaja na velocidade da luz até o seu celular.",
+  "hl": [
+   "luz"
+  ]
+ },
+ {
+  "id": "s5",
+  "text": "Só que ele demora um tiquinho pra chegar, e esse atraso é a chave.",
+  "hl": [
+   "atraso"
+  ]
+ },
+ {
+  "id": "s6",
+  "text": "Quanto mais longe o satélite, maior o atraso, e isso vira distância.",
+  "hl": [
+   "distância"
+  ]
+ },
+ {
+  "id": "s7",
+  "text": "Com um satélite, você pode estar em qualquer ponto de uma esfera enorme.",
+  "hl": [
+   "esfera"
+  ]
+ },
+ {
+  "id": "s8",
+  "text": "Com dois, as esferas se cruzam, e você cai num círculo.",
+  "hl": [
+   "círculo"
+  ]
+ },
+ {
+  "id": "s9",
+  "text": "Com três, sobram só dois pontos, e um deles tá lá no espaço.",
+  "hl": [
+   "três",
+   "espaço"
+  ]
+ },
+ {
+  "id": "s10",
+  "text": "O quarto satélite acerta o relógio do celular, e o ponto fica certinho.",
+  "hl": [
+   "quarto",
+   "certinho"
+  ]
+ },
+ {
+  "id": "s11",
+  "text": "Isso rola várias vezes por segundo, e a bolinha anda com você.",
+  "hl": [
+   "bolinha"
+  ]
+ },
+ {
+  "id": "s12",
+  "text": "E o seu celular só escuta, ele nunca manda nada pra lá.",
+  "hl": [
+   "escuta"
+  ]
+ },
+ {
+  "id": "s13",
+  "text": "Ou seja, o céu inteiro trabalha pra você nunca se perder.",
+  "hl": [
+   "perder"
+  ]
+ }
+]
