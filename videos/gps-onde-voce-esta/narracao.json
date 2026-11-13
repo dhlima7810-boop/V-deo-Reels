@@ -1,0 +1,1081 @@
+{
+ "duration": 58.0,
+ "lines": [
+  {
+   "id": "s1",
+   "text": "Você abre o mapa no celular, e uma bolinha mostra onde você está.",
+   "start": 0.15,
+   "end": 4.27,
+   "words": [
+    {
+     "w": "Você",
+     "start": 0.15,
+     "end": 0.451,
+     "hl": false
+    },
+    {
+     "w": "abre",
+     "start": 0.451,
+     "end": 0.751,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 0.751,
+     "end": 0.902,
+     "hl": false
+    },
+    {
+     "w": "mapa",
+     "start": 0.902,
+     "end": 1.203,
+     "hl": true
+    },
+    {
+     "w": "no",
+     "start": 1.203,
+     "end": 1.353,
+     "hl": false
+    },
+    {
+     "w": "celular",
+     "start": 1.353,
+     "end": 1.985,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 1.985,
+     "end": 2.135,
+     "hl": false
+    },
+    {
+     "w": "uma",
+     "start": 2.135,
+     "end": 2.436,
+     "hl": false
+    },
+    {
+     "w": "bolinha",
+     "start": 2.436,
+     "end": 2.887,
+     "hl": true
+    },
+    {
+     "w": "mostra",
+     "start": 2.887,
+     "end": 3.187,
+     "hl": false
+    },
+    {
+     "w": "onde",
+     "start": 3.187,
+     "end": 3.488,
+     "hl": false
+    },
+    {
+     "w": "você",
+     "start": 3.488,
+     "end": 3.789,
+     "hl": false
+    },
+    {
+     "w": "está",
+     "start": 3.789,
+     "end": 4.27,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "text": "Mas o celular não faz ideia. Quem sabe é o céu: os satélites de GPS.",
+   "start": 4.65,
+   "end": 9.348,
+   "words": [
+    {
+     "w": "Mas",
+     "start": 4.65,
+     "end": 4.834,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 4.834,
+     "end": 5.017,
+     "hl": false
+    },
+    {
+     "w": "celular",
+     "start": 5.017,
+     "end": 5.568,
+     "hl": false
+    },
+    {
+     "w": "não",
+     "start": 5.568,
+     "end": 5.751,
+     "hl": false
+    },
+    {
+     "w": "faz",
+     "start": 5.751,
+     "end": 5.935,
+     "hl": false
+    },
+    {
+     "w": "ideia",
+     "start": 5.935,
+     "end": 6.522,
+     "hl": false
+    },
+    {
+     "w": "Quem",
+     "start": 6.522,
+     "end": 6.706,
+     "hl": false
+    },
+    {
+     "w": "sabe",
+     "start": 6.706,
+     "end": 7.073,
+     "hl": false
+    },
+    {
+     "w": "é",
+     "start": 7.073,
+     "end": 7.256,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 7.256,
+     "end": 7.44,
+     "hl": false
+    },
+    {
+     "w": "céu",
+     "start": 7.44,
+     "end": 7.843,
+     "hl": false
+    },
+    {
+     "w": "os",
+     "start": 7.843,
+     "end": 8.027,
+     "hl": false
+    },
+    {
+     "w": "satélites",
+     "start": 8.027,
+     "end": 8.761,
+     "hl": true
+    },
+    {
+     "w": "de",
+     "start": 8.761,
+     "end": 8.944,
+     "hl": false
+    },
+    {
+     "w": "GPS",
+     "start": 8.944,
+     "end": 9.348,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "text": "Cada um tem um relógio atômico e fica gritando a hora certa.",
+   "start": 9.728,
+   "end": 13.348,
+   "words": [
+    {
+     "w": "Cada",
+     "start": 9.728,
+     "end": 10.027,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 10.027,
+     "end": 10.177,
+     "hl": false
+    },
+    {
+     "w": "tem",
+     "start": 10.177,
+     "end": 10.326,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 10.326,
+     "end": 10.476,
+     "hl": false
+    },
+    {
+     "w": "relógio",
+     "start": 10.476,
+     "end": 10.925,
+     "hl": true
+    },
+    {
+     "w": "atômico",
+     "start": 10.925,
+     "end": 11.523,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 11.523,
+     "end": 11.672,
+     "hl": false
+    },
+    {
+     "w": "fica",
+     "start": 11.672,
+     "end": 11.972,
+     "hl": false
+    },
+    {
+     "w": "gritando",
+     "start": 11.972,
+     "end": 12.42,
+     "hl": true
+    },
+    {
+     "w": "a",
+     "start": 12.42,
+     "end": 12.57,
+     "hl": false
+    },
+    {
+     "w": "hora",
+     "start": 12.57,
+     "end": 12.869,
+     "hl": false
+    },
+    {
+     "w": "certa",
+     "start": 12.869,
+     "end": 13.348,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "text": "Esse sinal viaja na velocidade da luz até o seu celular.",
+   "start": 13.728,
+   "end": 17.381,
+   "words": [
+    {
+     "w": "Esse",
+     "start": 13.728,
+     "end": 14.057,
+     "hl": false
+    },
+    {
+     "w": "sinal",
+     "start": 14.057,
+     "end": 14.386,
+     "hl": false
+    },
+    {
+     "w": "viaja",
+     "start": 14.386,
+     "end": 14.715,
+     "hl": false
+    },
+    {
+     "w": "na",
+     "start": 14.715,
+     "end": 14.88,
+     "hl": false
+    },
+    {
+     "w": "velocidade",
+     "start": 14.88,
+     "end": 15.702,
+     "hl": false
+    },
+    {
+     "w": "da",
+     "start": 15.702,
+     "end": 15.867,
+     "hl": false
+    },
+    {
+     "w": "luz",
+     "start": 15.867,
+     "end": 16.031,
+     "hl": true
+    },
+    {
+     "w": "até",
+     "start": 16.031,
+     "end": 16.361,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 16.361,
+     "end": 16.525,
+     "hl": false
+    },
+    {
+     "w": "seu",
+     "start": 16.525,
+     "end": 16.69,
+     "hl": false
+    },
+    {
+     "w": "celular",
+     "start": 16.69,
+     "end": 17.381,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "text": "Só que ele demora um tiquinho pra chegar, e esse atraso é a chave.",
+   "start": 17.761,
+   "end": 21.431,
+   "words": [
+    {
+     "w": "Só",
+     "start": 17.761,
+     "end": 17.9,
+     "hl": false
+    },
+    {
+     "w": "que",
+     "start": 17.9,
+     "end": 18.039,
+     "hl": false
+    },
+    {
+     "w": "ele",
+     "start": 18.039,
+     "end": 18.317,
+     "hl": false
+    },
+    {
+     "w": "demora",
+     "start": 18.317,
+     "end": 18.734,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 18.734,
+     "end": 18.873,
+     "hl": false
+    },
+    {
+     "w": "tiquinho",
+     "start": 18.873,
+     "end": 19.29,
+     "hl": false
+    },
+    {
+     "w": "pra",
+     "start": 19.29,
+     "end": 19.429,
+     "hl": false
+    },
+    {
+     "w": "chegar",
+     "start": 19.429,
+     "end": 19.874,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 19.874,
+     "end": 20.013,
+     "hl": false
+    },
+    {
+     "w": "esse",
+     "start": 20.013,
+     "end": 20.291,
+     "hl": false
+    },
+    {
+     "w": "atraso",
+     "start": 20.291,
+     "end": 20.708,
+     "hl": true
+    },
+    {
+     "w": "é",
+     "start": 20.708,
+     "end": 20.847,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 20.847,
+     "end": 20.987,
+     "hl": false
+    },
+    {
+     "w": "chave",
+     "start": 20.987,
+     "end": 21.431,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "text": "Quanto mais longe o satélite, maior o atraso, e isso vira distância.",
+   "start": 21.811,
+   "end": 26.0,
+   "words": [
+    {
+     "w": "Quanto",
+     "start": 21.811,
+     "end": 22.126,
+     "hl": false
+    },
+    {
+     "w": "mais",
+     "start": 22.126,
+     "end": 22.284,
+     "hl": false
+    },
+    {
+     "w": "longe",
+     "start": 22.284,
+     "end": 22.599,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 22.599,
+     "end": 22.756,
+     "hl": false
+    },
+    {
+     "w": "satélite",
+     "start": 22.756,
+     "end": 23.575,
+     "hl": false
+    },
+    {
+     "w": "maior",
+     "start": 23.575,
+     "end": 23.732,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 23.732,
+     "end": 23.89,
+     "hl": false
+    },
+    {
+     "w": "atraso",
+     "start": 23.89,
+     "end": 24.551,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 24.551,
+     "end": 24.709,
+     "hl": false
+    },
+    {
+     "w": "isso",
+     "start": 24.709,
+     "end": 25.024,
+     "hl": false
+    },
+    {
+     "w": "vira",
+     "start": 25.024,
+     "end": 25.339,
+     "hl": false
+    },
+    {
+     "w": "distância",
+     "start": 25.339,
+     "end": 26.0,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "text": "Com um satélite, você pode estar em qualquer ponto de uma esfera enorme.",
+   "start": 26.38,
+   "end": 30.66,
+   "words": [
+    {
+     "w": "Com",
+     "start": 26.38,
+     "end": 26.531,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 26.531,
+     "end": 26.681,
+     "hl": false
+    },
+    {
+     "w": "satélite",
+     "start": 26.681,
+     "end": 27.465,
+     "hl": false
+    },
+    {
+     "w": "você",
+     "start": 27.465,
+     "end": 27.766,
+     "hl": false
+    },
+    {
+     "w": "pode",
+     "start": 27.766,
+     "end": 28.068,
+     "hl": false
+    },
+    {
+     "w": "estar",
+     "start": 28.068,
+     "end": 28.369,
+     "hl": false
+    },
+    {
+     "w": "em",
+     "start": 28.369,
+     "end": 28.52,
+     "hl": false
+    },
+    {
+     "w": "qualquer",
+     "start": 28.52,
+     "end": 28.821,
+     "hl": false
+    },
+    {
+     "w": "ponto",
+     "start": 28.821,
+     "end": 29.123,
+     "hl": false
+    },
+    {
+     "w": "de",
+     "start": 29.123,
+     "end": 29.274,
+     "hl": false
+    },
+    {
+     "w": "uma",
+     "start": 29.274,
+     "end": 29.575,
+     "hl": false
+    },
+    {
+     "w": "esfera",
+     "start": 29.575,
+     "end": 30.027,
+     "hl": true
+    },
+    {
+     "w": "enorme",
+     "start": 30.027,
+     "end": 30.66,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "text": "Com dois, as esferas se cruzam, e você cai num círculo.",
+   "start": 31.04,
+   "end": 34.377,
+   "words": [
+    {
+     "w": "Com",
+     "start": 31.04,
+     "end": 31.202,
+     "hl": false
+    },
+    {
+     "w": "dois",
+     "start": 31.202,
+     "end": 31.558,
+     "hl": false
+    },
+    {
+     "w": "as",
+     "start": 31.558,
+     "end": 31.72,
+     "hl": false
+    },
+    {
+     "w": "esferas",
+     "start": 31.72,
+     "end": 32.206,
+     "hl": false
+    },
+    {
+     "w": "se",
+     "start": 32.206,
+     "end": 32.368,
+     "hl": false
+    },
+    {
+     "w": "cruzam",
+     "start": 32.368,
+     "end": 32.887,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 32.887,
+     "end": 33.049,
+     "hl": false
+    },
+    {
+     "w": "você",
+     "start": 33.049,
+     "end": 33.373,
+     "hl": false
+    },
+    {
+     "w": "cai",
+     "start": 33.373,
+     "end": 33.535,
+     "hl": false
+    },
+    {
+     "w": "num",
+     "start": 33.535,
+     "end": 33.697,
+     "hl": false
+    },
+    {
+     "w": "círculo",
+     "start": 33.697,
+     "end": 34.377,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "text": "Com três, sobram só dois pontos, e um deles tá lá no espaço.",
+   "start": 34.757,
+   "end": 38.325,
+   "words": [
+    {
+     "w": "Com",
+     "start": 34.757,
+     "end": 34.922,
+     "hl": false
+    },
+    {
+     "w": "três",
+     "start": 34.922,
+     "end": 35.286,
+     "hl": true
+    },
+    {
+     "w": "sobram",
+     "start": 35.286,
+     "end": 35.616,
+     "hl": false
+    },
+    {
+     "w": "só",
+     "start": 35.616,
+     "end": 35.781,
+     "hl": false
+    },
+    {
+     "w": "dois",
+     "start": 35.781,
+     "end": 35.946,
+     "hl": false
+    },
+    {
+     "w": "pontos",
+     "start": 35.946,
+     "end": 36.475,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 36.475,
+     "end": 36.64,
+     "hl": false
+    },
+    {
+     "w": "um",
+     "start": 36.64,
+     "end": 36.805,
+     "hl": false
+    },
+    {
+     "w": "deles",
+     "start": 36.805,
+     "end": 37.135,
+     "hl": false
+    },
+    {
+     "w": "tá",
+     "start": 37.135,
+     "end": 37.301,
+     "hl": false
+    },
+    {
+     "w": "lá",
+     "start": 37.301,
+     "end": 37.466,
+     "hl": false
+    },
+    {
+     "w": "no",
+     "start": 37.466,
+     "end": 37.631,
+     "hl": false
+    },
+    {
+     "w": "espaço",
+     "start": 37.631,
+     "end": 38.325,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "text": "O quarto satélite acerta o relógio do celular, e o ponto fica certinho.",
+   "start": 38.705,
+   "end": 43.186,
+   "words": [
+    {
+     "w": "O",
+     "start": 38.705,
+     "end": 38.857,
+     "hl": false
+    },
+    {
+     "w": "quarto",
+     "start": 38.857,
+     "end": 39.162,
+     "hl": true
+    },
+    {
+     "w": "satélite",
+     "start": 39.162,
+     "end": 39.772,
+     "hl": false
+    },
+    {
+     "w": "acerta",
+     "start": 39.772,
+     "end": 40.229,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 40.229,
+     "end": 40.381,
+     "hl": false
+    },
+    {
+     "w": "relógio",
+     "start": 40.381,
+     "end": 40.839,
+     "hl": false
+    },
+    {
+     "w": "do",
+     "start": 40.839,
+     "end": 40.991,
+     "hl": false
+    },
+    {
+     "w": "celular",
+     "start": 40.991,
+     "end": 41.631,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 41.631,
+     "end": 41.784,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 41.784,
+     "end": 41.936,
+     "hl": false
+    },
+    {
+     "w": "ponto",
+     "start": 41.936,
+     "end": 42.241,
+     "hl": false
+    },
+    {
+     "w": "fica",
+     "start": 42.241,
+     "end": 42.546,
+     "hl": false
+    },
+    {
+     "w": "certinho",
+     "start": 42.546,
+     "end": 43.186,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "text": "Isso rola várias vezes por segundo, e a bolinha anda com você.",
+   "start": 43.566,
+   "end": 47.487,
+   "words": [
+    {
+     "w": "Isso",
+     "start": 43.566,
+     "end": 43.887,
+     "hl": false
+    },
+    {
+     "w": "rola",
+     "start": 43.887,
+     "end": 44.209,
+     "hl": false
+    },
+    {
+     "w": "várias",
+     "start": 44.209,
+     "end": 44.53,
+     "hl": false
+    },
+    {
+     "w": "vezes",
+     "start": 44.53,
+     "end": 44.851,
+     "hl": false
+    },
+    {
+     "w": "por",
+     "start": 44.851,
+     "end": 45.012,
+     "hl": false
+    },
+    {
+     "w": "segundo",
+     "start": 45.012,
+     "end": 45.687,
+     "hl": false
+    },
+    {
+     "w": "e",
+     "start": 45.687,
+     "end": 45.848,
+     "hl": false
+    },
+    {
+     "w": "a",
+     "start": 45.848,
+     "end": 46.008,
+     "hl": false
+    },
+    {
+     "w": "bolinha",
+     "start": 46.008,
+     "end": 46.49,
+     "hl": true
+    },
+    {
+     "w": "anda",
+     "start": 46.49,
+     "end": 46.812,
+     "hl": false
+    },
+    {
+     "w": "com",
+     "start": 46.812,
+     "end": 46.972,
+     "hl": false
+    },
+    {
+     "w": "você",
+     "start": 46.972,
+     "end": 47.486,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "text": "E o seu celular só escuta, ele nunca manda nada pra lá.",
+   "start": 47.867,
+   "end": 51.244,
+   "words": [
+    {
+     "w": "E",
+     "start": 47.867,
+     "end": 48.017,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 48.017,
+     "end": 48.168,
+     "hl": false
+    },
+    {
+     "w": "seu",
+     "start": 48.168,
+     "end": 48.319,
+     "hl": false
+    },
+    {
+     "w": "celular",
+     "start": 48.319,
+     "end": 48.771,
+     "hl": false
+    },
+    {
+     "w": "só",
+     "start": 48.771,
+     "end": 48.922,
+     "hl": false
+    },
+    {
+     "w": "escuta",
+     "start": 48.922,
+     "end": 49.555,
+     "hl": true
+    },
+    {
+     "w": "ele",
+     "start": 49.555,
+     "end": 49.857,
+     "hl": false
+    },
+    {
+     "w": "nunca",
+     "start": 49.857,
+     "end": 50.158,
+     "hl": false
+    },
+    {
+     "w": "manda",
+     "start": 50.158,
+     "end": 50.46,
+     "hl": false
+    },
+    {
+     "w": "nada",
+     "start": 50.46,
+     "end": 50.761,
+     "hl": false
+    },
+    {
+     "w": "pra",
+     "start": 50.761,
+     "end": 50.912,
+     "hl": false
+    },
+    {
+     "w": "lá",
+     "start": 50.912,
+     "end": 51.244,
+     "hl": false
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "text": "Ou seja, o céu inteiro trabalha pra você nunca se perder.",
+   "start": 51.624,
+   "end": 55.157,
+   "words": [
+    {
+     "w": "Ou",
+     "start": 51.624,
+     "end": 51.789,
+     "hl": false
+    },
+    {
+     "w": "seja",
+     "start": 51.789,
+     "end": 52.317,
+     "hl": false
+    },
+    {
+     "w": "o",
+     "start": 52.317,
+     "end": 52.482,
+     "hl": false
+    },
+    {
+     "w": "céu",
+     "start": 52.482,
+     "end": 52.647,
+     "hl": false
+    },
+    {
+     "w": "inteiro",
+     "start": 52.647,
+     "end": 53.143,
+     "hl": false
+    },
+    {
+     "w": "trabalha",
+     "start": 53.143,
+     "end": 53.638,
+     "hl": false
+    },
+    {
+     "w": "pra",
+     "start": 53.638,
+     "end": 53.803,
+     "hl": false
+    },
+    {
+     "w": "você",
+     "start": 53.803,
+     "end": 54.133,
+     "hl": false
+    },
+    {
+     "w": "nunca",
+     "start": 54.133,
+     "end": 54.464,
+     "hl": false
+    },
+    {
+     "w": "se",
+     "start": 54.464,
+     "end": 54.629,
+     "hl": false
+    },
+    {
+     "w": "perder",
+     "start": 54.629,
+     "end": 55.157,
+     "hl": true
+    }
+   ]
+  }
+ ]
+}

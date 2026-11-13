@@ -1,0 +1,15 @@
+[
+ {"id":"s1","text":"Você precisa sumir com o lixo de uma cidade inteira.","hl":["lixo"]},
+ {"id":"s2","text":"Então joga tudo num terreno vazio.","hl":[]},
+ {"id":"s3","text":"Mas a chuva atravessa o lixo e vira chorume, um líquido tóxico que escorre até o rio.","hl":["chorume","tóxico"]},
+ {"id":"s4","text":"Então você cava um buraco gigante e forra com argila e uma manta de plástico.","hl":["argila","manta"]},
+ {"id":"s5","text":"Agora o chorume desce por canos até uma lagoa de tratamento.","hl":["tratamento"]},
+ {"id":"s6","text":"O caminhão despeja, o trator compacta, e todo dia você cobre com terra.","hl":["compacta","terra"]},
+ {"id":"s7","text":"Camada por camada, o morro de lixo cresce.","hl":["camada"]},
+ {"id":"s8","text":"Mas lá embaixo, sem oxigênio, bilhões de bactérias começam a comer a comida podre.","hl":["bactérias"]},
+ {"id":"s9","text":"E enquanto comem, elas soltam gás. Metano e gás carbônico. Isso é o biogás.","hl":["metano","biogás"]},
+ {"id":"s10","text":"O gás fica preso, a pressão sobe, e ele pode até pegar fogo.","hl":["fogo"]},
+ {"id":"s11","text":"Então você enfia tubos no morro e puxa esse gás pra fora.","hl":["tubos"]},
+ {"id":"s12","text":"Ele vai pra uma usina, queima num motor, e o motor gira um gerador.","hl":["gerador"]},
+ {"id":"s13","text":"Resultado: o lixo da cidade vira luz pra própria cidade.","hl":["luz"]}
+]
